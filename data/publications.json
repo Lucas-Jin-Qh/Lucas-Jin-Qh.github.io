@@ -1,0 +1,14 @@
+[
+  {
+    "title": "HySSM-Pyramid: Hierarchical State Space Models for Vision",
+    "zhTitle": "HySSM-Pyramid：分层状态空间视觉模型",
+    "authors": "Lucas Jin*, ...",
+    "venue": "arXiv 2025",
+    "enVenue": "arXiv 2025",
+    "pdf": "https://arxiv.org/pdf/xxxx.xxxxx",
+    "code": "https://github.com/Lucas-Jin-Qh/HySSM-Pyramid",
+    "tags": ["SSM","Vision","Hierarchical"],
+    "year": 2025,
+    "bibtex": "@article{...}"
+  }
+]
