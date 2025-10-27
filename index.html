@@ -148,8 +148,8 @@
   <!-- ================= ABOUT ================= -->
   <section id="about" class="border-t border-gray-200 dark:border-gray-800">
     <div class="max-w-6xl mx-auto px-4 py-12">
-      <h2 class="text-2xl font-bold" data-i18n="about.title">关于我</h2>
-      <p class="mt-3 text-gray-600 dark:text-gray-300 max-w-3xl" data-i18n="about.body">目前在中国科学技术大学（USTC）先进技术研究院攻读硕士（电子与信息工程），研究方向涵盖视觉-语言模型、多模态学习与模型优化；希望接触医疗人工智能等多学科交叉方向；正在申请 2027 Fall PhD，RA 可 remote 或暑期 on-site。</p>
+      <h2 class="text-2xl font-bold" data-i18n="about.title">About</h2>
+      <p class="mt-3 text-gray-600 dark:text-gray-300 max-w-3xl" data-i18n="about.body">Pursuing M.Eng. at USTC (Institute of Advanced Technology). Research on vision-language models, multimodal learning, and model optimization. Interested in interdisciplinary areas like medical AI. Applying for 2027 Fall PhD programs. Open to RA roles (remote or summer on-site).</p>
       <div class="mt-6 grid md:grid-cols-3 gap-6">
         <div class="p-5 rounded-2xl border border-gray-200 dark:border-gray-800">
           <div class="text-sm text-gray-500" data-i18n="about.keywords">研究方向</div>
@@ -196,7 +196,7 @@
   <section id="publications" class="border-t border-gray-200 dark:border-gray-800">
     <div class="max-w-6xl mx-auto px-4 py-12">
       <div class="md:flex items-end justify-between gap-6">
-        <h2 class="text-2xl font-bold" data-i18n="pubs.title">论文 Publications</h2>
+        <h2 class="text-2xl font-bold" data-i18n="pubs.title">Publications</h2>
         <div class="mt-4 md:mt-0 flex flex-wrap items-center gap-3">
           <input x-model="pubQuery" @input="filterPubs()" type="search" :placeholder="t('pubs.searchPH')" class="w-72 max-w-full px-3 py-2 text-sm rounded-xl border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-800" />
           <select x-model="pubYear" @change="filterPubs()" class="px-3 py-2 text-sm rounded-xl border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-800">
@@ -214,8 +214,8 @@
   <section id="projects" class="border-t border-gray-200 dark:border-gray-800">
     <div class="max-w-6xl mx-auto px-4 py-12">
       <div class="flex items-center justify-between">
-        <h2 class="text-2xl font-bold" data-i18n="projects.title">项目 Projects</h2>
-        <div class="text-sm text-gray-500"><span data-i18n="projects.auto">自动载入自</span> <span class="font-mono">@Lucas-Jin-Qh</span> GitHub</div>
+              <h2 class="text-2xl font-bold" data-i18n="projects.title">Projects</h2>
+      <div class="text-sm text-gray-500"><span data-i18n="projects.auto">Auto-loaded from</span> <span class="font-mono">@Lucas-Jin-Qh</span> GitHub</div>
       </div>
       <div class="mt-4 grid sm:grid-cols-2 lg:grid-cols-3 gap-4" x-ref="repoGrid">
         <div class="text-sm text-gray-500" data-i18n="projects.loading">正在加载仓库…</div>
@@ -227,8 +227,8 @@
   <section id="contact" class="border-t border-gray-200 dark:border-gray-800">
     <div class="max-w-6xl mx-auto px-4 py-12">
       <h2 class="text-2xl font-bold" data-i18n="contact.title">联系 · 合作</h2>
-      <div class="mt-4 grid md:grid-cols-2 gap-8">
-        <form @submit.prevent="sendMessage" class="p-6 rounded-2xl border border-gray-200 dark:border-gray-800">
+      <div class="mt-4">
+        <form @submit.prevent="sendMessage" class="max-w-2xl p-6 rounded-2xl border border-gray-200 dark:border-gray-800">
           <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
             <div>
               <label class="text-sm text-gray-500" data-i18n="contact.name">姓名</label>
@@ -253,29 +253,38 @@
           </div>
           <p x-show="contactSent" class="mt-3 text-sm text-emerald-600" data-i18n="contact.hint">已生成邮件草稿，请在邮件客户端发送。</p>
         </form>
-        <div class="p-6 rounded-2xl border border-gray-200 dark:border-gray-800">
-          <h3 class="font-semibold" data-i18n="contact.links">常用链接</h3>
-          <ul class="mt-2 space-y-2 text-sm">
-            <li><i data-lucide="mail" class="inline w-4 h-4 mr-2"></i><a :href="mailtoHref" class="underline">{{ email }}</a></li>
-            <li><i data-lucide="github" class="inline w-4 h-4 mr-2"></i><a :href="links.github" class="underline">GitHub</a></li>
-            <li><i data-lucide="graduation-cap" class="inline w-4 h-4 mr-2"></i><a :href="links.scholar" class="underline">Google Scholar</a></li>
-            <li><i data-lucide="file-text" class="inline w-4 h-4 mr-2"></i><a :href="links.arxiv" class="underline">arXiv</a></li>
-          </ul>
-          <div class="mt-6">
-            <h4 class="font-semibold text-sm" data-i18n="contact.noteTitle">声明</h4>
-            <p class="mt-1 text-sm text-gray-500" data-i18n="contact.note">本页采用纯静态架构 + 轻量交互（Alpine.js），可直接部署到 GitHub Pages，无需后端。</p>
-          </div>
-        </div>
+
       </div>
     </div>
   </section>
 
   <!-- ================= FOOTER ================= -->
   <footer class="border-t border-gray-200 dark:border-gray-800">
-    <div class="max-w-6xl mx-auto px-4 py-8 text-sm flex flex-col md:flex-row items-center justify-between gap-4">
-      <div>© <span x-text="new Date().getFullYear()"></span> Lucas Jin. <span data-i18n="footer.all">All rights reserved.</span></div>
-      <div class="flex items-center gap-4 text-gray-500">
-        <a href="#top" class="hover:text-sky-600 flex items-center gap-1"><i data-lucide="arrow-up" class="w-4 h-4"></i><span data-i18n="footer.top">回到顶部</span></a>
+    <div class="max-w-6xl mx-auto px-4 py-8">
+      <div class="flex flex-col md:flex-row items-center justify-between gap-6">
+        <div class="text-sm text-gray-600 dark:text-gray-400">© <span x-text="new Date().getFullYear()"></span> Lucas Jin. All rights reserved.</div>
+        <div class="flex items-center gap-6 text-sm">
+          <a :href="mailtoHref" class="flex items-center gap-2 hover:text-sky-600 transition-colors">
+            <i data-lucide="mail" class="w-4 h-4"></i>
+            <span>{{ email }}</span>
+          </a>
+          <a :href="links.github" target="_blank" class="flex items-center gap-2 hover:text-sky-600 transition-colors">
+            <i data-lucide="github" class="w-4 h-4"></i>
+            <span>GitHub</span>
+          </a>
+          <a :href="links.scholar" target="_blank" class="flex items-center gap-2 hover:text-sky-600 transition-colors">
+            <i data-lucide="graduation-cap" class="w-4 h-4"></i>
+            <span>Google Scholar</span>
+          </a>
+          <a :href="links.arxiv" target="_blank" class="flex items-center gap-2 hover:text-sky-600 transition-colors">
+            <i data-lucide="file-text" class="w-4 h-4"></i>
+            <span>arXiv</span>
+          </a>
+          <a :href="links.twitter" target="_blank" class="flex items-center gap-2 hover:text-sky-600 transition-colors">
+            <i data-lucide="twitter" class="w-4 h-4"></i>
+            <span>Twitter</span>
+          </a>
+        </div>
       </div>
     </div>
   </footer>
@@ -483,9 +492,10 @@ ${this.contact.message||""}
               const card = document.createElement('a');
               card.href = r.html_url; card.target = '_blank';
               card.className = 'p-5 rounded-2xl border border-gray-200 dark:border-gray-800 hover:bg-gray-50 dark:hover:bg-gray-800 block';
+              const displayName = r.name.replace(/\.github\.io$/i, '');
               card.innerHTML = `
                 <div class=\"flex items-center justify-between\">
-                  <div class=\"font-semibold\">${r.name}</div>
+                  <div class=\"font-semibold\">${displayName}</div>
                   <div class=\"text-xs text-gray-500\">★ ${r.stargazers_count}</div>
                 </div>
                 <p class=\"mt-2 text-sm text-gray-600 dark:text-gray-300 line-clamp-3\">${r.description || ''}</p>
