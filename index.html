@@ -3,25 +3,64 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Lucas Jin — Research & AI</title>
-  <meta name="description" content="Lucas Jin (金启航) — Research homepage for AI/ML, vision-language models, adapters, diagnostics, and more." />
+  <title>Lucas Jin (金启航) — AI Research | VLM, ULRA, Long-Context</title>
+  <meta name="description" content="Lucas Jin (金启航) — M.Eng. student at USTC·IAT focusing on Vision-Language Models, efficient fine-tuning (ULRA), and long-context modeling. Open to RA/PhD opportunities." />
+  <meta name="keywords" content="Lucas Jin, 金启航, AI research, VLM, Vision-Language Models, ULRA, USTC, machine learning, deep learning, multimodal AI" />
+  <meta name="author" content="Lucas Jin" />
   <meta name="theme-color" content="#0ea5e9" />
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://Lucas-Jin-Qh.github.io/" />
+  <meta property="og:title" content="Lucas Jin (金启航) — AI Research" />
+  <meta property="og:description" content="M.Eng. student at USTC·IAT focusing on Vision-Language Models, efficient fine-tuning, and long-context modeling." />
+  <meta property="og:image" content="https://Lucas-Jin-Qh.github.io/top.png" />
+  
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image" />
+  <meta property="twitter:url" content="https://Lucas-Jin-Qh.github.io/" />
+  <meta property="twitter:title" content="Lucas Jin (金启航) — AI Research" />
+  <meta property="twitter:description" content="M.Eng. student at USTC·IAT focusing on Vision-Language Models, efficient fine-tuning, and long-context modeling." />
+  <meta property="twitter:image" content="https://Lucas-Jin-Qh.github.io/top.png" />
+  <meta name="twitter:creator" content="@Qh_Jin_Lucas" />
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🔬</text></svg>">
+  
+  <!-- Preconnect for performance -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://cdn.tailwindcss.com">
+  <link rel="preconnect" href="https://cdn.jsdelivr.net">
+  <link rel="preconnect" href="https://unpkg.com">
+  <link rel="dns-prefetch" href="https://api.github.com">
+  
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  
   <!-- TailwindCSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
   <!-- Alpine.js for small interactivity -->
   <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
   <!-- Lucide Icons -->
   <script src="https://unpkg.com/lucide@latest"></script>
+  
   <style>
     html, body {font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji";}
     .prose a { text-decoration: underline; text-underline-offset: 3px; }
     .glass { backdrop-filter: blur(8px); background: rgba(255,255,255,0.65);}
     .dark .glass { background: rgba(17,24,39,0.5); }
+    /* Smooth loading animation */
+    @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+    body { animation: fadeIn 0.3s ease-in; }
+    /* Image lazy loading optimization */
+    img { content-visibility: auto; }
   </style>
+  
+  <!-- RSS Feed -->
   <link rel="alternate" type="application/rss+xml" title="Lucas Jin — News" href="/feed.xml" />
+  <!-- Sitemap -->
+  <link rel="sitemap" type="application/xml" title="Sitemap" href="/sitemap.xml" />
+  <!-- Canonical URL -->
+  <link rel="canonical" href="https://Lucas-Jin-Qh.github.io/" />
 </head>
 <body x-data="app()" x-init="init()" :class="{dark: darkMode}" class="bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100">
   <!-- ================= NAVBAR ================= -->
@@ -90,15 +129,20 @@
         </div>
         <div class="relative">
           <div class="aspect-square rounded-3xl bg-gradient-to-tr from-sky-100 to-indigo-100 dark:from-sky-900/30 dark:to-indigo-900/20 p-2">
-            <img src="https://avatars.githubusercontent.com/u/98234173?v=4" alt="Avatar" class="w-full h-full object-cover rounded-2xl">
+            <img src="./top.png" 
+                 alt="Lucas Jin (金启航) - AI Researcher" 
+                 loading="lazy"
+                 width="400"
+                 height="400"
+                 class="w-full h-full object-cover rounded-2xl">
           </div>
           <div class="absolute -bottom-6 -right-4 md:-right-6 bg-white/80 dark:bg-gray-900/80 glass border border-gray-200 dark:border-gray-800 rounded-2xl p-4 shadow-lg">
-            <div class="text-xs text-gray-500" data-i18n="hero.interests">当前研究兴趣</div>
+            <div class="text-xs text-gray-500" data-i18n="hero.interests">研究兴趣</div>
             <div class="mt-1 flex flex-wrap gap-2">
-              <span class="px-2 py-1 rounded-full bg-gray-100 dark:bg-gray-800 text-xs">VLM</span>
-              <span class="px-2 py-1 rounded-full bg-gray-100 dark:bg-gray-800 text-xs">ULRA</span>
-              <span class="px-2 py-1 rounded-full bg-gray-100 dark:bg-gray-800 text-xs" data-i18n="tags.longctx">长上下文</span>
-              <span class="px-2 py-1 rounded-full bg-gray-100 dark:bg-gray-800 text-xs" data-i18n="tags.systems">系统优化</span>
+              <span class="px-2 py-1 rounded-full bg-gray-100 dark:bg-gray-800 text-xs">视觉-语言模型</span>
+              <span class="px-2 py-1 rounded-full bg-gray-100 dark:bg-gray-800 text-xs">模型优化</span>
+              <span class="px-2 py-1 rounded-full bg-gray-100 dark:bg-gray-800 text-xs">多模态AI</span>
+              <span class="px-2 py-1 rounded-full bg-gray-100 dark:bg-gray-800 text-xs">深度学习</span>
             </div>
           </div>
         </div>
@@ -113,13 +157,12 @@
       <p class="mt-3 text-gray-600 dark:text-gray-300 max-w-3xl" data-i18n="about.body">目前就读/工作于 USTC · IAT，与临床/产业伙伴合作，关注 视觉-语言模型的可靠性与效率。我的长期目标是构建低成本、可解释、跨模态泛化的基础模型与评测工具。</p>
       <div class="mt-6 grid md:grid-cols-3 gap-6">
         <div class="p-5 rounded-2xl border border-gray-200 dark:border-gray-800">
-          <div class="text-sm text-gray-500" data-i18n="about.keywords">关键词</div>
+          <div class="text-sm text-gray-500" data-i18n="about.keywords">研究方向</div>
           <div class="mt-2 flex flex-wrap gap-2">
-            <span class="px-2 py-1 rounded-full bg-gray-100 dark:bg-gray-800 text-xs">VRI/VRST</span>
-            <span class="px-2 py-1 rounded-full bg-gray-100 dark:bg-gray-800 text-xs">LIT</span>
-            <span class="px-2 py-1 rounded-full bg-gray-100 dark:bg-gray-800 text-xs">HySSM-Pyramid</span>
-            <span class="px-2 py-1 rounded-full bg-gray-100 dark:bg-gray-800 text-xs">ULRA/J-ORA/QISA</span>
-            <span class="px-2 py-1 rounded-full bg-gray-100 dark:bg-gray-800 text-xs">DeepSeek-OCR</span>
+            <span class="px-2 py-1 rounded-full bg-gray-100 dark:bg-gray-800 text-xs">视觉-语言模型</span>
+            <span class="px-2 py-1 rounded-full bg-gray-100 dark:bg-gray-800 text-xs">模型优化</span>
+            <span class="px-2 py-1 rounded-full bg-gray-100 dark:bg-gray-800 text-xs">多模态学习</span>
+            <span class="px-2 py-1 rounded-full bg-gray-100 dark:bg-gray-800 text-xs">模型对齐</span>
           </div>
         </div>
         <div class="p-5 rounded-2xl border border-gray-200 dark:border-gray-800">
@@ -133,7 +176,7 @@
         <div class="p-5 rounded-2xl border border-gray-200 dark:border-gray-800">
           <div class="text-sm text-gray-500" data-i18n="about.links">简历 & 链接</div>
           <div class="mt-2 flex flex-wrap gap-3 text-sm">
-            <a href="./static/CV_LucasJin.pdf" class="underline" data-i18n="about.cv">CV</a>
+            <a href="./Qihang Jin_Resume.pdf" class="underline" data-i18n="about.cv">CV</a>
             <a :href="links.github" class="underline">GitHub</a>
             <a :href="links.scholar" class="underline">Google Scholar</a>
             <a :href="links.arxiv" class="underline">arXiv</a>
@@ -266,49 +309,19 @@
   <!-- ================= DATA (Inline fallback; can be overridden by /data/*.json) ================= -->
   <script id="site-data" type="application/json">
   {
-    $1qihangjin@mail.ustc.edu.cn$2
+    "email": "qihangjin@mail.ustc.edu.cn",
     "links": {
-      $1https://github.com/Lucas-Jin-Qh",
-      $1https://scholar.google.com/citations?user=pSvQSKsAAAAJ&hl=en",
-      $1https://arxiv.org/a/lucas10358.html",
+      "github": "https://github.com/Lucas-Jin-Qh",
+      "scholar": "https://scholar.google.com/citations?user=pSvQSKsAAAAJ&hl=en",
+      "arxiv": "https://arxiv.org/a/lucas10358.html",
       "orcid": "https://orcid.org/",
-      $1https://x.com/Qh_Jin_Lucas"
+      "twitter": "https://x.com/Qh_Jin_Lucas"
     },
-    "news": [
-      {"date": "2025-10-25", "text": "发布 VRST/LIT 指标工具箱 v0.4，支持 LLaVA/InternVL。", "link": "#"},
-      {"date": "2025-10-20", "text": "在 IROS 2025 交流 VLM 诊断与长上下文经验。", "link": "#"}
-    ],
-    "publications": [
-      {
-        "title": "HySSM-Pyramid: Hierarchical State Space Models for Vision",
-        "authors": "Lucas Jin*, ...",
-        "venue": "arXiv 2025",
-        "pdf": "#",
-        "code": "https://github.com/Lucas-Jin-Qh/HySSM-Pyramid",
-        "tags": ["SSM", "Vision", "Hierarchical"],
-        "year": 2025,
-        "bibtex": "@article{jin2025hyssm, title={HySSM-Pyramid}, author={Jin, Lucas and others}, journal={arXiv}, year={2025}}"
-      },
-      {
-        "title": "VRST/LIT: Diagnosing Visual Reliance in VLMs",
-        "authors": "Lucas Jin*, ...",
-        "venue": "Preprint 2025",
-        "pdf": "#",
-        "code": "#",
-        "tags": ["VLM", "Evaluation", "Reliance"],
-        "year": 2025,
-        "bibtex": "@article{jin2025vrst, title={VRST/LIT}, author={Jin, Lucas and others}, journal={arXiv}, year={2025}}"
-      }
-    ],
-    "talks": [
-      {"date": "2025-10-21", "title": "Long-context VLM Diagnostics", "event": "IROS Spotlight", "link": "#"}
-    ],
-    "teaching": [
-      {"date": "2025-Spring", "title": "Deep Learning Systems (TA)", "org": "USTC"}
-    ],
-    "service": [
-      {"year": "2025", "role": "Reviewer", "venue": "CVPR/NeurIPS"}
-    ]
+    "news": [],
+    "publications": [],
+    "talks": [],
+    "teaching": [],
+    "service": []
   }
   </script>
 
@@ -319,9 +332,9 @@
       "ui": {"light": "切换到浅色", "dark": "切换到深色"},
       "nav": {"about":"关于我","news":"动态","pubs":"论文","projects":"项目","talks":"报告/教学","contact":"联系"},
       "cta": {"collab":"合作交流"},
-      "hero": {"badge":"AI/ML · 视觉-语言 · 高效训练","desc":"深度学习研究员，专注于多模态基础模型（VLM）、高效微调（LoRA/Adapters/ULRA）、长上下文建模与诊断（VRST/LIT），探索从方法到系统的全链路优化。","viewPubs":"查看论文","viewProjects":"项目与代码","contact":"联系/合作","interests":"当前研究兴趣"},
+      "hero": {"badge":"AI/ML · 视觉-语言 · 高效训练","desc":"AI研究生，就读于 USTC · IAT（电子与信息工程 M.Eng.），专注多模态基础模型与高效优化；目前开放 RA/合作与 2026 入学 PhD 机会。","viewPubs":"查看论文","viewProjects":"项目与代码","contact":"联系/合作","interests":"当前研究兴趣"},
       "tags": {"longctx":"长上下文","systems":"系统优化"},
-      "about": {"title":"关于我","body":"目前就读/工作于 USTC · IAT，与临床/产业伙伴合作，关注 视觉-语言模型的可靠性与效率。我的长期目标是构建低成本、可解释、跨模态泛化的基础模型与评测工具。","keywords":"关键词","collab":"合作机会","c1":"VLM鲁棒性评测与对抗/诊断工具","c2":"高效微调与跨域迁移（医学/工业）","c3":"长文档/多图多页场景理解","links":"简历 & 链接","cv":"CV"},
+      "about": {"title":"关于我","body":"目前在中国科学技术大学（USTC）先进技术研究院攻读硕士（电子与信息工程），研究方向涵盖 VLM 可靠性与效率、长上下文与对齐机制；正在寻求 RA 与 PhD 机会。","keywords":"关键词","collab":"合作机会","c1":"VLM鲁棒性评测与对抗/诊断工具","c2":"高效微调与跨域迁移（医学/工业）","c3":"长文档/多图多页场景理解","links":"简历 & 链接","cv":"CV"},
       "news": {"title":"近期动态"},
       "pubs": {"title":"论文 Publications","searchPH":"搜索标题/作者/关键词…","allYears":"全部年份","toggleBib":"切换BibTeX"},
       "projects": {"title":"项目 Projects","auto":"自动载入自","loading":"正在加载仓库…"},
@@ -333,9 +346,9 @@
       "ui": {"light": "Switch to light", "dark": "Switch to dark"},
       "nav": {"about":"About","news":"News","pubs":"Publications","projects":"Projects","talks":"Talks/Teaching","contact":"Contact"},
       "cta": {"collab":"Collaborate"},
-      "hero": {"badge":"AI/ML · Vision-Language · Efficient Training","desc":"AI researcher focusing on multimodal foundation models (VLMs), efficient fine-tuning (LoRA/Adapters/ULRA), long-context modeling and diagnostics (VRST/LIT), with end-to-end system thinking.","viewPubs":"View Publications","viewProjects":"Projects & Code","contact":"Contact/Collab","interests":"Current Interests"},
+      "hero": {"badge":"AI/ML · Vision-Language · Efficient Training","desc":"M.Eng. student at USTC · IAT focusing on multimodal foundation models and efficient optimization; open to RA roles and PhD applications (2026 intake).","viewPubs":"View Publications","viewProjects":"Projects & Code","contact":"Contact/Collab","interests":"Current Interests"},
       "tags": {"longctx":"Long Context","systems":"Systems"},
-      "about": {"title":"About","body":"Affiliated with USTC · IAT. I work with clinical/industry partners on reliability & efficiency of VLMs. Long-term goal: low-cost, interpretable, cross-modal generalization and evaluation tools.","keywords":"Keywords","collab":"Collaboration","c1":"VLM robustness evaluation & diagnostics","c2":"Efficient finetuning & cross-domain transfer (medical/industrial)","c3":"Long-document / multi-image understanding","links":"CV & Links","cv":"CV"},
+      "about": {"title":"About","body":"Pursuing M.Eng. at USTC (Institute of Advanced Technology). Research on VLM reliability/efficiency, long-context and alignment. Actively seeking RA and PhD opportunities.","keywords":"Keywords","collab":"Collaboration","c1":"VLM robustness evaluation & diagnostics","c2":"Efficient finetuning & cross-domain transfer (medical/industrial)","c3":"Long-document / multi-image understanding","links":"CV & Links","cv":"CV"},
       "news": {"title":"News"},
       "pubs": {"title":"Publications","searchPH":"Search title/authors/keywords…","allYears":"All years","toggleBib":"Toggle BibTeX"},
       "projects": {"title":"Projects","auto":"Auto from","loading":"Loading repos…"},
