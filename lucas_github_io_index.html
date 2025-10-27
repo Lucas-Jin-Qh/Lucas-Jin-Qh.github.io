@@ -21,6 +21,7 @@
     .glass { backdrop-filter: blur(8px); background: rgba(255,255,255,0.65);}
     .dark .glass { background: rgba(17,24,39,0.5); }
   </style>
+  <link rel="alternate" type="application/rss+xml" title="Lucas Jin — News" href="/feed.xml" />
 </head>
 <body x-data="app()" x-init="init()" :class="{dark: darkMode}" class="bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100">
   <!-- ================= NAVBAR ================= -->
@@ -147,7 +148,7 @@
     <div class="max-w-6xl mx-auto px-4 py-12">
       <div class="flex items-center justify-between">
         <h2 class="text-2xl font-bold" data-i18n="news.title">近期动态</h2>
-        <div class="text-sm text-gray-500">RSS: <a href="#" class="underline">/feed.xml</a></div>
+        <div class="text-sm text-gray-500">RSS: <a href="/feed.xml" class="underline">/feed.xml</a></div>
       </div>
       <div class="mt-4 grid md:grid-cols-2 gap-4" x-ref="newsList"></div>
     </div>
@@ -265,13 +266,13 @@
   <!-- ================= DATA (Inline fallback; can be overridden by /data/*.json) ================= -->
   <script id="site-data" type="application/json">
   {
-    "email": "lucas@example.com",
+    $1qihangjin@mail.ustc.edu.cn$2
     "links": {
-      "github": "https://github.com/Lucas-Jin-Qh",
-      "scholar": "https://scholar.google.com/",
-      "arxiv": "https://arxiv.org/a/",
+      $1https://github.com/Lucas-Jin-Qh",
+      $1https://scholar.google.com/citations?user=pSvQSKsAAAAJ&hl=en",
+      $1https://arxiv.org/a/lucas10358.html",
       "orcid": "https://orcid.org/",
-      "twitter": "https://x.com/"
+      $1https://x.com/Qh_Jin_Lucas"
     },
     "news": [
       {"date": "2025-10-25", "text": "发布 VRST/LIT 指标工具箱 v0.4，支持 LLaVA/InternVL。", "link": "#"},

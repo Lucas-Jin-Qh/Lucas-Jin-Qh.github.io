@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+  <channel>
+    <title>Lucas Jin — News</title>
+    <link>https://Lucas-Jin-Qh.github.io/</link>
+    <description>Updates from Lucas Jin</description>
+    <language>zh-CN</language>
+    <lastBuildDate>Mon, 27 Oct 2025 12:00:00 +0000</lastBuildDate>
+
+    <!-- 示例动态条目：按时间倒序添加 -->
+    <item>
+      <title>发布 VRST/LIT 指标工具箱 v0.4（支持 LLaVA/InternVL）</title>
+      <link>https://Lucas-Jin-Qh.github.io/#news</link>
+      <guid>news-2025-10-25-vrst-lit-v0.4</guid>
+      <pubDate>Sat, 25 Oct 2025 00:00:00 +0000</pubDate>
+      <description>新增兼容与评测脚本。</description>
+    </item>
+
+    <item>
+      <title>IROS 2025：VLM 诊断与长上下文实践分享</title>
+      <link>https://Lucas-Jin-Qh.github.io/#talks</link>
+      <guid>news-2025-10-20-iros</guid>
+      <pubDate>Mon, 20 Oct 2025 00:00:00 +0000</pubDate>
+      <description>Slides/notes 即将整理。</description>
+    </item>
+  </channel>
+</rss>
