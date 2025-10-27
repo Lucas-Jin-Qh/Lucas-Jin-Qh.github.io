@@ -2,13 +2,13 @@
   {
     "title": "From Memory to Alignment: A Comprehensive Review of Large Language Model Optimization",
     "zhTitle": "从记忆到对齐：大语言模型优化综述",
-    "authors": "Second Author: Qihang Jin (Lucas)",
+    "authors": "Enze Ge, Qihang Jin, Yuhang Xie, et al.",
     "venue": "IEEE TechRxiv (preprint)",
     "year": 2025,
     "pdf": "https://www.techrxiv.org/users/887679/articles/1342552-from-memory-to-alignment-a-comprehensive-review-of-large-language-model-optimization",
     "code": "",
     "tags": ["Survey", "LLM", "Optimization"],
-    "bibtex": "@article{jin2025memory,\n  title={From Memory to Alignment: A Comprehensive Review of Large Language Model Optimization},\n  author={Jin, Qihang},\n  journal={IEEE TechRxiv},\n  year={2025},\n  note={preprint},\n  url={https://www.techrxiv.org/users/887679/articles/1342552-from-memory-to-alignment-a-comprehensive-review-of-large-language-model-optimization}\n}",
+    "bibtex": "@article{ge2025memory,\n  title={From Memory to Alignment: A Comprehensive Review of Large Language Model Optimization},\n  author={Ge, Enze and Jin, Qihang and Xie, Yuhang and others},\n  journal={TechRxiv},\n  year={2025},\n  month={October},\n  day={21},\n  publisher={TechRxiv},\n  note={preprint},\n  doi={10.36227/techrxiv.176107630.07942950/v1},\n  url={https://www.techrxiv.org/users/887679/articles/1342552-from-memory-to-alignment-a-comprehensive-review-of-large-language-model-optimization}\n}",
     "abstract": "This survey provides a comprehensive review of large language model optimization techniques, covering methods from memory efficiency to alignment mechanisms. We systematically analyze various optimization approaches including efficient training, fine-tuning strategies, and alignment methods that improve model performance while reducing computational costs.",
     "zhAbstract": "本综述全面回顾了大语言模型优化技术，涵盖从内存效率到对齐机制的方法。我们系统分析了高效训练、微调策略和对齐方法等优化方法，这些方法在降低计算成本的同时提高了模型性能。"
   },
