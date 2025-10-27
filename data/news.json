@@ -1,4 +1,7 @@
 [
-  {"date":"2025-10-25","text":"发布 VRST/LIT 工具箱 v0.4，支持 LLaVA/InternVL。","link":"#"},
-  {"date":"2025-10-20","text":"IROS 2025 交流 VLM 诊断与长上下文经验。","link":"#"}
+  {
+    "date": "2025-10-27",
+    "text": "TechRxiv 预印本上线：From Memory to Alignment — A Comprehensive Review of LLM Optimization（第二作者）",
+    "link": "https://www.techrxiv.org/users/887679/articles/1342552-from-memory-to-alignment-a-comprehensive-review-of-large-language-model-optimization"
+  }
 ]

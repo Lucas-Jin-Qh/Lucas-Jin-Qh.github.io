@@ -1,14 +1,35 @@
 [
   {
-    "title": "HySSM-Pyramid: Hierarchical State Space Models for Vision",
-    "zhTitle": "HySSM-Pyramid：分层状态空间视觉模型",
-    "authors": "Lucas Jin*, ...",
-    "venue": "arXiv 2025",
-    "enVenue": "arXiv 2025",
-    "pdf": "https://arxiv.org/pdf/xxxx.xxxxx",
-    "code": "https://github.com/Lucas-Jin-Qh/HySSM-Pyramid",
-    "tags": ["SSM","Vision","Hierarchical"],
+    "title": "From Memory to Alignment: A Comprehensive Review of Large Language Model Optimization",
+    "zhTitle": "从记忆到对齐：大语言模型优化综述",
+    "authors": "Second Author: Qihang Jin (Lucas)",
+    "venue": "IEEE TechRxiv (preprint)",
     "year": 2025,
-    "bibtex": "@article{...}"
+    "pdf": "https://www.techrxiv.org/users/887679/articles/1342552-from-memory-to-alignment-a-comprehensive-review-of-large-language-model-optimization",
+    "code": "",
+    "tags": ["Survey", "LLM", "Optimization"],
+    "bibtex": ""
+  },
+  {
+    "title": "Effect of Brain-Computer Interface on Limb Motor Function after Intracerebral Hemorrhage in Basal Ganglia and Its Rehabilitation Mechanism",
+    "zhTitle": "脑出血后脑机接口对肢体运动功能的影响与康复机制",
+    "authors": "Qihang Jin et al.",
+    "venue": "Under review",
+    "year": 2025,
+    "pdf": "",
+    "code": "",
+    "tags": ["BCI", "Rehabilitation"],
+    "bibtex": ""
+  },
+  {
+    "title": "Multimodal Representation Learning and Fusion",
+    "zhTitle": "多模态表示学习与融合",
+    "authors": "Qihang Jin et al.",
+    "venue": "Under review",
+    "year": 2025,
+    "pdf": "",
+    "code": "",
+    "tags": ["Multimodal"],
+    "bibtex": ""
   }
 ]
