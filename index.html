@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Lucas Jin (金启航) — AI Researcher | Vision-Language Models, Multimodal Learning, Model Optimization</title>
-  <meta name="description" content="Lucas Jin (金启航) — AI Researcher at USTC·IAT specializing in Vision-Language Models, multimodal representation learning, and efficient model optimization. Contributing to cutting-edge AI research with publications in top venues." />
+  <title>Lucas Jin (金启航) — Graduate Student | Vision-Language Models, Multimodal Learning, Model Optimization</title>
+  <meta name="description" content="Lucas Jin (金启航) — Graduate student in Computer Technology at USTC·IAT focusing on Vision-Language Models, multimodal representation learning, and efficient model optimization. Aspiring AI researcher with growing publication record." />
   <meta name="keywords" content="Lucas Jin, 金启航, AI researcher, Vision-Language Models, multimodal learning, model optimization, USTC, machine learning, deep learning, computer vision, natural language processing" />
   <meta name="author" content="Lucas Jin" />
   <meta name="theme-color" content="#0ea5e9" />
@@ -12,15 +12,15 @@
   <!-- Open Graph / Facebook -->
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://Lucas-Jin-Qh.github.io/" />
-  <meta property="og:title" content="Lucas Jin (金启航) — AI Researcher" />
-  <meta property="og:description" content="AI Researcher at USTC·IAT specializing in Vision-Language Models, multimodal learning, and model optimization. Contributing to cutting-edge AI research." />
+  <meta property="og:title" content="Lucas Jin (金启航) — Graduate Student" />
+  <meta property="og:description" content="Graduate student in Computer Technology at USTC·IAT focusing on Vision-Language Models, multimodal learning, and model optimization. Aspiring AI researcher." />
   <meta property="og:image" content="https://Lucas-Jin-Qh.github.io/top.png" />
   
   <!-- Twitter -->
   <meta property="twitter:card" content="summary_large_image" />
   <meta property="twitter:url" content="https://Lucas-Jin-Qh.github.io/" />
-  <meta property="twitter:title" content="Lucas Jin (金启航) — AI Researcher" />
-  <meta property="twitter:description" content="AI Researcher at USTC·IAT specializing in Vision-Language Models, multimodal learning, and model optimization. Contributing to cutting-edge AI research." />
+  <meta property="twitter:title" content="Lucas Jin (金启航) — Graduate Student" />
+  <meta property="twitter:description" content="Graduate student in Computer Technology at USTC·IAT focusing on Vision-Language Models, multimodal learning, and model optimization. Aspiring AI researcher." />
   <meta property="twitter:image" content="https://Lucas-Jin-Qh.github.io/top.png" />
   <meta name="twitter:creator" content="@Qh_Jin_Lucas" />
   <!-- Favicon -->
@@ -62,7 +62,7 @@
   <!-- Canonical URL -->
   <link rel="canonical" href="https://Lucas-Jin-Qh.github.io/" />
 </head>
-<body x-data="app()" x-init="init()" :class="{dark: darkMode}" class="bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100">
+<body x-data="app()" x-init="init()" :class="darkMode ? 'dark' : ''" class="bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100">
   <!-- ================= NAVBAR ================= -->
   <header class="sticky top-0 z-50 border-b border-gray-200/60 dark:border-gray-800/60 bg-white/80 dark:bg-gray-900/70 glass">
     <div class="max-w-6xl mx-auto px-4">
@@ -118,9 +118,9 @@
               <span class="block text-blue-600 dark:text-blue-400">金启航</span>
             </h1>
             <p class="mt-4 text-xl text-gray-600 dark:text-gray-300 leading-relaxed">
-              AI Researcher at USTC·IAT specializing in <strong>Vision-Language Models</strong>, 
+              Graduate student in Computer Technology at USTC·IAT focusing on <strong>Vision-Language Models</strong>, 
               <strong>multimodal representation learning</strong>, and <strong>efficient model optimization</strong>. 
-              Contributing to cutting-edge AI research with publications in top venues.
+              Aspiring AI researcher with growing publication record and research contributions.
             </p>
           </div>
           
@@ -298,13 +298,13 @@
         <div>
           <h2 class="text-3xl font-bold text-gray-900 dark:text-white mb-6">About</h2>
           <p class="text-lg text-gray-600 dark:text-gray-300 leading-relaxed mb-6">
-            I am an AI Researcher at the University of Science and Technology of China (USTC), 
+            I am a graduate student in Computer Technology at the University of Science and Technology of China (USTC), 
             Institute of Advanced Technology. My research focuses on developing cutting-edge 
             AI systems that can understand and process multimodal information efficiently.
           </p>
           <p class="text-gray-600 dark:text-gray-300 leading-relaxed mb-8">
             Currently pursuing my M.Eng. degree, I am actively contributing to the field through 
-            publications in top venues and collaborations with leading researchers. I am applying 
+            publications and collaborations with leading researchers. I am applying 
             for PhD programs starting Fall 2027 and am open to research assistant positions 
             (remote or summer on-site).
           </p>
@@ -385,8 +385,8 @@
       <div class="text-center mb-12">
         <h2 class="text-3xl font-bold text-gray-900 dark:text-white mb-4">Publications</h2>
         <p class="text-lg text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
-          My research contributions span multiple areas of AI, with publications in top-tier venues 
-          and ongoing work in cutting-edge technologies.
+          My research contributions span multiple areas of AI, with publications and ongoing work 
+          in cutting-edge technologies and methodologies.
         </p>
       </div>
 
@@ -486,7 +486,7 @@
                 Send Message
               </button>
               <span class="text-sm text-gray-500">Or email directly:</span>
-              <a :href="mailtoHref" class="text-blue-600 hover:text-blue-700 font-medium">{{ email }}</a>
+              <a :href="mailtoHref" class="text-blue-600 hover:text-blue-700 font-medium" x-text="email || 'qihangjin@mail.ustc.edu.cn'">qihangjin@mail.ustc.edu.cn</a>
             </div>
             <p x-show="contactSent" class="text-sm text-green-600">
               <i data-lucide="check-circle" class="w-4 h-4 inline mr-2"></i>
@@ -507,7 +507,7 @@
                 </div>
                 <div>
                   <div class="font-medium text-gray-900 dark:text-white">Email</div>
-                  <a :href="mailtoHref" class="text-blue-600 hover:text-blue-700">{{ email }}</a>
+                  <a :href="mailtoHref" class="text-blue-600 hover:text-blue-700" x-text="email || 'qihangjin@mail.ustc.edu.cn'">qihangjin@mail.ustc.edu.cn</a>
                 </div>
               </div>
               <div class="flex items-center gap-4">
@@ -566,7 +566,7 @@
         <div>
           <h3 class="text-xl font-bold mb-4">Lucas Jin</h3>
           <p class="text-gray-400 mb-4">
-            AI Researcher specializing in Vision-Language Models, multimodal learning, and model optimization.
+            Graduate student in Computer Technology specializing in Vision-Language Models, multimodal learning, and model optimization.
           </p>
           <div class="flex items-center gap-4">
             <a :href="links.github" class="text-gray-400 hover:text-white transition-colors">
@@ -601,7 +601,7 @@
           <div class="space-y-2 text-gray-400">
             <div class="flex items-center gap-2">
               <i data-lucide="mail" class="w-4 h-4"></i>
-              <a :href="mailtoHref" class="hover:text-white transition-colors">{{ email }}</a>
+              <a :href="mailtoHref" class="hover:text-white transition-colors" x-text="email || 'qihangjin@mail.ustc.edu.cn'">qihangjin@mail.ustc.edu.cn</a>
             </div>
             <div class="flex items-center gap-2">
               <i data-lucide="map-pin" class="w-4 h-4"></i>
@@ -678,12 +678,19 @@ ${this.contact.message||""}
           this.darkMode = localStorage.getItem('theme') === 'dark' || window.matchMedia('(prefers-color-scheme: dark)').matches;
           document.documentElement.classList.toggle('dark', this.darkMode);
 
-
           // data load (external overrides)
           const dataInline = JSON.parse(document.getElementById('site-data').textContent);
           const dataExternal = await this.tryFetchJSON('/data/site-data.json');
           const data = dataExternal ? Object.assign({}, dataInline, dataExternal) : dataInline;
-          this.email = data.email; this.links = data.links;
+          this.email = data.email; 
+          this.links = data.links;
+          
+          // Force Alpine.js to update the DOM
+          this.$nextTick(() => {
+            // Trigger reactivity update
+            this.email = data.email;
+            this.links = data.links;
+          });
 
           // news (override file takes precedence)
           const newsExternal = await this.tryFetchJSON('/data/news.json');
@@ -709,7 +716,15 @@ ${this.contact.message||""}
 
         },
 
-        toggleDark(){ this.darkMode = !this.darkMode; document.documentElement.classList.toggle('dark', this.darkMode); localStorage.setItem('theme', this.darkMode?'dark':'light'); window.lucide?.createIcons(); },
+        toggleDark(){ 
+          this.darkMode = !this.darkMode; 
+          document.documentElement.classList.toggle('dark', this.darkMode); 
+          localStorage.setItem('theme', this.darkMode?'dark':'light'); 
+          // Force Alpine.js reactivity update
+          this.$nextTick(() => {
+            window.lucide?.createIcons(); 
+          });
+        },
         toggleBibtex(){ this.showBibtex = !this.showBibtex; this.filterPubs(); },
         filterPubs(){
           const q = this.pubQuery.toLowerCase();
@@ -802,7 +817,7 @@ ${this.contact.message||""}
       "https://arxiv.org/a/lucas10358.html",
       "https://x.com/Qh_Jin_Lucas"
     ],
-    "jobTitle": "AI Researcher",
+    "jobTitle": "Graduate Student",
     "affiliation": {
       "@type": "Organization", 
       "name": "University of Science and Technology of China",
