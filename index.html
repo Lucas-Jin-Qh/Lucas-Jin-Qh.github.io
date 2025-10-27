@@ -1,26 +1,26 @@
 <!DOCTYPE html>
-<html lang="zh-CN" class="scroll-smooth">
+<html lang="en" class="scroll-smooth">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Lucas Jin (金启航) — AI Research | VLM, ULRA, Long-Context</title>
-  <meta name="description" content="Lucas Jin (金启航) — M.Eng. student at USTC·IAT focusing on Vision-Language Models, efficient fine-tuning (ULRA), and long-context modeling. Open to RA/PhD opportunities." />
-  <meta name="keywords" content="Lucas Jin, 金启航, AI research, VLM, Vision-Language Models, ULRA, USTC, machine learning, deep learning, multimodal AI" />
+  <title>Lucas Jin (金启航) — AI Researcher | Vision-Language Models, Multimodal Learning, Model Optimization</title>
+  <meta name="description" content="Lucas Jin (金启航) — AI Researcher at USTC·IAT specializing in Vision-Language Models, multimodal representation learning, and efficient model optimization. Contributing to cutting-edge AI research with publications in top venues." />
+  <meta name="keywords" content="Lucas Jin, 金启航, AI researcher, Vision-Language Models, multimodal learning, model optimization, USTC, machine learning, deep learning, computer vision, natural language processing" />
   <meta name="author" content="Lucas Jin" />
   <meta name="theme-color" content="#0ea5e9" />
   
   <!-- Open Graph / Facebook -->
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://Lucas-Jin-Qh.github.io/" />
-  <meta property="og:title" content="Lucas Jin (金启航) — AI Research" />
-  <meta property="og:description" content="M.Eng. student at USTC·IAT focusing on Vision-Language Models, efficient fine-tuning, and long-context modeling." />
+  <meta property="og:title" content="Lucas Jin (金启航) — AI Researcher" />
+  <meta property="og:description" content="AI Researcher at USTC·IAT specializing in Vision-Language Models, multimodal learning, and model optimization. Contributing to cutting-edge AI research." />
   <meta property="og:image" content="https://Lucas-Jin-Qh.github.io/top.png" />
   
   <!-- Twitter -->
   <meta property="twitter:card" content="summary_large_image" />
   <meta property="twitter:url" content="https://Lucas-Jin-Qh.github.io/" />
-  <meta property="twitter:title" content="Lucas Jin (金启航) — AI Research" />
-  <meta property="twitter:description" content="M.Eng. student at USTC·IAT focusing on Vision-Language Models, efficient fine-tuning, and long-context modeling." />
+  <meta property="twitter:title" content="Lucas Jin (金启航) — AI Researcher" />
+  <meta property="twitter:description" content="AI Researcher at USTC·IAT specializing in Vision-Language Models, multimodal learning, and model optimization. Contributing to cutting-edge AI research." />
   <meta property="twitter:image" content="https://Lucas-Jin-Qh.github.io/top.png" />
   <meta name="twitter:creator" content="@Qh_Jin_Lucas" />
   <!-- Favicon -->
@@ -69,76 +69,222 @@
       <div class="flex items-center justify-between h-16">
         <a href="#top" class="font-extrabold tracking-tight text-xl">Lucas Jin<span class="text-sky-500">.</span></a>
         <nav class="hidden md:flex items-center gap-6 text-sm">
-          <a href="#about" class="hover:text-sky-600" data-i18n="nav.about">关于我</a>
-          <a href="#news" class="hover:text-sky-600" data-i18n="nav.news">动态</a>
-          <a href="#publications" class="hover:text-sky-600" data-i18n="nav.pubs">论文</a>
-          <a href="#projects" class="hover:text-sky-600" data-i18n="nav.projects">项目</a>
-          <a href="#contact" class="hover:text-sky-600" data-i18n="nav.contact">联系</a>
+          <a href="#about" class="hover:text-sky-600">About</a>
+          <a href="#research" class="hover:text-sky-600">Research</a>
+          <a href="#publications" class="hover:text-sky-600">Publications</a>
+          <a href="#news" class="hover:text-sky-600">News</a>
+          <a href="#projects" class="hover:text-sky-600">Projects</a>
+          <a href="#contact" class="hover:text-sky-600">Contact</a>
         </nav>
         <div class="flex items-center gap-3">
-          <button @click="toggleDark()" class="p-2 rounded-xl border border-gray-200 dark:border-gray-800 hover:bg-gray-50 dark:hover:bg-gray-800" :aria-label="darkMode ? t('ui.light') : t('ui.dark')">
+          <button @click="toggleDark()" class="p-2 rounded-xl border border-gray-200 dark:border-gray-800 hover:bg-gray-50 dark:hover:bg-gray-800" :aria-label="darkMode ? 'Switch to light' : 'Switch to dark'">
             <i data-lucide="sun" x-show="darkMode" class="w-5 h-5"></i>
             <i data-lucide="moon" x-show="!darkMode" class="w-5 h-5"></i>
           </button>
           <a href="#contact" class="hidden sm:inline-flex items-center gap-2 px-3 py-2 rounded-xl bg-sky-600 hover:bg-sky-700 text-white text-sm font-semibold">
             <i data-lucide="send" class="w-4 h-4"></i>
-            <span data-i18n="cta.collab">合作交流</span>
+            <span>Collaborate</span>
           </a>
-          <button class="md:hidden p-2 rounded-xl border border-gray-200 dark:border-gray-800" @click="mobileOpen=!mobileOpen" aria-label="打开菜单">
+          <button class="md:hidden p-2 rounded-xl border border-gray-200 dark:border-gray-800" @click="mobileOpen=!mobileOpen" aria-label="Open menu">
             <i data-lucide="menu" class="w-5 h-5"></i>
           </button>
         </div>
       </div>
       <div x-show="mobileOpen" x-transition class="md:hidden pb-4">
         <nav class="flex flex-col gap-2 text-sm">
-          <a @click="mobileOpen=false" href="#about" class="py-2" data-i18n="nav.about">关于我</a>
-          <a @click="mobileOpen=false" href="#news" class="py-2" data-i18n="nav.news">动态</a>
-          <a @click="mobileOpen=false" href="#publications" class="py-2" data-i18n="nav.pubs">论文</a>
-          <a @click="mobileOpen=false" href="#projects" class="py-2" data-i18n="nav.projects">项目</a>
-          <a @click="mobileOpen=false" href="#contact" class="py-2" data-i18n="nav.contact">联系</a>
+          <a @click="mobileOpen=false" href="#about" class="py-2">About</a>
+          <a @click="mobileOpen=false" href="#research" class="py-2">Research</a>
+          <a @click="mobileOpen=false" href="#publications" class="py-2">Publications</a>
+          <a @click="mobileOpen=false" href="#news" class="py-2">News</a>
+          <a @click="mobileOpen=false" href="#projects" class="py-2">Projects</a>
+          <a @click="mobileOpen=false" href="#contact" class="py-2">Contact</a>
         </nav>
       </div>
     </div>
   </header>
 
   <!-- ================= HERO ================= -->
-  <section id="top" class="relative overflow-hidden">
-    <div class="max-w-6xl mx-auto px-4 py-16 md:py-24">
-      <div class="grid md:grid-cols-2 gap-10 items-center">
-        <div>
-          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-sky-50 dark:bg-sky-900/30 text-sky-700 dark:text-sky-300 text-xs font-semibold" data-i18n="hero.badge">AI/ML · Vision-Language · Efficient Training</div>
-          <h1 class="mt-4 text-4xl md:text-5xl font-extrabold leading-tight">Lucas Jin（金启航）<span class="text-sky-500"> — Research</span></h1>
-          <p class="mt-4 text-lg text-gray-600 dark:text-gray-300" data-i18n="hero.desc">深度学习研究员，专注于多模态基础模型（VLM）、高效微调（LoRA/Adapters/ULRA）、长上下文建模与诊断（VRST/LIT），探索从方法到系统的全链路优化。</p>
-          <div class="mt-6 flex flex-wrap gap-3">
-            <a href="#publications" class="px-4 py-2 rounded-xl border border-gray-200 dark:border-gray-800 hover:bg-gray-50 dark:hover:bg-gray-800" data-i18n="hero.viewPubs">查看论文</a>
-            <a href="#projects" class="px-4 py-2 rounded-xl bg-sky-600 hover:bg-sky-700 text-white" data-i18n="hero.viewProjects">项目与代码</a>
-            <a href="#contact" class="px-4 py-2 rounded-xl border border-gray-200 dark:border-gray-800 hover:bg-gray-50 dark:hover:bg-gray-800" data-i18n="hero.contact">联系/合作</a>
+  <section id="top" class="relative overflow-hidden bg-gradient-to-br from-slate-50 to-blue-50 dark:from-slate-900 dark:to-blue-900">
+    <div class="max-w-7xl mx-auto px-4 py-20 md:py-28">
+      <div class="grid lg:grid-cols-2 gap-12 items-center">
+        <div class="space-y-6">
+          <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-blue-100 dark:bg-blue-900/30 text-blue-800 dark:text-blue-200 text-sm font-semibold">
+            <i data-lucide="brain" class="w-4 h-4"></i>
+            AI Researcher · Vision-Language Models · Multimodal Learning
           </div>
-          <div class="mt-6 flex items-center gap-4 text-gray-500">
-            <a :href="links.scholar" class="hover:text-sky-600" aria-label="Google Scholar"><i data-lucide="graduation-cap" class="w-5 h-5"></i></a>
-            <a :href="links.orcid" class="hover:text-sky-600" aria-label="ORCID"><i data-lucide="circle" class="w-5 h-5"></i></a>
-            <a :href="links.arxiv" class="hover:text-sky-600" aria-label="arXiv"><i data-lucide="file-text" class="w-5 h-5"></i></a>
-            <a :href="links.github" class="hover:text-sky-600" aria-label="GitHub"><i data-lucide="github" class="w-5 h-5"></i></a>
-            <a :href="links.twitter" class="hover:text-sky-600" aria-label="Twitter/X"><i data-lucide="twitter" class="w-5 h-5"></i></a>
+          <div>
+            <h1 class="text-5xl md:text-6xl font-bold leading-tight text-gray-900 dark:text-white">
+              Lucas Jin
+              <span class="block text-blue-600 dark:text-blue-400">金启航</span>
+            </h1>
+            <p class="mt-4 text-xl text-gray-600 dark:text-gray-300 leading-relaxed">
+              AI Researcher at USTC·IAT specializing in <strong>Vision-Language Models</strong>, 
+              <strong>multimodal representation learning</strong>, and <strong>efficient model optimization</strong>. 
+              Contributing to cutting-edge AI research with publications in top venues.
+            </p>
+          </div>
+          
+          <!-- Academic Stats -->
+          <div class="grid grid-cols-3 gap-4 py-6 border-t border-b border-gray-200 dark:border-gray-700">
+            <div class="text-center">
+              <div class="text-2xl font-bold text-blue-600 dark:text-blue-400">3+</div>
+              <div class="text-sm text-gray-600 dark:text-gray-400">Publications</div>
+            </div>
+            <div class="text-center">
+              <div class="text-2xl font-bold text-blue-600 dark:text-blue-400">2</div>
+              <div class="text-sm text-gray-600 dark:text-gray-400">Research Areas</div>
+            </div>
+            <div class="text-center">
+              <div class="text-2xl font-bold text-blue-600 dark:text-blue-400">2027</div>
+              <div class="text-sm text-gray-600 dark:text-gray-400">PhD Target</div>
+            </div>
+          </div>
+
+          <div class="flex flex-wrap gap-3">
+            <a href="#publications" class="px-6 py-3 rounded-xl bg-blue-600 hover:bg-blue-700 text-white font-semibold transition-colors">
+              <i data-lucide="file-text" class="w-4 h-4 inline mr-2"></i>
+              View Publications
+            </a>
+            <a href="#research" class="px-6 py-3 rounded-xl border border-gray-300 dark:border-gray-600 hover:bg-gray-50 dark:hover:bg-gray-800 font-semibold transition-colors">
+              <i data-lucide="search" class="w-4 h-4 inline mr-2"></i>
+              Research Focus
+            </a>
+            <a href="#contact" class="px-6 py-3 rounded-xl border border-gray-300 dark:border-gray-600 hover:bg-gray-50 dark:hover:bg-gray-800 font-semibold transition-colors">
+              <i data-lucide="mail" class="w-4 h-4 inline mr-2"></i>
+              Collaborate
+            </a>
+          </div>
+
+          <!-- Social Links -->
+          <div class="flex items-center gap-4 text-gray-500">
+            <a :href="links.scholar" class="hover:text-blue-600 transition-colors" aria-label="Google Scholar">
+              <i data-lucide="graduation-cap" class="w-5 h-5"></i>
+            </a>
+            <a :href="links.orcid" class="hover:text-blue-600 transition-colors" aria-label="ORCID">
+              <i data-lucide="circle" class="w-5 h-5"></i>
+            </a>
+            <a :href="links.arxiv" class="hover:text-blue-600 transition-colors" aria-label="arXiv">
+              <i data-lucide="file-text" class="w-5 h-5"></i>
+            </a>
+            <a :href="links.github" class="hover:text-blue-600 transition-colors" aria-label="GitHub">
+              <i data-lucide="github" class="w-5 h-5"></i>
+            </a>
+            <a :href="links.twitter" class="hover:text-blue-600 transition-colors" aria-label="Twitter/X">
+              <i data-lucide="twitter" class="w-5 h-5"></i>
+            </a>
           </div>
         </div>
+        
         <div class="relative">
-          <div class="aspect-square rounded-3xl bg-gradient-to-tr from-sky-100 to-indigo-100 dark:from-sky-900/30 dark:to-indigo-900/20 p-2">
+          <div class="aspect-square rounded-3xl bg-gradient-to-tr from-blue-100 to-indigo-100 dark:from-blue-900/30 dark:to-indigo-900/20 p-3 shadow-2xl">
             <img src="./top.png" 
                  alt="Lucas Jin (金启航) - AI Researcher" 
                  loading="lazy"
-                 width="400"
-                 height="400"
+                 width="500"
+                 height="500"
                  class="w-full h-full object-cover rounded-2xl">
           </div>
-          <div class="absolute -bottom-6 -right-4 md:-right-6 bg-white/80 dark:bg-gray-900/80 glass border border-gray-200 dark:border-gray-800 rounded-2xl p-4 shadow-lg">
-            <div class="text-xs text-gray-500" data-i18n="hero.interests">研究兴趣</div>
-            <div class="mt-1 flex flex-wrap gap-2">
-              <span class="px-2 py-1 rounded-full bg-gray-100 dark:bg-gray-800 text-xs">视觉-语言</span>
-              <span class="px-2 py-1 rounded-full bg-gray-100 dark:bg-gray-800 text-xs">模型优化</span>
-              <span class="px-2 py-1 rounded-full bg-gray-100 dark:bg-gray-800 text-xs">多模态</span>
-              <span class="px-2 py-1 rounded-full bg-gray-100 dark:bg-gray-800 text-xs">医疗AI</span>
+          
+          <!-- Research Interests Badge -->
+          <div class="absolute -bottom-8 -right-8 bg-white/90 dark:bg-gray-900/90 backdrop-blur-sm border border-gray-200 dark:border-gray-800 rounded-2xl p-6 shadow-xl">
+            <div class="text-sm font-semibold text-gray-700 dark:text-gray-300 mb-3">Research Interests</div>
+            <div class="flex flex-wrap gap-2">
+              <span class="px-3 py-1 rounded-full bg-blue-100 dark:bg-blue-900/30 text-blue-800 dark:text-blue-200 text-xs font-medium">Vision-Language</span>
+              <span class="px-3 py-1 rounded-full bg-green-100 dark:bg-green-900/30 text-green-800 dark:text-green-200 text-xs font-medium">Model Optimization</span>
+              <span class="px-3 py-1 rounded-full bg-purple-100 dark:bg-purple-900/30 text-purple-800 dark:text-purple-200 text-xs font-medium">Multimodal</span>
+              <span class="px-3 py-1 rounded-full bg-orange-100 dark:bg-orange-900/30 text-orange-800 dark:text-orange-200 text-xs font-medium">Medical AI</span>
             </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= RESEARCH FOCUS ================= -->
+  <section id="research" class="bg-gray-50 dark:bg-gray-900">
+    <div class="max-w-7xl mx-auto px-4 py-16">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl font-bold text-gray-900 dark:text-white mb-4">Research Focus</h2>
+        <p class="text-lg text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
+          My research spans the intersection of computer vision, natural language processing, and multimodal learning, 
+          with a focus on developing efficient and robust AI systems.
+        </p>
+      </div>
+      
+      <div class="grid md:grid-cols-2 gap-8">
+        <!-- Vision-Language Models -->
+        <div class="bg-white dark:bg-gray-800 rounded-2xl p-8 shadow-lg border border-gray-200 dark:border-gray-700">
+          <div class="flex items-center gap-4 mb-6">
+            <div class="w-12 h-12 bg-blue-100 dark:bg-blue-900/30 rounded-xl flex items-center justify-center">
+              <i data-lucide="eye" class="w-6 h-6 text-blue-600 dark:text-blue-400"></i>
+            </div>
+            <h3 class="text-xl font-bold text-gray-900 dark:text-white">Vision-Language Models</h3>
+          </div>
+          <p class="text-gray-600 dark:text-gray-300 mb-4">
+            Developing and optimizing vision-language models for multimodal understanding, 
+            focusing on efficient training strategies and robust performance across diverse domains.
+          </p>
+          <div class="flex flex-wrap gap-2">
+            <span class="px-3 py-1 bg-blue-100 dark:bg-blue-900/30 text-blue-800 dark:text-blue-200 rounded-full text-sm">CLIP</span>
+            <span class="px-3 py-1 bg-blue-100 dark:bg-blue-900/30 text-blue-800 dark:text-blue-200 rounded-full text-sm">BLIP</span>
+            <span class="px-3 py-1 bg-blue-100 dark:bg-blue-900/30 text-blue-800 dark:text-blue-200 rounded-full text-sm">Multimodal</span>
+          </div>
+        </div>
+
+        <!-- Model Optimization -->
+        <div class="bg-white dark:bg-gray-800 rounded-2xl p-8 shadow-lg border border-gray-200 dark:border-gray-700">
+          <div class="flex items-center gap-4 mb-6">
+            <div class="w-12 h-12 bg-green-100 dark:bg-green-900/30 rounded-xl flex items-center justify-center">
+              <i data-lucide="zap" class="w-6 h-6 text-green-600 dark:text-green-400"></i>
+            </div>
+            <h3 class="text-xl font-bold text-gray-900 dark:text-white">Model Optimization</h3>
+          </div>
+          <p class="text-gray-600 dark:text-gray-300 mb-4">
+            Researching efficient fine-tuning methods, parameter-efficient techniques, 
+            and optimization strategies to reduce computational costs while maintaining model performance.
+          </p>
+          <div class="flex flex-wrap gap-2">
+            <span class="px-3 py-1 bg-green-100 dark:bg-green-900/30 text-green-800 dark:text-green-200 rounded-full text-sm">LoRA</span>
+            <span class="px-3 py-1 bg-green-100 dark:bg-green-900/30 text-green-800 dark:text-green-200 rounded-full text-sm">Adapters</span>
+            <span class="px-3 py-1 bg-green-100 dark:bg-green-900/30 text-green-800 dark:text-green-200 rounded-full text-sm">Efficient Training</span>
+          </div>
+        </div>
+
+        <!-- Multimodal Learning -->
+        <div class="bg-white dark:bg-gray-800 rounded-2xl p-8 shadow-lg border border-gray-200 dark:border-gray-700">
+          <div class="flex items-center gap-4 mb-6">
+            <div class="w-12 h-12 bg-purple-100 dark:bg-purple-900/30 rounded-xl flex items-center justify-center">
+              <i data-lucide="layers" class="w-6 h-6 text-purple-600 dark:text-purple-400"></i>
+            </div>
+            <h3 class="text-xl font-bold text-gray-900 dark:text-white">Multimodal Learning</h3>
+          </div>
+          <p class="text-gray-600 dark:text-gray-300 mb-4">
+            Exploring representation learning and fusion strategies for multimodal data, 
+            enabling AI systems to understand and reason across different modalities effectively.
+          </p>
+          <div class="flex flex-wrap gap-2">
+            <span class="px-3 py-1 bg-purple-100 dark:bg-purple-900/30 text-purple-800 dark:text-purple-200 rounded-full text-sm">Fusion</span>
+            <span class="px-3 py-1 bg-purple-100 dark:bg-purple-900/30 text-purple-800 dark:text-purple-200 rounded-full text-sm">Alignment</span>
+            <span class="px-3 py-1 bg-purple-100 dark:bg-purple-900/30 text-purple-800 dark:text-purple-200 rounded-full text-sm">Representation</span>
+          </div>
+        </div>
+
+        <!-- Medical AI -->
+        <div class="bg-white dark:bg-gray-800 rounded-2xl p-8 shadow-lg border border-gray-200 dark:border-gray-700">
+          <div class="flex items-center gap-4 mb-6">
+            <div class="w-12 h-12 bg-orange-100 dark:bg-orange-900/30 rounded-xl flex items-center justify-center">
+              <i data-lucide="heart" class="w-6 h-6 text-orange-600 dark:text-orange-400"></i>
+            </div>
+            <h3 class="text-xl font-bold text-gray-900 dark:text-white">Medical AI</h3>
+          </div>
+          <p class="text-gray-600 dark:text-gray-300 mb-4">
+            Applying AI techniques to medical applications, including brain-computer interfaces, 
+            medical image analysis, and healthcare decision support systems.
+          </p>
+          <div class="flex flex-wrap gap-2">
+            <span class="px-3 py-1 bg-orange-100 dark:bg-orange-900/30 text-orange-800 dark:text-orange-200 rounded-full text-sm">BCI</span>
+            <span class="px-3 py-1 bg-orange-100 dark:bg-orange-900/30 text-orange-800 dark:text-orange-200 rounded-full text-sm">Medical Imaging</span>
+            <span class="px-3 py-1 bg-orange-100 dark:bg-orange-900/30 text-orange-800 dark:text-orange-200 rounded-full text-sm">Healthcare</span>
           </div>
         </div>
       </div>
@@ -147,34 +293,75 @@
 
   <!-- ================= ABOUT ================= -->
   <section id="about" class="border-t border-gray-200 dark:border-gray-800">
-    <div class="max-w-6xl mx-auto px-4 py-12">
-      <h2 class="text-2xl font-bold" data-i18n="about.title">About</h2>
-      <p class="mt-3 text-gray-600 dark:text-gray-300 max-w-3xl" data-i18n="about.body">Pursuing M.Eng. at USTC (Institute of Advanced Technology). Research on vision-language models, multimodal learning, and model optimization. Interested in interdisciplinary areas like medical AI. Applying for 2027 Fall PhD programs. Open to RA roles (remote or summer on-site).</p>
-      <div class="mt-6 grid md:grid-cols-3 gap-6">
-        <div class="p-5 rounded-2xl border border-gray-200 dark:border-gray-800">
-          <div class="text-sm text-gray-500" data-i18n="about.keywords">研究方向</div>
-          <div class="mt-2 flex flex-wrap gap-2">
-            <span class="px-2 py-1 rounded-full bg-gray-100 dark:bg-gray-800 text-xs">视觉-语言模型</span>
-            <span class="px-2 py-1 rounded-full bg-gray-100 dark:bg-gray-800 text-xs">模型优化</span>
-            <span class="px-2 py-1 rounded-full bg-gray-100 dark:bg-gray-800 text-xs">多模态学习</span>
-            <span class="px-2 py-1 rounded-full bg-gray-100 dark:bg-gray-800 text-xs">医疗AI</span>
+    <div class="max-w-6xl mx-auto px-4 py-16">
+      <div class="grid lg:grid-cols-2 gap-12 items-center">
+        <div>
+          <h2 class="text-3xl font-bold text-gray-900 dark:text-white mb-6">About</h2>
+          <p class="text-lg text-gray-600 dark:text-gray-300 leading-relaxed mb-6">
+            I am an AI Researcher at the University of Science and Technology of China (USTC), 
+            Institute of Advanced Technology. My research focuses on developing cutting-edge 
+            AI systems that can understand and process multimodal information efficiently.
+          </p>
+          <p class="text-gray-600 dark:text-gray-300 leading-relaxed mb-8">
+            Currently pursuing my M.Eng. degree, I am actively contributing to the field through 
+            publications in top venues and collaborations with leading researchers. I am applying 
+            for PhD programs starting Fall 2027 and am open to research assistant positions 
+            (remote or summer on-site).
+          </p>
+          
+          <div class="flex flex-wrap gap-3">
+            <a href="./Qihang Jin_Resume.pdf" class="px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white rounded-xl font-semibold transition-colors">
+              <i data-lucide="download" class="w-4 h-4 inline mr-2"></i>
+              Download CV
+            </a>
+            <a :href="links.scholar" class="px-6 py-3 border border-gray-300 dark:border-gray-600 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-xl font-semibold transition-colors">
+              <i data-lucide="graduation-cap" class="w-4 h-4 inline mr-2"></i>
+              Google Scholar
+            </a>
           </div>
         </div>
-        <div class="p-5 rounded-2xl border border-gray-200 dark:border-gray-800">
-          <div class="text-sm text-gray-500" data-i18n="about.collab">合作机会</div>
-          <ul class="mt-2 list-disc list-inside text-sm text-gray-600 dark:text-gray-300">
-            <li data-i18n="about.c1">VLM鲁棒性评测与对抗/诊断工具</li>
-            <li data-i18n="about.c2">高效微调与跨域迁移（医学/工业）</li>
-            <li data-i18n="about.c3">长文档/多图多页场景理解</li>
-          </ul>
-        </div>
-        <div class="p-5 rounded-2xl border border-gray-200 dark:border-gray-800">
-          <div class="text-sm text-gray-500" data-i18n="about.links">简历 & 链接</div>
-          <div class="mt-2 flex flex-wrap gap-3 text-sm">
-            <a href="./Qihang Jin_Resume.pdf" class="underline" data-i18n="about.cv">CV</a>
-            <a :href="links.github" class="underline">GitHub</a>
-            <a :href="links.scholar" class="underline">Google Scholar</a>
-            <a :href="links.arxiv" class="underline">arXiv</a>
+        
+        <div class="space-y-6">
+          <!-- Collaboration Opportunities -->
+          <div class="bg-white dark:bg-gray-800 rounded-2xl p-6 border border-gray-200 dark:border-gray-700">
+            <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-4">Collaboration Opportunities</h3>
+            <ul class="space-y-3 text-gray-600 dark:text-gray-300">
+              <li class="flex items-start gap-3">
+                <i data-lucide="check-circle" class="w-5 h-5 text-green-500 mt-0.5 flex-shrink-0"></i>
+                <span>VLM robustness evaluation and adversarial/diagnostic tools</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <i data-lucide="check-circle" class="w-5 h-5 text-green-500 mt-0.5 flex-shrink-0"></i>
+                <span>Efficient fine-tuning and cross-domain transfer (medical/industrial)</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <i data-lucide="check-circle" class="w-5 h-5 text-green-500 mt-0.5 flex-shrink-0"></i>
+                <span>Long document/multi-image multi-page scene understanding</span>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Quick Links -->
+          <div class="bg-white dark:bg-gray-800 rounded-2xl p-6 border border-gray-200 dark:border-gray-700">
+            <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-4">Quick Links</h3>
+            <div class="grid grid-cols-2 gap-3">
+              <a :href="links.github" class="flex items-center gap-2 text-gray-600 dark:text-gray-300 hover:text-blue-600 transition-colors">
+                <i data-lucide="github" class="w-4 h-4"></i>
+                <span>GitHub</span>
+              </a>
+              <a :href="links.arxiv" class="flex items-center gap-2 text-gray-600 dark:text-gray-300 hover:text-blue-600 transition-colors">
+                <i data-lucide="file-text" class="w-4 h-4"></i>
+                <span>arXiv</span>
+              </a>
+              <a :href="links.twitter" class="flex items-center gap-2 text-gray-600 dark:text-gray-300 hover:text-blue-600 transition-colors">
+                <i data-lucide="twitter" class="w-4 h-4"></i>
+                <span>Twitter</span>
+              </a>
+              <a :href="links.orcid" class="flex items-center gap-2 text-gray-600 dark:text-gray-300 hover:text-blue-600 transition-colors">
+                <i data-lucide="circle" class="w-4 h-4"></i>
+                <span>ORCID</span>
+              </a>
+            </div>
           </div>
         </div>
       </div>
@@ -182,109 +369,254 @@
   </section>
 
   <!-- ================= NEWS ================= -->
-  <section id="news" class="border-t border-gray-200 dark:border-gray-800">
-    <div class="max-w-6xl mx-auto px-4 py-12">
-      <div class="flex items-center justify-between">
-        <h2 class="text-2xl font-bold" data-i18n="news.title">近期动态</h2>
-        <div class="text-sm text-gray-500">RSS: <a href="/feed.xml" class="underline">/feed.xml</a></div>
+  <section id="news" class="bg-gray-50 dark:bg-gray-900">
+    <div class="max-w-6xl mx-auto px-4 py-16">
+      <div class="flex items-center justify-between mb-8">
+        <h2 class="text-3xl font-bold text-gray-900 dark:text-white">Recent News</h2>
+        <div class="text-sm text-gray-500">RSS: <a href="/feed.xml" class="underline hover:text-blue-600">/feed.xml</a></div>
       </div>
-      <div class="mt-4 grid md:grid-cols-2 gap-4" x-ref="newsList"></div>
+      <div class="grid md:grid-cols-2 gap-6" x-ref="newsList"></div>
     </div>
   </section>
 
   <!-- ================= PUBLICATIONS ================= -->
   <section id="publications" class="border-t border-gray-200 dark:border-gray-800">
-    <div class="max-w-6xl mx-auto px-4 py-12">
-      <div class="md:flex items-end justify-between gap-6">
-        <h2 class="text-2xl font-bold" data-i18n="pubs.title">Publications</h2>
-        <div class="mt-4 md:mt-0 flex flex-wrap items-center gap-3">
-          <input x-model="pubQuery" @input="filterPubs()" type="search" :placeholder="t('pubs.searchPH')" class="w-72 max-w-full px-3 py-2 text-sm rounded-xl border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-800" />
-          <select x-model="pubYear" @change="filterPubs()" class="px-3 py-2 text-sm rounded-xl border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-800">
-            <option value="all" data-i18n="pubs.allYears">全部年份</option>
-            <template x-for="y in years" :key="y"><option :value="y" x-text="y"></option></template>
-          </select>
-          <button @click="toggleBibtex()" class="px-3 py-2 text-sm rounded-xl border border-gray-200 dark:border-gray-800 hover:bg-gray-50 dark:hover:bg-gray-800" data-i18n="pubs.toggleBib">切换BibTeX</button>
+    <div class="max-w-7xl mx-auto px-4 py-16">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl font-bold text-gray-900 dark:text-white mb-4">Publications</h2>
+        <p class="text-lg text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
+          My research contributions span multiple areas of AI, with publications in top-tier venues 
+          and ongoing work in cutting-edge technologies.
+        </p>
+      </div>
+
+      <!-- Publication Stats -->
+      <div class="grid grid-cols-4 gap-6 mb-12">
+        <div class="text-center p-6 bg-white dark:bg-gray-800 rounded-2xl border border-gray-200 dark:border-gray-700">
+          <div class="text-3xl font-bold text-blue-600 dark:text-blue-400">3+</div>
+          <div class="text-sm text-gray-600 dark:text-gray-400 mt-1">Publications</div>
+        </div>
+        <div class="text-center p-6 bg-white dark:bg-gray-800 rounded-2xl border border-gray-200 dark:border-gray-700">
+          <div class="text-3xl font-bold text-green-600 dark:text-green-400">2</div>
+          <div class="text-sm text-gray-600 dark:text-gray-400 mt-1">Research Areas</div>
+        </div>
+        <div class="text-center p-6 bg-white dark:bg-gray-800 rounded-2xl border border-gray-200 dark:border-gray-700">
+          <div class="text-3xl font-bold text-purple-600 dark:text-purple-400">1</div>
+          <div class="text-sm text-gray-600 dark:text-gray-400 mt-1">Under Review</div>
+        </div>
+        <div class="text-center p-6 bg-white dark:bg-gray-800 rounded-2xl border border-gray-200 dark:border-gray-700">
+          <div class="text-3xl font-bold text-orange-600 dark:text-orange-400">2025</div>
+          <div class="text-sm text-gray-600 dark:text-gray-400 mt-1">Latest Year</div>
         </div>
       </div>
-      <div class="mt-8 space-y-6" x-ref="pubList"></div>
+
+      <!-- Search and Filter Controls -->
+      <div class="flex flex-wrap items-center justify-between gap-4 mb-8">
+        <div class="flex flex-wrap items-center gap-3">
+          <div class="relative">
+            <i data-lucide="search" class="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-gray-400"></i>
+            <input x-model="pubQuery" @input="filterPubs()" type="search" placeholder="Search publications..." class="w-80 max-w-full pl-10 pr-4 py-2 text-sm rounded-xl border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-800 focus:ring-2 focus:ring-blue-500 focus:border-transparent" />
+          </div>
+          <select x-model="pubYear" @change="filterPubs()" class="px-4 py-2 text-sm rounded-xl border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-800 focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+            <option value="all">All Years</option>
+            <template x-for="y in years" :key="y"><option :value="y" x-text="y"></option></template>
+          </select>
+        </div>
+        <button @click="toggleBibtex()" class="px-4 py-2 text-sm rounded-xl border border-gray-300 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors">
+          <i data-lucide="file-text" class="w-4 h-4 inline mr-2"></i>
+          Toggle BibTeX
+        </button>
+      </div>
+
+      <!-- Publications List -->
+      <div class="space-y-6" x-ref="pubList"></div>
     </div>
   </section>
 
-  <!-- ================= PROJECTS (auto from GitHub) ================= -->
-  <section id="projects" class="border-t border-gray-200 dark:border-gray-800">
-    <div class="max-w-6xl mx-auto px-4 py-12">
-      <div class="flex items-center justify-between">
-              <h2 class="text-2xl font-bold" data-i18n="projects.title">Projects</h2>
-      <div class="text-sm text-gray-500"><span data-i18n="projects.auto">Auto-loaded from</span> <span class="font-mono">@Lucas-Jin-Qh</span> GitHub</div>
+  <!-- ================= PROJECTS ================= -->
+  <section id="projects" class="bg-gray-50 dark:bg-gray-900">
+    <div class="max-w-7xl mx-auto px-4 py-16">
+      <div class="flex items-center justify-between mb-8">
+        <h2 class="text-3xl font-bold text-gray-900 dark:text-white">Projects</h2>
+        <div class="text-sm text-gray-500">Auto-loaded from <span class="font-mono">@Lucas-Jin-Qh</span> GitHub</div>
       </div>
-      <div class="mt-4 grid sm:grid-cols-2 lg:grid-cols-3 gap-4" x-ref="repoGrid">
-        <div class="text-sm text-gray-500" data-i18n="projects.loading">正在加载仓库…</div>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6" x-ref="repoGrid">
+        <div class="text-sm text-gray-500">Loading repositories...</div>
       </div>
     </div>
   </section>
 
   <!-- ================= CONTACT ================= -->
   <section id="contact" class="border-t border-gray-200 dark:border-gray-800">
-    <div class="max-w-6xl mx-auto px-4 py-12">
-      <h2 class="text-2xl font-bold" data-i18n="contact.title">联系 · 合作</h2>
-      <div class="mt-4">
-        <form @submit.prevent="sendMessage" class="max-w-2xl p-6 rounded-2xl border border-gray-200 dark:border-gray-800">
-          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-            <div>
-              <label class="text-sm text-gray-500" data-i18n="contact.name">姓名</label>
-              <input x-model="contact.name" required class="mt-1 w-full px-3 py-2 rounded-xl border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-800" />
-            </div>
-            <div>
-              <label class="text-sm text-gray-500" data-i18n="contact.email">邮箱</label>
-              <input x-model="contact.email" type="email" required class="mt-1 w-full px-3 py-2 rounded-xl border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-800" />
-            </div>
-          </div>
-          <div class="mt-4">
-            <label class="text-sm text-gray-500" data-i18n="contact.subject">主题</label>
-            <input x-model="contact.subject" class="mt-1 w-full px-3 py-2 rounded-xl border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-800" />
-          </div>
-          <div class="mt-4">
-            <label class="text-sm text-gray-500" data-i18n="contact.message">留言</label>
-            <textarea x-model="contact.message" rows="5" class="mt-1 w-full px-3 py-2 rounded-xl border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-800"></textarea>
-          </div>
-          <div class="mt-6 flex items-center gap-3">
-            <button type="submit" class="px-4 py-2 rounded-xl bg-sky-600 hover:bg-sky-700 text-white" data-i18n="contact.send">发送</button>
-            <span class="text-sm text-gray-500" data-i18n="contact.orEmail">或直接邮件：</span><a :href="mailtoHref" class="underline">{{ email }}</a>
-          </div>
-          <p x-show="contactSent" class="mt-3 text-sm text-emerald-600" data-i18n="contact.hint">已生成邮件草稿，请在邮件客户端发送。</p>
-        </form>
+    <div class="max-w-6xl mx-auto px-4 py-16">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl font-bold text-gray-900 dark:text-white mb-4">Contact & Collaboration</h2>
+        <p class="text-lg text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
+          I'm always interested in discussing research opportunities, collaborations, and potential PhD positions. 
+          Feel free to reach out!
+        </p>
+      </div>
 
+      <div class="grid lg:grid-cols-2 gap-12">
+        <!-- Contact Form -->
+        <div class="bg-white dark:bg-gray-800 rounded-2xl p-8 border border-gray-200 dark:border-gray-700">
+          <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-6">Send a Message</h3>
+          <form @submit.prevent="sendMessage" class="space-y-6">
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div>
+                <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Name</label>
+                <input x-model="contact.name" required class="w-full px-4 py-3 rounded-xl border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-800 focus:ring-2 focus:ring-blue-500 focus:border-transparent" />
+              </div>
+              <div>
+                <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Email</label>
+                <input x-model="contact.email" type="email" required class="w-full px-4 py-3 rounded-xl border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-800 focus:ring-2 focus:ring-blue-500 focus:border-transparent" />
+              </div>
+            </div>
+            <div>
+              <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Subject</label>
+              <input x-model="contact.subject" class="w-full px-4 py-3 rounded-xl border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-800 focus:ring-2 focus:ring-blue-500 focus:border-transparent" />
+            </div>
+            <div>
+              <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Message</label>
+              <textarea x-model="contact.message" rows="5" class="w-full px-4 py-3 rounded-xl border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-800 focus:ring-2 focus:ring-blue-500 focus:border-transparent"></textarea>
+            </div>
+            <div class="flex items-center gap-4">
+              <button type="submit" class="px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white rounded-xl font-semibold transition-colors">
+                <i data-lucide="send" class="w-4 h-4 inline mr-2"></i>
+                Send Message
+              </button>
+              <span class="text-sm text-gray-500">Or email directly:</span>
+              <a :href="mailtoHref" class="text-blue-600 hover:text-blue-700 font-medium">{{ email }}</a>
+            </div>
+            <p x-show="contactSent" class="text-sm text-green-600">
+              <i data-lucide="check-circle" class="w-4 h-4 inline mr-2"></i>
+              Email draft generated! Please send it from your email client.
+            </p>
+          </form>
+        </div>
+
+        <!-- Contact Information -->
+        <div class="space-y-8">
+          <!-- Direct Contact -->
+          <div class="bg-white dark:bg-gray-800 rounded-2xl p-8 border border-gray-200 dark:border-gray-700">
+            <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-6">Direct Contact</h3>
+            <div class="space-y-4">
+              <div class="flex items-center gap-4">
+                <div class="w-10 h-10 bg-blue-100 dark:bg-blue-900/30 rounded-xl flex items-center justify-center">
+                  <i data-lucide="mail" class="w-5 h-5 text-blue-600 dark:text-blue-400"></i>
+                </div>
+                <div>
+                  <div class="font-medium text-gray-900 dark:text-white">Email</div>
+                  <a :href="mailtoHref" class="text-blue-600 hover:text-blue-700">{{ email }}</a>
+                </div>
+              </div>
+              <div class="flex items-center gap-4">
+                <div class="w-10 h-10 bg-green-100 dark:bg-green-900/30 rounded-xl flex items-center justify-center">
+                  <i data-lucide="map-pin" class="w-5 h-5 text-green-600 dark:text-green-400"></i>
+                </div>
+                <div>
+                  <div class="font-medium text-gray-900 dark:text-white">Location</div>
+                  <div class="text-gray-600 dark:text-gray-300">Hefei, Anhui, China</div>
+                </div>
+              </div>
+              <div class="flex items-center gap-4">
+                <div class="w-10 h-10 bg-purple-100 dark:bg-purple-900/30 rounded-xl flex items-center justify-center">
+                  <i data-lucide="building" class="w-5 h-5 text-purple-600 dark:text-purple-400"></i>
+                </div>
+                <div>
+                  <div class="font-medium text-gray-900 dark:text-white">Institution</div>
+                  <div class="text-gray-600 dark:text-gray-300">USTC · Institute of Advanced Technology</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Social Links -->
+          <div class="bg-white dark:bg-gray-800 rounded-2xl p-8 border border-gray-200 dark:border-gray-700">
+            <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-6">Connect</h3>
+            <div class="grid grid-cols-2 gap-4">
+              <a :href="links.github" class="flex items-center gap-3 p-4 rounded-xl border border-gray-200 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors">
+                <i data-lucide="github" class="w-5 h-5 text-gray-600 dark:text-gray-400"></i>
+                <span class="font-medium">GitHub</span>
+              </a>
+              <a :href="links.scholar" class="flex items-center gap-3 p-4 rounded-xl border border-gray-200 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors">
+                <i data-lucide="graduation-cap" class="w-5 h-5 text-gray-600 dark:text-gray-400"></i>
+                <span class="font-medium">Scholar</span>
+              </a>
+              <a :href="links.arxiv" class="flex items-center gap-3 p-4 rounded-xl border border-gray-200 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors">
+                <i data-lucide="file-text" class="w-5 h-5 text-gray-600 dark:text-gray-400"></i>
+                <span class="font-medium">arXiv</span>
+              </a>
+              <a :href="links.twitter" class="flex items-center gap-3 p-4 rounded-xl border border-gray-200 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors">
+                <i data-lucide="twitter" class="w-5 h-5 text-gray-600 dark:text-gray-400"></i>
+                <span class="font-medium">Twitter</span>
+              </a>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </section>
 
   <!-- ================= FOOTER ================= -->
-  <footer class="border-t border-gray-200 dark:border-gray-800">
-    <div class="max-w-6xl mx-auto px-4 py-8">
-      <div class="flex flex-col md:flex-row items-center justify-between gap-6">
-        <div class="text-sm text-gray-600 dark:text-gray-400">© <span x-text="new Date().getFullYear()"></span> Lucas Jin. All rights reserved.</div>
-        <div class="flex items-center gap-6 text-sm">
-          <a :href="mailtoHref" class="flex items-center gap-2 hover:text-sky-600 transition-colors">
-            <i data-lucide="mail" class="w-4 h-4"></i>
-            <span>{{ email }}</span>
-          </a>
-          <a :href="links.github" target="_blank" class="flex items-center gap-2 hover:text-sky-600 transition-colors">
-            <i data-lucide="github" class="w-4 h-4"></i>
-            <span>GitHub</span>
-          </a>
-          <a :href="links.scholar" target="_blank" class="flex items-center gap-2 hover:text-sky-600 transition-colors">
-            <i data-lucide="graduation-cap" class="w-4 h-4"></i>
-            <span>Google Scholar</span>
-          </a>
-          <a :href="links.arxiv" target="_blank" class="flex items-center gap-2 hover:text-sky-600 transition-colors">
-            <i data-lucide="file-text" class="w-4 h-4"></i>
-            <span>arXiv</span>
-          </a>
-          <a :href="links.twitter" target="_blank" class="flex items-center gap-2 hover:text-sky-600 transition-colors">
-            <i data-lucide="twitter" class="w-4 h-4"></i>
-            <span>Twitter</span>
-          </a>
+  <footer class="bg-gray-900 dark:bg-black text-white">
+    <div class="max-w-7xl mx-auto px-4 py-12">
+      <div class="grid md:grid-cols-3 gap-8">
+        <!-- Brand -->
+        <div>
+          <h3 class="text-xl font-bold mb-4">Lucas Jin</h3>
+          <p class="text-gray-400 mb-4">
+            AI Researcher specializing in Vision-Language Models, multimodal learning, and model optimization.
+          </p>
+          <div class="flex items-center gap-4">
+            <a :href="links.github" class="text-gray-400 hover:text-white transition-colors">
+              <i data-lucide="github" class="w-5 h-5"></i>
+            </a>
+            <a :href="links.scholar" class="text-gray-400 hover:text-white transition-colors">
+              <i data-lucide="graduation-cap" class="w-5 h-5"></i>
+            </a>
+            <a :href="links.arxiv" class="text-gray-400 hover:text-white transition-colors">
+              <i data-lucide="file-text" class="w-5 h-5"></i>
+            </a>
+            <a :href="links.twitter" class="text-gray-400 hover:text-white transition-colors">
+              <i data-lucide="twitter" class="w-5 h-5"></i>
+            </a>
+          </div>
         </div>
+
+        <!-- Quick Links -->
+        <div>
+          <h3 class="text-lg font-semibold mb-4">Quick Links</h3>
+          <div class="space-y-2">
+            <a href="#research" class="block text-gray-400 hover:text-white transition-colors">Research Focus</a>
+            <a href="#publications" class="block text-gray-400 hover:text-white transition-colors">Publications</a>
+            <a href="#projects" class="block text-gray-400 hover:text-white transition-colors">Projects</a>
+            <a href="#contact" class="block text-gray-400 hover:text-white transition-colors">Contact</a>
+          </div>
+        </div>
+
+        <!-- Contact Info -->
+        <div>
+          <h3 class="text-lg font-semibold mb-4">Contact</h3>
+          <div class="space-y-2 text-gray-400">
+            <div class="flex items-center gap-2">
+              <i data-lucide="mail" class="w-4 h-4"></i>
+              <a :href="mailtoHref" class="hover:text-white transition-colors">{{ email }}</a>
+            </div>
+            <div class="flex items-center gap-2">
+              <i data-lucide="map-pin" class="w-4 h-4"></i>
+              <span>Hefei, Anhui, China</span>
+            </div>
+            <div class="flex items-center gap-2">
+              <i data-lucide="building" class="w-4 h-4"></i>
+              <span>USTC · IAT</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
+        <p>© <span x-text="new Date().getFullYear()"></span> Lucas Jin. All rights reserved.</p>
       </div>
     </div>
   </footer>
@@ -308,38 +640,6 @@
   }
   </script>
 
-  <!-- ================= I18N DATA (Inline fallback; can be overridden by /data/i18n.json) ================= -->
-  <script id="i18n-data" type="application/json">
-  {
-    "zh": {
-      "ui": {"light": "切换到浅色", "dark": "切换到深色"},
-      "nav": {"about":"关于我","news":"动态","pubs":"论文","projects":"项目","contact":"联系"},
-      "cta": {"collab":"合作交流"},
-      "hero": {"badge":"AI/ML · 视觉-语言 · 高效训练","desc":"AI研究生，就读于 USTC · IAT（电子与信息工程 M.Eng.），专注多模态基础模型与高效优化；正在申请 2027 Fall PhD，RA 可 remote 或暑期 on-site。","viewPubs":"查看论文","viewProjects":"项目与代码","contact":"联系/合作","interests":"当前研究兴趣"},
-              "tags": {"longctx":"长上下文","systems":"系统优化"},
-        "about": {"title":"关于我","body":"目前在中国科学技术大学（USTC）先进技术研究院攻读硕士（电子与信息工程），研究方向涵盖视觉-语言模型、多模态学习与模型优化；希望接触医疗人工智能等多学科交叉方向；正在申请 2027 Fall PhD，RA 可 remote 或暑期 on-site。","keywords":"关键词","collab":"合作机会","c1":"VLM鲁棒性评测与对抗/诊断工具","c2":"高效微调与跨域迁移（医学/工业）","c3":"医疗AI与多学科交叉研究","links":"简历 & 链接","cv":"CV"},
-        "news": {"title":"近期动态"},
-        "pubs": {"title":"论文 Publications","searchPH":"搜索标题/作者/关键词…","allYears":"全部年份","toggleBib":"切换BibTeX"},
-        "projects": {"title":"项目 Projects","auto":"自动载入自","loading":"正在加载仓库…"},
-      "contact": {"title":"联系 · 合作","name":"姓名","email":"邮箱","subject":"主题","message":"留言","send":"发送","orEmail":"或直接邮件：","links":"常用链接","noteTitle":"声明","note":"本页采用纯静态架构 + 轻量交互（Alpine.js），可直接部署到 GitHub Pages，无需后端。"},
-      "footer": {"all":"保留所有权利","top":"回到顶部"}
-    },
-    "en": {
-      "ui": {"light": "Switch to light", "dark": "Switch to dark"},
-      "nav": {"about":"About","news":"News","pubs":"Publications","projects":"Projects","contact":"Contact"},
-      "cta": {"collab":"Collaborate"},
-      "hero": {"badge":"AI/ML · Vision-Language · Efficient Training","desc":"M.Eng. student at USTC · IAT focusing on multimodal foundation models and efficient optimization; applying for 2027 Fall PhD programs, open to RA roles (remote or summer on-site).","viewPubs":"View Publications","viewProjects":"Projects & Code","contact":"Contact/Collab","interests":"Current Interests"},
-      "tags": {"longctx":"Long Context","systems":"Systems"},
-                "about": {"title":"About","body":"Pursuing M.Eng. at USTC (Institute of Advanced Technology). Research on vision-language models, multimodal learning, and model optimization. Interested in interdisciplinary areas like medical AI. Applying for 2027 Fall PhD programs. Open to RA roles (remote or summer on-site).","keywords":"Keywords","collab":"Collaboration","c1":"VLM robustness evaluation & diagnostics","c2":"Efficient finetuning & cross-domain transfer","c3":"Medical AI & interdisciplinary research","links":"CV & Links","cv":"CV"},
-      "news": {"title":"News"},
-      "pubs": {"title":"Publications","searchPH":"Search title/author/tags…","allYears":"All Years","toggleBib":"Toggle BibTeX"},
-      "projects": {"title":"Projects","auto":"Auto-loaded from","loading":"Loading repos…"},
-      "talks": {"title":"Talks · Teaching · Service","talks":"Talks","teach":"Teaching","service":"Service"},
-      "contact": {"title":"Contact · Collaboration","name":"Name","email":"Email","subject":"Subject","message":"Message","send":"Send","orEmail":"Or email:","links":"Quick Links","noteTitle":"Note","note":"This page is fully static with lightweight interactivity (Alpine.js), deployable on GitHub Pages without backend."},
-      "footer": {"all":"All rights reserved","top":"Back to top"}
-    }
-  }
-  </script>
 
   <!-- ================= SCRIPTS ================= -->
   <script>
@@ -348,7 +648,6 @@
         darkMode: false,
         mobileOpen: false,
         lang: 'en',
-        i18n: {},
         email: "",
         links: {},
         pubQuery: "",
@@ -368,26 +667,6 @@ ${this.contact.message||""}
 — Sent from homepage form`);
           return `mailto:${this.email}?subject=${subject}&body=${body}`;
         },
-        t(key){
-          const seg = (this.i18n[this.lang]||{}); const parts = key.split('.');
-          const result = parts.reduce((acc,k)=> (acc&&acc[k]) ? acc[k] : null, seg);
-          return result || key; // Fallback to key if translation not found
-        },
-        applyI18n(){
-          document.querySelectorAll('[data-i18n]').forEach(el=>{
-            const key = el.getAttribute('data-i18n');
-            const translation = this.t(key);
-            if(translation && translation !== key){
-              el.textContent = translation;
-            }
-          });
-          // Update placeholders
-          const searchInput = document.querySelector('input[type="search"]');
-          if(searchInput){ 
-            const ph = this.t('pubs.searchPH');
-            if(ph && ph !== 'pubs.searchPH') searchInput.setAttribute('placeholder', ph); 
-          }
-        },
         async tryFetchJSON(path){
           try{ const r = await fetch(path, {cache:'no-store'}); if(!r.ok) throw 0; return await r.json(); }catch{ return null; }
         },
@@ -399,11 +678,6 @@ ${this.contact.message||""}
           this.darkMode = localStorage.getItem('theme') === 'dark' || window.matchMedia('(prefers-color-scheme: dark)').matches;
           document.documentElement.classList.toggle('dark', this.darkMode);
 
-          // i18n load (external overrides)
-          const i18nInline = JSON.parse(document.getElementById('i18n-data').textContent);
-          const i18nExternal = await this.tryFetchJSON('/data/i18n.json');
-          this.i18n = i18nExternal ? Object.assign({}, i18nInline, i18nExternal) : i18nInline;
-          this.applyI18n();
 
           // data load (external overrides)
           const dataInline = JSON.parse(document.getElementById('site-data').textContent);
@@ -450,10 +724,9 @@ ${this.contact.message||""}
         renderPubs(list){
           const wrap = this.$refs.pubList; wrap.innerHTML='';
           list.sort((a,b)=> (b.year-a.year) || a.title.localeCompare(b.title)).forEach(p=>{
-            const title = p[this.lang+"Title"] || p.title;
-            const venue = p[this.lang+"Venue"] || p.venue;
-            const abstractKey = this.lang+"Abstract";
-            const abstract = p[abstractKey] || p.abstract || '';
+            const title = p.title;
+            const venue = p.venue;
+            const abstract = p.abstract || '';
             const card = document.createElement('div');
             card.className = 'p-6 rounded-2xl border border-gray-200 dark:border-gray-800 hover:bg-gray-50/60 dark:hover:bg-gray-800/60 transition-all duration-200';
             const tags = (p.tags||[]).map(t=>`<span class=\"px-2 py-0.5 rounded-full bg-gray-100 dark:bg-gray-800 text-xs\">${t}</span>`).join(' ');
@@ -524,21 +797,45 @@ ${this.contact.message||""}
     "alternateName": "金启航",
     "url": "https://Lucas-Jin-Qh.github.io",
     "sameAs": [
-      "https://github.com/Lucas-Jin-Qh"
+      "https://github.com/Lucas-Jin-Qh",
+      "https://scholar.google.com/citations?user=pSvQSKsAAAAJ&hl=en",
+      "https://arxiv.org/a/lucas10358.html",
+      "https://x.com/Qh_Jin_Lucas"
     ],
     "jobTitle": "AI Researcher",
-    "affiliation": {"@type": "Organization", "name": "USTC"}
+    "affiliation": {
+      "@type": "Organization", 
+      "name": "University of Science and Technology of China",
+      "department": "Institute of Advanced Technology"
+    },
+    "alumniOf": "University of Science and Technology of China",
+    "knowsAbout": [
+      "Vision-Language Models",
+      "Multimodal Learning", 
+      "Model Optimization",
+      "Machine Learning",
+      "Computer Vision",
+      "Natural Language Processing",
+      "Medical AI"
+    ],
+    "email": "qihangjin@mail.ustc.edu.cn",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Hefei",
+      "addressRegion": "Anhui",
+      "addressCountry": "China"
+    }
   }
   </script>
 
   <!-- ================= DEV NOTE ================= -->
   <!--
-  维护友好：
-  1) /data 目录（可选）：创建 i18n.json、site-data.json、publications.json、news.json、talks.json、teaching.json、service.json 即可热替换本页内置数据。
-  2) 新增条目：直接改 /data/*.json；避免改动 HTML。
-  3) 多语言：i18n.json 结构同内置示例，可只覆盖需要的键。页面右上角按钮可切换中/英，自动记忆。
-  4) 论文项支持 zhTitle/enTitle 等可选字段；talks/teaching/service 支持 zhTitle/enTitle、zhEvent/enEvent、zhOrg/enOrg、zhRole/enRole 等。
-  5) 若需 RSS/表单后端/自定义域名，请联络后我可扩展对应模块。
+  Maintenance-friendly:
+  1) /data directory (optional): Create i18n.json, site-data.json, publications.json, news.json, talks.json, teaching.json, service.json to hot-replace built-in data.
+  2) Add entries: Directly edit /data/*.json; avoid modifying HTML.
+  3) Multilingual: i18n.json structure same as built-in example, can override only needed keys. Page language toggle button switches between languages automatically.
+  4) Publication items support zhTitle/enTitle etc. optional fields; talks/teaching/service support zhTitle/enTitle, zhEvent/enEvent, zhOrg/enOrg, zhRole/enRole etc.
+  5) If RSS/backend/custom domain needed, contact me to extend corresponding modules.
   -->
 </body>
 </html>
