@@ -73,7 +73,6 @@
           <a href="#news" class="hover:text-sky-600" data-i18n="nav.news">动态</a>
           <a href="#publications" class="hover:text-sky-600" data-i18n="nav.pubs">论文</a>
           <a href="#projects" class="hover:text-sky-600" data-i18n="nav.projects">项目</a>
-          <a href="#talks" class="hover:text-sky-600" data-i18n="nav.talks">报告/教学</a>
           <a href="#contact" class="hover:text-sky-600" data-i18n="nav.contact">联系</a>
         </nav>
         <div class="flex items-center gap-3">
@@ -99,7 +98,6 @@
           <a @click="mobileOpen=false" href="#news" class="py-2" data-i18n="nav.news">动态</a>
           <a @click="mobileOpen=false" href="#publications" class="py-2" data-i18n="nav.pubs">论文</a>
           <a @click="mobileOpen=false" href="#projects" class="py-2" data-i18n="nav.projects">项目</a>
-          <a @click="mobileOpen=false" href="#talks" class="py-2" data-i18n="nav.talks">报告/教学</a>
           <a @click="mobileOpen=false" href="#contact" class="py-2" data-i18n="nav.contact">联系</a>
         </nav>
       </div>
@@ -228,27 +226,6 @@
     </div>
   </section>
 
-  <!-- ================= TALKS / TEACHING ================= -->
-  <section id="talks" class="border-t border-gray-200 dark:border-gray-800">
-    <div class="max-w-6xl mx-auto px-4 py-12">
-      <h2 class="text-2xl font-bold" data-i18n="talks.title">报告 · 教学 · 服务</h2>
-      <div class="mt-4 grid md:grid-cols-3 gap-6">
-        <div class="p-5 rounded-2xl border border-gray-200 dark:border-gray-800">
-          <h3 class="font-semibold" data-i18n="talks.talks">学术报告</h3>
-          <ul class="mt-2 space-y-2 text-sm text-gray-600 dark:text-gray-300" x-ref="talkList"></ul>
-        </div>
-        <div class="p-5 rounded-2xl border border-gray-200 dark:border-gray-800">
-          <h3 class="font-semibold" data-i18n="talks.teach">教学/助教</h3>
-          <ul class="mt-2 space-y-2 text-sm text-gray-600 dark:text-gray-300" x-ref="teachList"></ul>
-        </div>
-        <div class="p-5 rounded-2xl border border-gray-200 dark:border-gray-800">
-          <h3 class="font-semibold" data-i18n="talks.service">学术服务</h3>
-          <ul class="mt-2 space-y-2 text-sm text-gray-600 dark:text-gray-300" x-ref="serviceList"></ul>
-        </div>
-      </div>
-    </div>
-  </section>
-
   <!-- ================= CONTACT ================= -->
   <section id="contact" class="border-t border-gray-200 dark:border-gray-800">
     <div class="max-w-6xl mx-auto px-4 py-12">
@@ -330,21 +307,20 @@
   {
     "zh": {
       "ui": {"light": "切换到浅色", "dark": "切换到深色"},
-      "nav": {"about":"关于我","news":"动态","pubs":"论文","projects":"项目","talks":"报告/教学","contact":"联系"},
+      "nav": {"about":"关于我","news":"动态","pubs":"论文","projects":"项目","contact":"联系"},
       "cta": {"collab":"合作交流"},
       "hero": {"badge":"AI/ML · 视觉-语言 · 高效训练","desc":"AI研究生，就读于 USTC · IAT（电子与信息工程 M.Eng.），专注多模态基础模型与高效优化；正在申请 2027 Fall PhD，RA 可 remote 或暑期 on-site。","viewPubs":"查看论文","viewProjects":"项目与代码","contact":"联系/合作","interests":"当前研究兴趣"},
-      "tags": {"longctx":"长上下文","systems":"系统优化"},
-      "about": {"title":"关于我","body":"目前在中国科学技术大学（USTC）先进技术研究院攻读硕士（电子与信息工程），研究方向涵盖视觉-语言模型、多模态学习与模型优化；希望接触医疗人工智能等多学科交叉方向；正在申请 2027 Fall PhD，RA 可 remote 或暑期 on-site。","keywords":"关键词","collab":"合作机会","c1":"VLM鲁棒性评测与对抗/诊断工具","c2":"高效微调与跨域迁移（医学/工业）","c3":"医疗AI与多学科交叉研究","links":"简历 & 链接","cv":"CV"},
-      "news": {"title":"近期动态"},
-      "pubs": {"title":"论文 Publications","searchPH":"搜索标题/作者/关键词…","allYears":"全部年份","toggleBib":"切换BibTeX"},
-      "projects": {"title":"项目 Projects","auto":"自动载入自","loading":"正在加载仓库…"},
-      "talks": {"title":"报告 · 教学 · 服务","talks":"学术报告","teach":"教学/助教","service":"学术服务"},
+              "tags": {"longctx":"长上下文","systems":"系统优化"},
+        "about": {"title":"关于我","body":"目前在中国科学技术大学（USTC）先进技术研究院攻读硕士（电子与信息工程），研究方向涵盖视觉-语言模型、多模态学习与模型优化；希望接触医疗人工智能等多学科交叉方向；正在申请 2027 Fall PhD，RA 可 remote 或暑期 on-site。","keywords":"关键词","collab":"合作机会","c1":"VLM鲁棒性评测与对抗/诊断工具","c2":"高效微调与跨域迁移（医学/工业）","c3":"医疗AI与多学科交叉研究","links":"简历 & 链接","cv":"CV"},
+        "news": {"title":"近期动态"},
+        "pubs": {"title":"论文 Publications","searchPH":"搜索标题/作者/关键词…","allYears":"全部年份","toggleBib":"切换BibTeX"},
+        "projects": {"title":"项目 Projects","auto":"自动载入自","loading":"正在加载仓库…"},
       "contact": {"title":"联系 · 合作","name":"姓名","email":"邮箱","subject":"主题","message":"留言","send":"发送","orEmail":"或直接邮件：","links":"常用链接","noteTitle":"声明","note":"本页采用纯静态架构 + 轻量交互（Alpine.js），可直接部署到 GitHub Pages，无需后端。"},
       "footer": {"all":"保留所有权利","top":"回到顶部"}
     },
     "en": {
       "ui": {"light": "Switch to light", "dark": "Switch to dark"},
-      "nav": {"about":"About","news":"News","pubs":"Publications","projects":"Projects","talks":"Talks/Teaching","contact":"Contact"},
+      "nav": {"about":"About","news":"News","pubs":"Publications","projects":"Projects","contact":"Contact"},
       "cta": {"collab":"Collaborate"},
       "hero": {"badge":"AI/ML · Vision-Language · Efficient Training","desc":"M.Eng. student at USTC · IAT focusing on multimodal foundation models and efficient optimization; open to RA roles and PhD applications (2026 intake).","viewPubs":"View Publications","viewProjects":"Projects & Code","contact":"Contact/Collab","interests":"Current Interests"},
       "tags": {"longctx":"Long Context","systems":"Systems"},
@@ -375,7 +351,6 @@
         showBibtex: false,
         publications: [],
         news: [],
-        talks: [], teaching: [], service: [],
         contact: {name: "", email: "", subject: "", message: ""},
         contactSent: false,
         get mailtoHref(){
@@ -395,16 +370,23 @@ ${this.contact.message||""}
         },
         t(key){
           const seg = (this.i18n[this.lang]||{}); const parts = key.split('.');
-          return parts.reduce((acc,k)=> (acc&&acc[k]) ? acc[k] : key, seg);
+          const result = parts.reduce((acc,k)=> (acc&&acc[k]) ? acc[k] : null, seg);
+          return result || key; // Fallback to key if translation not found
         },
         applyI18n(){
           document.querySelectorAll('[data-i18n]').forEach(el=>{
-            el.textContent = this.t(el.getAttribute('data-i18n'));
+            const key = el.getAttribute('data-i18n');
+            const translation = this.t(key);
+            if(translation && translation !== key){
+              el.textContent = translation;
+            }
           });
-          // placeholders
-          const ph = this.t('pubs.searchPH');
-          const search = document.querySelector('input[type="search"]');
-          if(search){ search.setAttribute('placeholder', ph); }
+          // Update placeholders
+          const searchInput = document.querySelector('input[type="search"]');
+          if(searchInput){ 
+            const ph = this.t('pubs.searchPH');
+            if(ph && ph !== 'pubs.searchPH') searchInput.setAttribute('placeholder', ph); 
+          }
         },
         async tryFetchJSON(path){
           try{ const r = await fetch(path, {cache:'no-store'}); if(!r.ok) throw 0; return await r.json(); }catch{ return null; }
@@ -450,26 +432,7 @@ ${this.contact.message||""}
           // repos
           this.loadRepos();
 
-          // talks/teaching/service (with optional external files)
-          const talksExt = await this.tryFetchJSON('/data/talks.json');
-          const teachExt = await this.tryFetchJSON('/data/teaching.json');
-          const serviceExt = await this.tryFetchJSON('/data/service.json');
-          this.talks = talksExt || data.talks || []; this.teaching = teachExt || data.teaching || []; this.service = serviceExt || data.service || [];
-          const tl = this.$refs.talkList; this.talks.forEach(t=>{
-            const li = document.createElement('li');
-            const title = t[this.lang+"Title"] || t.title;
-            const event = t[this.lang+"Event"] || t.event || '';
-            li.innerHTML = `<a class="underline" href="${t.link||'#'}">${title}</a> · <span class="text-gray-500">${event}</span> · ${t.date}`;
-            tl.appendChild(li);
-          });
-          const teach = this.$refs.teachList; this.teaching.forEach(t=>{
-            const title = t[this.lang+"Title"] || t.title; const org = t[this.lang+"Org"] || t.org;
-            const li = document.createElement('li'); li.textContent = `${title} · ${org} · ${t.date}`; teach.appendChild(li);
-          });
-          const service = this.$refs.serviceList; this.service.forEach(s=>{
-            const role = s[this.lang+"Role"] || s.role; const venue = s[this.lang+"Venue"] || s.venue;
-            const li = document.createElement('li'); li.textContent = `${role} · ${venue} · ${s.year}`; service.appendChild(li);
-          });
+
         },
         toggleLang(){ this.lang = (this.lang==='zh'?'en':'zh'); localStorage.setItem('lang', this.lang); this.applyI18n(); },
         toggleDark(){ this.darkMode = !this.darkMode; document.documentElement.classList.toggle('dark', this.darkMode); localStorage.setItem('theme', this.darkMode?'dark':'light'); window.lucide?.createIcons(); },
