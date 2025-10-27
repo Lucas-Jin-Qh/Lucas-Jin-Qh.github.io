@@ -76,9 +76,6 @@
           <a href="#contact" class="hover:text-sky-600" data-i18n="nav.contact">联系</a>
         </nav>
         <div class="flex items-center gap-3">
-          <button @click="toggleLang()" class="px-2 py-1 rounded-xl border border-gray-200 dark:border-gray-800 text-xs">
-            <span x-text="lang==='zh' ? 'EN' : '中' "></span>
-          </button>
           <button @click="toggleDark()" class="p-2 rounded-xl border border-gray-200 dark:border-gray-800 hover:bg-gray-50 dark:hover:bg-gray-800" :aria-label="darkMode ? t('ui.light') : t('ui.dark')">
             <i data-lucide="sun" x-show="darkMode" class="w-5 h-5"></i>
             <i data-lucide="moon" x-show="!darkMode" class="w-5 h-5"></i>
@@ -322,12 +319,12 @@
       "ui": {"light": "Switch to light", "dark": "Switch to dark"},
       "nav": {"about":"About","news":"News","pubs":"Publications","projects":"Projects","contact":"Contact"},
       "cta": {"collab":"Collaborate"},
-      "hero": {"badge":"AI/ML · Vision-Language · Efficient Training","desc":"M.Eng. student at USTC · IAT focusing on multimodal foundation models and efficient optimization; open to RA roles and PhD applications (2026 intake).","viewPubs":"View Publications","viewProjects":"Projects & Code","contact":"Contact/Collab","interests":"Current Interests"},
+      "hero": {"badge":"AI/ML · Vision-Language · Efficient Training","desc":"M.Eng. student at USTC · IAT focusing on multimodal foundation models and efficient optimization; applying for 2027 Fall PhD programs, open to RA roles (remote or summer on-site).","viewPubs":"View Publications","viewProjects":"Projects & Code","contact":"Contact/Collab","interests":"Current Interests"},
       "tags": {"longctx":"Long Context","systems":"Systems"},
-      "about": {"title":"About","body":"Pursuing M.Eng. at USTC (Institute of Advanced Technology). Research on VLM reliability/efficiency, long-context and alignment. Actively seeking RA and PhD opportunities.","keywords":"Keywords","collab":"Collaboration","c1":"VLM robustness evaluation & diagnostics","c2":"Efficient finetuning & cross-domain transfer (medical/industrial)","c3":"Long-document / multi-image understanding","links":"CV & Links","cv":"CV"},
+                "about": {"title":"About","body":"Pursuing M.Eng. at USTC (Institute of Advanced Technology). Research on vision-language models, multimodal learning, and model optimization. Interested in interdisciplinary areas like medical AI. Applying for 2027 Fall PhD programs. Open to RA roles (remote or summer on-site).","keywords":"Keywords","collab":"Collaboration","c1":"VLM robustness evaluation & diagnostics","c2":"Efficient finetuning & cross-domain transfer","c3":"Medical AI & interdisciplinary research","links":"CV & Links","cv":"CV"},
       "news": {"title":"News"},
-      "pubs": {"title":"Publications","searchPH":"Search title/authors/keywords…","allYears":"All years","toggleBib":"Toggle BibTeX"},
-      "projects": {"title":"Projects","auto":"Auto from","loading":"Loading repos…"},
+      "pubs": {"title":"Publications","searchPH":"Search title/author/tags…","allYears":"All Years","toggleBib":"Toggle BibTeX"},
+      "projects": {"title":"Projects","auto":"Auto-loaded from","loading":"Loading repos…"},
       "talks": {"title":"Talks · Teaching · Service","talks":"Talks","teach":"Teaching","service":"Service"},
       "contact": {"title":"Contact · Collaboration","name":"Name","email":"Email","subject":"Subject","message":"Message","send":"Send","orEmail":"Or email:","links":"Quick Links","noteTitle":"Note","note":"This page is fully static with lightweight interactivity (Alpine.js), deployable on GitHub Pages without backend."},
       "footer": {"all":"All rights reserved","top":"Back to top"}
@@ -341,7 +338,7 @@
       return {
         darkMode: false,
         mobileOpen: false,
-        lang: (localStorage.getItem('lang') || (navigator.language||'zh').startsWith('zh') ? 'zh' : 'en'),
+        lang: 'en',
         i18n: {},
         email: "",
         links: {},
@@ -354,18 +351,12 @@
         contact: {name: "", email: "", subject: "", message: ""},
         contactSent: false,
         get mailtoHref(){
-          const subject = encodeURIComponent(this.contact.subject || (this.lang==='zh'?"[合作]":"[Collaboration]"));
-          const body = encodeURIComponent((this.lang==='zh'
-            ? `您好，我是${this.contact.name||""}（${this.contact.email||""}）。
+          const subject = encodeURIComponent(this.contact.subject || "[Collaboration]");
+          const body = encodeURIComponent(`Hello, I am ${this.contact.name||""} (${this.contact.email||""}).
 
 ${this.contact.message||""}
 
-—— 来自主页联系表单`
-            : `Hello, I am ${this.contact.name||""} (${this.contact.email||""}).
-
-${this.contact.message||""}
-
-— Sent from homepage form`));
+— Sent from homepage form`);
           return `mailto:${this.email}?subject=${subject}&body=${body}`;
         },
         t(key){
@@ -434,7 +425,7 @@ ${this.contact.message||""}
 
 
         },
-        toggleLang(){ this.lang = (this.lang==='zh'?'en':'zh'); localStorage.setItem('lang', this.lang); this.applyI18n(); },
+
         toggleDark(){ this.darkMode = !this.darkMode; document.documentElement.classList.toggle('dark', this.darkMode); localStorage.setItem('theme', this.darkMode?'dark':'light'); window.lucide?.createIcons(); },
         toggleBibtex(){ this.showBibtex = !this.showBibtex; this.filterPubs(); },
         filterPubs(){
