@@ -55,8 +55,6 @@
     img { content-visibility: auto; }
   </style>
   
-  <!-- RSS Feed -->
-  <link rel="alternate" type="application/rss+xml" title="Qihang(Lucas) Jin — News" href="/feed.xml" />
   <!-- Sitemap -->
   <link rel="sitemap" type="application/xml" title="Sitemap" href="/sitemap.xml" />
   <!-- Canonical URL -->
@@ -72,7 +70,6 @@
           <a href="#about" class="hover:text-sky-600">About</a>
           <a href="#research" class="hover:text-sky-600">Research</a>
           <a href="#publications" class="hover:text-sky-600">Publications</a>
-          <a href="#news" class="hover:text-sky-600">News</a>
           <a href="#projects" class="hover:text-sky-600">Projects</a>
           <a href="#contact" class="hover:text-sky-600">Contact</a>
         </nav>
@@ -95,7 +92,6 @@
           <a @click="mobileOpen=false" href="#about" class="py-2">About</a>
           <a @click="mobileOpen=false" href="#research" class="py-2">Research</a>
           <a @click="mobileOpen=false" href="#publications" class="py-2">Publications</a>
-          <a @click="mobileOpen=false" href="#news" class="py-2">News</a>
           <a @click="mobileOpen=false" href="#projects" class="py-2">Projects</a>
           <a @click="mobileOpen=false" href="#contact" class="py-2">Contact</a>
         </nav>
@@ -368,19 +364,8 @@
     </div>
   </section>
 
-  <!-- ================= NEWS ================= -->
-  <section id="news" class="bg-gray-50 dark:bg-gray-900">
-    <div class="max-w-6xl mx-auto px-4 py-16">
-      <div class="flex items-center justify-between mb-8">
-        <h2 class="text-3xl font-bold text-gray-900 dark:text-white">Recent News</h2>
-        <div class="text-sm text-gray-500">RSS: <a href="/feed.xml" class="underline hover:text-blue-600">/feed.xml</a></div>
-      </div>
-      <div class="grid md:grid-cols-2 gap-6" x-ref="newsList"></div>
-    </div>
-  </section>
-
   <!-- ================= PUBLICATIONS ================= -->
-  <section id="publications" class="border-t border-gray-200 dark:border-gray-800">
+  <section id="publications" class="bg-gray-50 dark:bg-gray-900">
     <div class="max-w-7xl mx-auto px-4 py-16">
       <div class="text-center mb-12">
         <h2 class="text-3xl font-bold text-gray-900 dark:text-white mb-4">Publications</h2>
@@ -434,7 +419,7 @@
   </section>
 
   <!-- ================= PROJECTS ================= -->
-  <section id="projects" class="bg-gray-50 dark:bg-gray-900">
+  <section id="projects" class="border-t border-gray-200 dark:border-gray-800">
     <div class="max-w-7xl mx-auto px-4 py-16">
       <div class="flex items-center justify-between mb-8">
         <h2 class="text-3xl font-bold text-gray-900 dark:text-white">Projects</h2>
@@ -632,11 +617,7 @@
       "orcid": "https://orcid.org/",
       "twitter": "https://x.com/Qh_Jin_Lucas"
     },
-    "news": [],
-    "publications": [],
-    "talks": [],
-    "teaching": [],
-    "service": []
+    "publications": []
   }
   </script>
 
@@ -655,7 +636,6 @@
         years: [],
         showBibtex: false,
         publications: [],
-        news: [],
         contact: {name: "", email: "", subject: "", message: ""},
         contactSent: false,
         get mailtoHref(){
@@ -690,18 +670,6 @@ ${this.contact.message||""}
             // Trigger reactivity update
             this.email = data.email;
             this.links = data.links;
-          });
-
-          // news (override file takes precedence)
-          const newsExternal = await this.tryFetchJSON('/data/news.json');
-          this.news = newsExternal || data.news || [];
-          const newsList = this.$refs.newsList; newsList.innerHTML='';
-          this.news.sort((a,b)=> new Date(b.date)-new Date(a.date)).forEach(n=>{
-            const el = document.createElement('a');
-            el.className = 'p-4 rounded-2xl border border-gray-200 dark:border-gray-800 hover:bg-gray-50 dark:hover:bg-gray-800 block';
-            el.href = n.link||'#';
-            el.innerHTML = `<div class="text-xs text-gray-500">${n.date}</div><div class="mt-1">${n.text}</div>`;
-            newsList.appendChild(el);
           });
 
           // publications

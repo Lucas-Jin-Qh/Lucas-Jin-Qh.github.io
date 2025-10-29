@@ -14,11 +14,10 @@ Visit: [https://Lucas-Jin-Qh.github.io/](https://Lucas-Jin-Qh.github.io/)
 - 🎨 **Modern Design**: Clean, responsive UI with dark mode support
 - 🌍 **Bilingual**: Full Chinese/English support (auto-detection + manual toggle)
 - 📱 **Mobile-First**: Fully responsive across all devices
-- ⚡ **Performance**: Optimized loading with preconnect, lazy loading, and content visibility
+- ⚡ **Performance**: Optimized loading with preconnect and lazy loading
 - 🔍 **SEO Optimized**: Meta tags, Open Graph, Twitter Cards, structured data
-- 📊 **Dynamic Content**: Auto-loads publications, projects, news from JSON files
+- 📊 **Dynamic Content**: Auto-loads publications and projects from JSON files
 - 🎯 **GitHub Integration**: Automatically displays latest repositories
-- 📡 **RSS Feed**: Subscribe to updates at `/feed.xml`
 
 ## 📁 Project Structure
 
@@ -28,15 +27,12 @@ Lucas-Jin-Qh.github.io/
 ├── data/                   # Data files (JSON)
 │   ├── i18n.json          # Internationalization strings
 │   ├── site-data.json     # Email, links, social media
-│   ├── publications.json  # Research papers
-│   ├── news.json          # News updates
-│   ├── talks.json         # Academic talks
-│   ├── teaching.json      # Teaching experience
-│   └── service.json       # Academic service
-├── feed.xml               # RSS feed
+│   └── publications.json  # Research papers
 ├── sitemap.xml            # SEO sitemap
 ├── robots.txt             # Search engine directives
-└── README.md              # This file
+├── README.md              # This file
+├── CHANGELOG.md           # Version history
+└── LICENSE                # MIT License
 ```
 
 ## 🛠️ Tech Stack
@@ -47,9 +43,42 @@ Lucas-Jin-Qh.github.io/
 - **Fonts**: [Inter](https://fonts.google.com/specimen/Inter) (Google Fonts)
 - **Hosting**: GitHub Pages (static, no backend needed)
 
+## 🚀 Quick Start
+
+### 1. Clone Repository
+
+```bash
+git clone https://github.com/Lucas-Jin-Qh/Lucas-Jin-Qh.github.io.git
+cd Lucas-Jin-Qh.github.io
+```
+
+### 2. Serve Locally
+
+Choose one method:
+
+```bash
+# Python 3
+python -m http.server 8000
+
+# Node.js
+npx serve
+
+# PHP
+php -S localhost:8000
+```
+
+Then open `http://localhost:8000` in your browser.
+
+### 3. Deploy to GitHub Pages
+
+1. Go to repository **Settings** → **Pages**
+2. Select **Source**: `main` branch, `/root` folder
+3. Save and wait ~1 minute
+4. Visit `https://Lucas-Jin-Qh.github.io/`
+
 ## 📝 How to Update Content
 
-### 1. Update Publications
+### Update Publications
 
 Edit `data/publications.json`:
 
@@ -63,111 +92,124 @@ Edit `data/publications.json`:
   "pdf": "https://link-to-paper.pdf",
   "code": "https://github.com/your-repo",
   "tags": ["Tag1", "Tag2"],
-  "bibtex": "@article{...}"
+  "bibtex": "@article{...}",
+  "abstract": "Paper abstract in English",
+  "zhAbstract": "论文摘要（中文）"
 }
 ```
 
-### 2. Update News
+### Update Personal Info
 
-Edit `data/news.json`:
+Edit `data/site-data.json`:
 
 ```json
 {
-  "date": "2025-10-27",
-  "text": "Your news update (supports both zh/en)",
-  "link": "https://optional-link.com"
+  "email": "your.email@example.com",
+  "links": {
+    "github": "https://github.com/your-username",
+    "scholar": "https://scholar.google.com/citations?user=YOUR_ID",
+    "arxiv": "https://arxiv.org/a/your-id.html",
+    "orcid": "https://orcid.org/YOUR-ORCID-ID",
+    "twitter": "https://twitter.com/your-handle"
+  }
 }
 ```
 
-### 3. Update Personal Info
-
-Edit `data/site-data.json` for email and social links.
-
-### 4. Update Translations
+### Update Translations
 
 Edit `data/i18n.json` to modify UI text in Chinese/English.
 
-## 🚀 Local Development
-
-1. Clone the repository:
-```bash
-git clone https://github.com/Lucas-Jin-Qh/Lucas-Jin-Qh.github.io.git
-cd Lucas-Jin-Qh.github.io
-```
-
-2. Serve locally (choose one):
-```bash
-# Python 3
-python -m http.server 8000
-
-# Node.js
-npx serve
-
-# PHP
-php -S localhost:8000
-```
-
-3. Open `http://localhost:8000` in your browser
-
 ## 🎨 Customization
 
-### Colors
+### Change Theme Color
 
-The site uses sky blue (`#0ea5e9`) as the primary color. To change:
+Current: **Sky Blue** (`#0ea5e9`)
 
-1. Update `meta theme-color` in `<head>`
-2. Search and replace `sky-` classes in Tailwind CSS
-3. Update gradient backgrounds as needed
+To change:
+1. Search and replace `sky-` classes with your color (e.g., `blue-`, `purple-`)
+2. Update `<meta name="theme-color" content="#YOUR_COLOR" />`
 
-### Sections
+### Hide/Show Sections
 
-To add/remove sections:
+To hide a section, add `hidden` class:
 
-1. Add HTML section in `index.html`
-2. Add navigation link in header
-3. Update i18n strings in `data/i18n.json`
+```html
+<section id="about" class="hidden ...">
+```
 
-## 📊 SEO & Analytics
+To reorder sections, move the entire `<section>` block in `index.html`.
+
+## 📊 SEO Features
 
 - ✅ Meta tags (title, description, keywords)
 - ✅ Open Graph (Facebook, LinkedIn)
 - ✅ Twitter Cards
 - ✅ Structured Data (Schema.org Person)
 - ✅ Sitemap (`sitemap.xml`)
-- ✅ RSS Feed (`feed.xml`)
 - ✅ Robots.txt
 - ✅ Canonical URLs
 
-To add Google Analytics, insert tracking code before `</head>` tag.
+### Add Google Analytics (Optional)
 
-## 🌍 Deployment
+Insert before `</head>` tag:
 
-### GitHub Pages (Automatic)
+```html
+<!-- Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-XXXXXXXXXX');
+</script>
+```
 
-1. Go to repository **Settings** → **Pages**
-2. Select **Source**: `main` branch, `/root` folder
-3. Save and wait ~1 minute
-4. Visit `https://Lucas-Jin-Qh.github.io/`
-
-### Custom Domain (Optional)
+## 🌍 Custom Domain (Optional)
 
 1. Add `CNAME` file with your domain:
-```bash
-echo "yourdomain.com" > CNAME
-```
+   ```bash
+   echo "yourdomain.com" > CNAME
+   ```
 
 2. Configure DNS:
-```
-Type: A
-Name: @
-Value: 185.199.108.153
-       185.199.109.153
-       185.199.110.153
-       185.199.111.153
+   ```
+   Type: A
+   Name: @
+   Value: 185.199.108.153
+          185.199.109.153
+          185.199.110.153
+          185.199.111.153
 
-Type: CNAME
-Name: www
-Value: Lucas-Jin-Qh.github.io
+   Type: CNAME
+   Name: www
+   Value: Lucas-Jin-Qh.github.io
+   ```
+
+## 🐛 Troubleshooting
+
+### Website not showing?
+
+1. Check GitHub Pages is enabled (Settings → Pages)
+2. Verify branch is set to `main` and folder is `/root`
+3. Wait 1-5 minutes for deployment
+4. Clear browser cache (Ctrl+Shift+R / Cmd+Shift+R)
+
+### Data not updating?
+
+1. Validate JSON syntax at [jsonlint.com](https://jsonlint.com/)
+2. Clear browser cache
+3. Check browser console for errors (F12)
+4. Verify file paths are correct
+
+### Dark mode not working?
+
+Test in browser console:
+```javascript
+localStorage.getItem('theme')  // Should return 'dark' or 'light'
+
+// Reset if needed:
+localStorage.removeItem('theme');
+location.reload();
 ```
 
 ## 📄 License
@@ -189,5 +231,4 @@ This is a personal homepage, but suggestions and bug reports are welcome via [Is
 
 **Built with ❤️ using Alpine.js + Tailwind CSS**
 
-Last updated: October 27, 2025
-
+Last updated: October 29, 2025

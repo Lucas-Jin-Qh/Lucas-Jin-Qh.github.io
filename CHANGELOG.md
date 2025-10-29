@@ -1,49 +1,99 @@
 # 更新日志 / Changelog
 
+All notable changes to this project will be documented in this file.
+
+---
+
+## [3.0.0] - 2025-10-29
+
+### 🧹 Simplified & Cleaned
+
+#### Removed
+- ❌ **News Section** - Removed news board as not needed for student stage
+- ❌ **RSS Feed** - Removed `/feed.xml` and related functionality
+- ❌ **Unused Data Files** - Deleted `teaching.json`, `talks.json`, `service.json`, `news.json`
+- ❌ **Redundant Documentation** - Cleaned up 5+ outdated documentation files
+
+#### Changed
+- ♻️ **UI Optimization** - Adjusted section backgrounds for better visual hierarchy
+  - Publications: Changed to gray background (`bg-gray-50`)
+  - Projects: Changed to white background (`border-t`)
+- 📝 **Navigation** - Removed "News" link from both desktop and mobile nav
+- 🗂️ **Data Structure** - Simplified inline data, removed unused fields
+- 📚 **Documentation** - Consolidated to just `README.md` and `CHANGELOG.md`
+
+#### Improved
+- ⚡ **Performance** - Reduced page complexity and data loading
+- 🎯 **Focus** - Streamlined content to highlight research and publications
+- 📦 **Maintenance** - Easier to maintain with fewer files and cleaner structure
+
+### 📊 Code Statistics
+- **Removed**: ~90+ lines of code
+- **Files deleted**: 10 (5 data files + 5 documentation files)
+- **HTML lines**: 856 → 824 (32 lines reduction)
+
+---
+
 ## [2.0.0] - 2025-10-27
 
-### ✨ 新增功能 / Added
-- 🌍 完整的中英双语支持，自动检测 + 手动切换
-- 📱 完全响应式设计，支持所有设备
-- 🎨 深色模式支持，保存用户偏好
-- 📊 动态加载 GitHub 仓库
-- 🔍 论文搜索和筛选功能
-- 📡 RSS Feed 支持
-- 🗺️ Sitemap.xml 用于 SEO
-- 🤖 Robots.txt 配置
-- 📧 联系表单（mailto 协议）
+### ✨ Added / 新增功能
+- 🌍 Complete bilingual support (Chinese/English) with auto-detection
+- 📱 Fully responsive design for all devices
+- 🎨 Dark mode support with user preference saving
+- 📊 Dynamic GitHub repository loading
+- 🔍 Publication search and filter functionality
+- 📡 RSS Feed support
+- 🗺️ Sitemap.xml for SEO
+- 🤖 Robots.txt configuration
+- 📧 Contact form (mailto protocol)
 
-### 🎨 优化 / Improved
-- ⚡ 性能优化：预连接、DNS 预取、图片懒加载
-- 🔍 SEO 优化：Meta 标签、Open Graph、Twitter Cards
-- ♿ 可访问性改进：ARIA 标签、语义化 HTML
-- 🎯 更好的代码组织和结构
-- 📦 数据与展示分离（JSON 数据文件）
+### 🎨 Improved / 优化
+- ⚡ Performance optimizations: preconnect, DNS prefetch, lazy loading
+- 🔍 SEO optimization: Meta tags, Open Graph, Twitter Cards
+- ♿ Accessibility improvements: ARIA labels, semantic HTML
+- 🎯 Better code organization and structure
+- 📦 Data/presentation separation (JSON data files)
 
-### 🐛 修复 / Fixed
-- ✅ 修复了 inline data 中的 JSON 格式错误
-- ✅ 修正了缺失的数据文件引用
-- ✅ 改进了图标加载时机
+### 🐛 Fixed / 修复
+- ✅ Fixed JSON format errors in inline data
+- ✅ Corrected missing data file references
+- ✅ Improved icon loading timing
 
-### 📁 新增文件 / New Files
-- `data/talks.json` - 学术报告数据
-- `data/teaching.json` - 教学经历数据
-- `data/service.json` - 学术服务数据
-- `sitemap.xml` - 网站地图
-- `robots.txt` - 搜索引擎配置
-- `README.md` - 项目文档
-- `LICENSE` - MIT 开源许可证
-- `.gitignore` - Git 忽略配置
-- `CHANGELOG.md` - 本文件
+### 📁 New Files / 新增文件
+- `data/i18n.json` - Internationalization strings
+- `data/site-data.json` - Personal information and links
+- `data/publications.json` - Research publications
+- `sitemap.xml` - Site map
+- `robots.txt` - Search engine configuration
+- `README.md` - Project documentation
+- `LICENSE` - MIT open source license
+- `.gitignore` - Git ignore configuration
 
 ---
 
 ## [1.0.0] - 2025-10-20
 
-### 初始版本 / Initial Release
-- 基础单页面架构
-- Alpine.js + Tailwind CSS
-- 论文展示
-- 项目列表
-- 联系信息
+### Initial Release / 初始版本
+- Basic single-page architecture
+- Alpine.js + Tailwind CSS framework
+- Publication showcase
+- Project list
+- Contact information
 
+---
+
+## 🎯 Future Plans / 未来计划
+
+As the career progresses (PhD/Professor stage), these sections can be easily added back:
+- **Academic Talks** - Invited presentations
+- **Teaching Experience** - Courses and student supervision
+- **Academic Service** - Reviewing, committees, etc.
+- **News Updates** - Awards, media coverage, etc.
+
+Simply create the corresponding JSON files and add sections to `index.html`.
+
+---
+
+**For detailed information, see [README.md](README.md)**
+
+Last updated: October 29, 2025
