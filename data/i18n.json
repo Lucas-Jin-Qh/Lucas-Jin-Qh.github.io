@@ -1,0 +1,18 @@
+{
+  "zh": {
+    "hero": {
+      "desc": "AI研究生，就读于 USTC · IAT（电子与信息工程 M.Eng.），专注多模态基础模型与高效优化；正在申请 2027 Fall PhD，RA 可 remote 或暑期 on-site。"
+    },
+    "about": {
+      "body": "目前在中国科学技术大学（USTC）先进技术研究院攻读硕士（电子与信息工程），研究方向涵盖视觉-语言模型、多模态学习与模型优化；希望接触医疗人工智能等多学科交叉方向；正在申请 2027 Fall PhD，RA 可 remote 或暑期 on-site。"
+    }
+  },
+  "en": {
+    "hero": {
+      "desc": "M.Eng. student at USTC · IAT focusing on multimodal foundation models and efficient optimization; applying for 2027 Fall PhD programs, open to RA roles (remote or summer on-site)."
+    },
+    "about": {
+      "body": "Pursuing M.Eng. at USTC (Institute of Advanced Technology). Research on vision-language models, multimodal learning, and model optimization. Interested in interdisciplinary areas like medical AI. Applying for 2027 Fall PhD programs. Open to RA roles (remote or summer on-site)."
+    }
+  }
+}

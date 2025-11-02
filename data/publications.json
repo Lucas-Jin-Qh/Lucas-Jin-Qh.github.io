@@ -1,0 +1,39 @@
+[
+  {
+    "title": "From Memory to Alignment: A Comprehensive Review of Large Language Model Optimization",
+    "zhTitle": "从记忆到对齐：大语言模型优化综述",
+    "authors": "Enze Ge, Qihang Jin, Yuhang Xie, et al.",
+    "venue": "IEEE TechRxiv (preprint)",
+    "year": 2025,
+    "pdf": "https://www.techrxiv.org/users/887679/articles/1342552-from-memory-to-alignment-a-comprehensive-review-of-large-language-model-optimization",
+    "code": "",
+    "tags": ["Survey", "LLM", "Optimization"],
+    "bibtex": "@article{ge2025memory,\n  title={From Memory to Alignment: A Comprehensive Review of Large Language Model Optimization},\n  author={Ge, Enze and Jin, Qihang and Xie, Yuhang and others},\n  journal={TechRxiv},\n  year={2025},\n  month={October},\n  day={21},\n  publisher={TechRxiv},\n  note={preprint},\n  doi={10.36227/techrxiv.176107630.07942950/v1},\n  url={https://www.techrxiv.org/users/887679/articles/1342552-from-memory-to-alignment-a-comprehensive-review-of-large-language-model-optimization}\n}",
+    "abstract": "This survey provides a comprehensive review of large language model optimization techniques, covering methods from memory efficiency to alignment mechanisms. We systematically analyze various optimization approaches including efficient training, fine-tuning strategies, and alignment methods that improve model performance while reducing computational costs.",
+    "zhAbstract": "本综述全面回顾了大语言模型优化技术，涵盖从内存效率到对齐机制的方法。我们系统分析了高效训练、微调策略和对齐方法等优化方法，这些方法在降低计算成本的同时提高了模型性能。"
+  },
+  {
+    "title": "Effect of Brain-Computer Interface on Limb Motor Function after Intracerebral Hemorrhage in Basal Ganglia and Its Rehabilitation Mechanism",
+    "zhTitle": "脑出血后脑机接口对肢体运动功能的影响与康复机制",
+    "authors": "Qihang Jin et al.",
+    "venue": "Under review",
+    "year": 2025,
+    "pdf": "",
+    "code": "",
+    "tags": ["BCI", "Rehabilitation"],
+    "bibtex": ""
+  },
+  {
+    "title": "Multimodal Representation Learning and Fusion",
+    "zhTitle": "多模态表示学习与融合",
+    "authors": "Qihang Jin, Enze Ge, Yuhang Xie, Hongying Luo, Junhao Song, Ziqian Bi, Chia Xin Liang, Jibin Guan, Joe Yeong, Junfeng Hao",
+    "venue": "arXiv preprint",
+    "year": 2025,
+    "pdf": "https://arxiv.org/abs/2506.20494v1",
+    "code": "",
+    "tags": ["Multimodal", "Representation Learning", "Fusion"],
+    "bibtex": "@article{jin2025multimodal,\n  title={Multimodal Representation Learning and Fusion},\n  author={Jin, Qihang and Ge, Enze and Xie, Yuhang and Luo, Hongying and Song, Junhao and Bi, Ziqian and Liang, Chia Xin and Guan, Jibin and Yeong, Joe and Hao, Junfeng},\n  journal={arXiv preprint arXiv:2506.20494},\n  year={2025},\n  note={preprint},\n  url={https://arxiv.org/abs/2506.20494v1}\n}",
+    "abstract": "Multi-modal learning is a fast growing area in artificial intelligence. It tries to help machines understand complex things by combining information from different sources, like images, text, and audio. By using the strengths of each modality, multi-modal learning allows AI systems to build stronger and richer internal representations. These help machines better interpretation, reasoning, and making decisions in real-life situations. This field includes core techniques such as representation learning (to get shared features from different data types), alignment methods (to match information across modalities), and fusion strategies (to combine them by deep learning models).",
+    "zhAbstract": "多模态学习是人工智能领域快速发展的方向，通过融合图像、文本和音频等多种信息源帮助机器理解复杂内容。利用各模态的优势，多模态学习使AI系统能够构建更强大、更丰富的内部表示，从而改善机器的解释、推理和决策能力。该领域包括表示学习、对齐方法和融合策略等核心技术。"
+  }
+]
