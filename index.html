@@ -170,14 +170,13 @@
         
         <div class="relative">
           <div class="aspect-square rounded-3xl bg-gradient-to-tr from-blue-100 to-indigo-100 dark:from-blue-900/30 dark:to-indigo-900/20 p-3 shadow-2xl">
-            <img src="./top.png"
+            <img id="profile-image"
+                 src="./top.png"
                  alt="Qihang(Lucas) Jin (金启航) - AI Researcher"
                  loading="lazy"
                  width="500"
                  height="500"
-                 class="w-full h-full object-cover rounded-2xl"
-                 onerror="this.onerror=null; this.src='data:image/svg+xml;base64,'+btoa('<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 100 100\" fill=\"currentColor\"><text y=\"50%\" x=\"50%\" text-anchor=\"middle\" font-size=\"50\">👨‍🎓</text></svg>'); this.classList.add('opacity-75');"
-                 onload="this.classList.remove('opacity-75')">
+                 class="w-full h-full object-cover rounded-2xl">
           </div>
           
           <!-- Research Interests Badge -->
@@ -843,6 +842,30 @@
           toggleBackToTop();
         },
 
+        setupImageErrorHandling(){
+          const profileImage = document.getElementById('profile-image');
+          if (profileImage) {
+            profileImage.addEventListener('error', function() {
+              // Prevent infinite error loop
+              this.onerror = null;
+
+              // Create fallback SVG avatar
+              const fallbackSvg = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="currentColor"><text y="50%" x="50%" text-anchor="middle" font-size="50">👨‍🎓</text></svg>';
+
+              // Convert to base64 data URL
+              this.src = 'data:image/svg+xml;base64,' + btoa(fallbackSvg);
+
+              // Add opacity to indicate fallback
+              this.classList.add('opacity-75');
+            });
+
+            profileImage.addEventListener('load', function() {
+              // Remove fallback opacity when image loads successfully
+              this.classList.remove('opacity-75');
+            });
+          }
+        },
+
         async init(){
           // Setup global error handling
           this.setupGlobalErrorHandling();
@@ -858,6 +881,9 @@
 
           // Setup back to top button
           this.setupBackToTop();
+
+          // Setup image error handling
+          this.setupImageErrorHandling();
 
           // theme
           this.darkMode = localStorage.getItem('theme') === 'dark' || window.matchMedia('(prefers-color-scheme: dark)').matches;
