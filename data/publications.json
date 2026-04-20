@@ -1,5 +1,18 @@
 [
   {
+    "title": "GridWM-Judge: Evaluating Vision-Language Model Judges in Grid Worlds via World Model Deficits",
+    "zhTitle": "",
+    "authors": "Qinan Zhang, Qihang Jin",
+    "venue": "ICLR 2026 Workshop on World Models",
+    "year": 2026,
+    "pdf": "https://openreview.net/forum?id=0eh1hJKbMi",
+    "code": "https://github.com/Lucas-Jin-Qh/GridWM_Judge",
+    "tags": ["VLM Evaluation", "World Model", "Grid World", "ICLR Workshop"],
+    "bibtex": "@inproceedings{zhang2026gridwmjudge,\n  title={GridWM-Judge: Evaluating Vision-Language Model Judges in Grid Worlds via World Model Deficits},\n  author={Zhang, Qinan and Jin, Qihang},\n  booktitle={ICLR 2026 Workshop on World Models},\n  year={2026},\n  note={Equal contribution}\n}",
+    "abstract": "Vision-language models (VLMs) are increasingly used as automated judges to score agent trajectories, yet their success/fail verdicts are brittle to benign changes in wording, evidence order, or rendering. We introduce GridWM-Judge, a diagnostic benchmark built on six deterministic MiniGrid environments that generates physically consistent Full/NoCue/Counterfactual trajectory triplets. GridWM-Judge decomposes evaluation into three tasks: atomic next-observation prediction, structured scene perception, and success/fail judging from rendered storyboards. Experiments across 13 VLMs reveal a fragility paradox: higher atomic transition accuracy does not necessarily yield more stable judgments.",
+    "zhAbstract": ""
+  },
+  {
     "title": "From Memory to Alignment: A Comprehensive Review of Large Language Model Optimization",
     "zhTitle": "从记忆到对齐：大语言模型优化综述",
     "authors": "Enze Ge, Qihang Jin, Yuhang Xie, et al.",

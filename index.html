@@ -53,6 +53,15 @@
     body { animation: fadeIn 0.3s ease-in; }
     /* Image lazy loading optimization */
     img { content-visibility: auto; }
+    /* Card hover micro-lift */
+    .card-hover { transition: transform 0.2s ease, box-shadow 0.2s ease; }
+    .card-hover:hover { transform: translateY(-2px); box-shadow: 0 8px 30px rgba(0,0,0,0.08); }
+    .dark .card-hover:hover { box-shadow: 0 8px 30px rgba(0,0,0,0.4); }
+    /* Dark mode toast border */
+    .toast-notification { border: 1px solid rgba(255,255,255,0.1); }
+    /* Section scroll fade-in */
+    section { opacity: 0; transform: translateY(16px); transition: opacity 0.5s ease, transform 0.5s ease; }
+    section.visible { opacity: 1; transform: translateY(0); }
   </style>
   
   <!-- Sitemap -->
@@ -67,11 +76,11 @@
       <div class="flex items-center justify-between h-16">
         <a href="#top" class="font-extrabold tracking-tight text-xl">Qihang(Lucas) Jin<span class="text-sky-500">.</span></a>
         <nav class="hidden md:flex items-center gap-6 text-sm">
-          <a href="#about" class="hover:text-sky-600">About</a>
-          <a href="#research" class="hover:text-sky-600">Research</a>
-          <a href="#publications" class="hover:text-sky-600">Publications</a>
-          <a href="#projects" class="hover:text-sky-600">Projects</a>
-          <a href="#contact" class="hover:text-sky-600">Contact</a>
+          <a href="#about" class="hover:text-sky-600 dark:hover:text-sky-400">About</a>
+          <a href="#research" class="hover:text-sky-600 dark:hover:text-sky-400">Research</a>
+          <a href="#publications" class="hover:text-sky-600 dark:hover:text-sky-400">Publications</a>
+          <a href="#projects" class="hover:text-sky-600 dark:hover:text-sky-400">Projects</a>
+          <a href="#contact" class="hover:text-sky-600 dark:hover:text-sky-400">Contact</a>
         </nav>
         <div class="flex items-center gap-3">
           <button @click="toggleDark()" class="p-2 rounded-xl border border-gray-200 dark:border-gray-800 hover:bg-gray-50 dark:hover:bg-gray-800" :aria-label="darkMode ? 'Switch to light' : 'Switch to dark'">
@@ -89,24 +98,24 @@
       </div>
       <div x-show="mobileOpen" x-transition class="md:hidden pb-4">
         <nav class="flex flex-col gap-2 text-sm">
-          <a @click="mobileOpen=false" href="#about" class="py-2">About</a>
-          <a @click="mobileOpen=false" href="#research" class="py-2">Research</a>
-          <a @click="mobileOpen=false" href="#publications" class="py-2">Publications</a>
-          <a @click="mobileOpen=false" href="#projects" class="py-2">Projects</a>
-          <a @click="mobileOpen=false" href="#contact" class="py-2">Contact</a>
+          <a @click="mobileOpen=false" href="#about" class="py-2 hover:text-sky-600 dark:hover:text-sky-400">About</a>
+          <a @click="mobileOpen=false" href="#research" class="py-2 hover:text-sky-600 dark:hover:text-sky-400">Research</a>
+          <a @click="mobileOpen=false" href="#publications" class="py-2 hover:text-sky-600 dark:hover:text-sky-400">Publications</a>
+          <a @click="mobileOpen=false" href="#projects" class="py-2 hover:text-sky-600 dark:hover:text-sky-400">Projects</a>
+          <a @click="mobileOpen=false" href="#contact" class="py-2 hover:text-sky-600 dark:hover:text-sky-400">Contact</a>
         </nav>
       </div>
     </div>
   </header>
 
   <!-- ================= HERO ================= -->
-  <section id="top" class="relative overflow-hidden bg-gradient-to-br from-slate-50 to-blue-50 dark:from-slate-900 dark:to-blue-900">
+  <section id="top" class="relative overflow-hidden bg-gradient-to-br from-slate-50 via-blue-50/50 to-indigo-100 dark:from-slate-900 dark:via-blue-900/20 dark:to-slate-950">
     <div class="max-w-7xl mx-auto px-4 py-20 md:py-28">
       <div class="grid lg:grid-cols-2 gap-12 items-center">
         <div class="space-y-6">
             <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-blue-100 dark:bg-blue-900/30 text-blue-800 dark:text-blue-200 text-sm font-semibold">
             <i data-lucide="brain" class="w-4 h-4"></i>
-            AI Researcher · Vision-Language Models · AI Applications
+            Graduate Researcher @ USTC &middot; RA @ Columbia &middot; Vision-Language Models
           </div>
           <div>
             <h1 class="text-5xl md:text-6xl font-bold leading-tight text-gray-900 dark:text-white">
@@ -114,20 +123,19 @@
               <span class="block text-3xl md:text-4xl text-blue-600 dark:text-blue-400">金启航</span>
             </h1>
             <p class="mt-4 text-xl text-gray-600 dark:text-gray-300 leading-relaxed">
-              Graduate student in Computer Technology at USTC focusing on <strong>Vision-Language Models</strong>,
+              Graduate student at USTC and Research Assistant at Columbia University (Liam Paninski Lab), focusing on <strong>Vision-Language Models</strong>,
               <strong>AI applications</strong>, and <strong>efficient model optimization</strong>.
-              Aspiring AI researcher with growing publication record and research contributions.
             </p>
           </div>
           
           <!-- Academic Stats -->
           <div class="grid grid-cols-3 gap-4 py-6 border-t border-b border-gray-200 dark:border-gray-700">
             <div class="text-center">
-              <div class="text-2xl font-bold text-blue-600 dark:text-blue-400">3+</div>
+              <div class="text-2xl font-bold text-blue-600 dark:text-blue-400">4+</div>
               <div class="text-sm text-gray-600 dark:text-gray-400">Publications</div>
             </div>
             <div class="text-center">
-              <div class="text-2xl font-bold text-blue-600 dark:text-blue-400">2</div>
+              <div class="text-2xl font-bold text-blue-600 dark:text-blue-400">3</div>
               <div class="text-sm text-gray-600 dark:text-gray-400">Research Areas</div>
             </div>
             <div class="text-center">
@@ -207,7 +215,7 @@
       
       <div class="grid md:grid-cols-2 gap-8">
         <!-- Vision-Language Models -->
-        <div class="bg-white dark:bg-gray-800 rounded-2xl p-8 shadow-lg border border-gray-200 dark:border-gray-700">
+        <div class="bg-white dark:bg-gray-800 rounded-2xl p-8 shadow-lg border border-gray-200 dark:border-gray-700 card-hover">
           <div class="flex items-center gap-4 mb-6">
             <div class="w-12 h-12 bg-blue-100 dark:bg-blue-900/30 rounded-xl flex items-center justify-center">
               <i data-lucide="eye" class="w-6 h-6 text-blue-600 dark:text-blue-400"></i>
@@ -231,7 +239,7 @@
         </div>
 
         <!-- Model Optimization -->
-        <div class="bg-white dark:bg-gray-800 rounded-2xl p-8 shadow-lg border border-gray-200 dark:border-gray-700">
+        <div class="bg-white dark:bg-gray-800 rounded-2xl p-8 shadow-lg border border-gray-200 dark:border-gray-700 card-hover">
           <div class="flex items-center gap-4 mb-6">
             <div class="w-12 h-12 bg-green-100 dark:bg-green-900/30 rounded-xl flex items-center justify-center">
               <i data-lucide="zap" class="w-6 h-6 text-green-600 dark:text-green-400"></i>
@@ -250,7 +258,7 @@
         </div>
 
         <!-- AI Applications -->
-        <div class="bg-white dark:bg-gray-800 rounded-2xl p-8 shadow-lg border border-gray-200 dark:border-gray-700">
+        <div class="bg-white dark:bg-gray-800 rounded-2xl p-8 shadow-lg border border-gray-200 dark:border-gray-700 card-hover">
           <div class="flex items-center gap-4 mb-6">
             <div class="w-12 h-12 bg-purple-100 dark:bg-purple-900/30 rounded-xl flex items-center justify-center">
               <i data-lucide="shield" class="w-6 h-6 text-purple-600 dark:text-purple-400"></i>
@@ -270,7 +278,7 @@
         </div>
 
         <!-- Medical AI -->
-        <div class="bg-white dark:bg-gray-800 rounded-2xl p-8 shadow-lg border border-gray-200 dark:border-gray-700">
+        <div class="bg-white dark:bg-gray-800 rounded-2xl p-8 shadow-lg border border-gray-200 dark:border-gray-700 card-hover">
           <div class="flex items-center gap-4 mb-6">
             <div class="w-12 h-12 bg-orange-100 dark:bg-orange-900/30 rounded-xl flex items-center justify-center">
               <i data-lucide="heart" class="w-6 h-6 text-orange-600 dark:text-orange-400"></i>
@@ -300,18 +308,17 @@
         <div>
           <h2 class="text-3xl font-bold text-gray-900 dark:text-white mb-6">About</h2>
           <p class="text-lg text-gray-600 dark:text-gray-300 leading-relaxed mb-6">
-            I am a graduate student in Computer Technology at the University of Science and Technology of China (USTC),
-            Institute of Advanced Technology. My research focuses on developing cutting-edge
+            I am a graduate student at USTC (Institute of Advanced Technology) and a Research Assistant
+            at Columbia University (Liam Paninski Lab). My research focuses on developing cutting-edge
             AI systems that can understand and process multimodal information efficiently and responsibly.
           </p>
           <p class="text-gray-600 dark:text-gray-300 leading-relaxed mb-8">
-            Currently pursuing my M.Eng. degree, I am actively contributing to the field through 
-            publications and collaborations with leading researchers. I am applying 
-            for PhD programs starting Fall 2027 and am open to research assistant positions 
-            (remote or summer on-site).
+            Actively contributing to the field through publications and collaborations with leading researchers.
+            I am applying for PhD programs starting Fall 2027 and am open to research positions
+            (remote or on-site).
           </p>
           
-          <div class="flex flex-wrap gap-3">
+          <div class="flex flex-wrap gap-3 mb-6">
             <a href="./Qihang_Jin_Resume.pdf" download="Qihang_Jin_Resume.pdf" class="px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white rounded-xl font-semibold transition-colors">
               <i data-lucide="download" class="w-4 h-4 inline mr-2"></i>
               Download CV
@@ -321,11 +328,43 @@
               Google Scholar
             </a>
           </div>
+
+          <!-- Research Experience -->
+          <div class="bg-white dark:bg-gray-800 rounded-2xl p-6 border border-gray-200 dark:border-gray-700 mb-6 card-hover">
+            <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-4 flex items-center gap-2">
+              <i data-lucide="briefcase" class="w-5 h-5 text-sky-500"></i>
+              Research Experience
+            </h3>
+            <div class="space-y-4">
+              <!-- Columbia -->
+              <div class="flex items-start gap-3">
+                <div class="w-10 h-10 bg-purple-100 dark:bg-purple-900/30 rounded-lg flex items-center justify-center flex-shrink-0 mt-0.5">
+                  <i data-lucide="globe" class="w-5 h-5 text-purple-600 dark:text-purple-400"></i>
+                </div>
+                <div>
+                  <div class="font-medium text-gray-900 dark:text-white">Research Assistant</div>
+                  <div class="text-sm text-gray-600 dark:text-gray-300">Columbia University — <span class="text-gray-500 dark:text-gray-400">Liam Paninski Lab</span></div>
+                  <div class="text-xs text-gray-500 dark:text-gray-400">Neural Signal Analysis · IBL Data 3D Reconstruction</div>
+                </div>
+              </div>
+              <!-- USTC -->
+              <div class="flex items-start gap-3">
+                <div class="w-10 h-10 bg-blue-100 dark:bg-blue-900/30 rounded-lg flex items-center justify-center flex-shrink-0 mt-0.5">
+                  <i data-lucide="school" class="w-5 h-5 text-blue-600 dark:text-blue-400"></i>
+                </div>
+                <div>
+                  <div class="font-medium text-gray-900 dark:text-white">Graduate Researcher</div>
+                  <div class="text-sm text-gray-600 dark:text-gray-300">USTC — <span class="text-gray-500 dark:text-gray-400">Institute of Advanced Technology</span></div>
+                  <div class="text-xs text-gray-500 dark:text-gray-400">Vision-Language Models · AI Applications</div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
         
         <div class="space-y-6">
           <!-- Collaboration Opportunities -->
-          <div class="bg-white dark:bg-gray-800 rounded-2xl p-6 border border-gray-200 dark:border-gray-700">
+          <div class="bg-white dark:bg-gray-800 rounded-2xl p-6 border border-gray-200 dark:border-gray-700 card-hover">
             <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-4">Collaboration Opportunities</h3>
             <ul class="space-y-3 text-gray-600 dark:text-gray-300">
               <li class="flex items-start gap-3">
@@ -344,7 +383,7 @@
           </div>
 
           <!-- Quick Links -->
-          <div class="bg-white dark:bg-gray-800 rounded-2xl p-6 border border-gray-200 dark:border-gray-700">
+          <div class="bg-white dark:bg-gray-800 rounded-2xl p-6 border border-gray-200 dark:border-gray-700 card-hover">
             <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-4">Quick Links</h3>
             <div class="grid grid-cols-2 gap-3">
               <a :href="links.github" class="flex items-center gap-2 text-gray-600 dark:text-gray-300 hover:text-blue-600 transition-colors">
@@ -384,11 +423,11 @@
       <!-- Publication Stats -->
       <div class="grid grid-cols-4 gap-6 mb-12">
         <div class="text-center p-6 bg-white dark:bg-gray-800 rounded-2xl border border-gray-200 dark:border-gray-700">
-          <div class="text-3xl font-bold text-blue-600 dark:text-blue-400">3+</div>
+          <div class="text-3xl font-bold text-blue-600 dark:text-blue-400">4+</div>
           <div class="text-sm text-gray-600 dark:text-gray-400 mt-1">Publications</div>
         </div>
         <div class="text-center p-6 bg-white dark:bg-gray-800 rounded-2xl border border-gray-200 dark:border-gray-700">
-          <div class="text-3xl font-bold text-green-600 dark:text-green-400">2</div>
+          <div class="text-3xl font-bold text-green-600 dark:text-green-400">3</div>
           <div class="text-sm text-gray-600 dark:text-gray-400 mt-1">Research Areas</div>
         </div>
         <div class="text-center p-6 bg-white dark:bg-gray-800 rounded-2xl border border-gray-200 dark:border-gray-700">
@@ -396,7 +435,7 @@
           <div class="text-sm text-gray-600 dark:text-gray-400 mt-1">Under Review</div>
         </div>
         <div class="text-center p-6 bg-white dark:bg-gray-800 rounded-2xl border border-gray-200 dark:border-gray-700">
-          <div class="text-3xl font-bold text-orange-600 dark:text-orange-400">2025</div>
+          <div class="text-3xl font-bold text-orange-600 dark:text-orange-400">2026</div>
           <div class="text-sm text-gray-600 dark:text-gray-400 mt-1">Latest Year</div>
         </div>
       </div>
@@ -429,7 +468,7 @@
     <div class="max-w-7xl mx-auto px-4 py-16">
       <div class="flex items-center justify-between mb-8">
         <h2 class="text-3xl font-bold text-gray-900 dark:text-white">Projects</h2>
-        <div class="text-sm text-gray-500">Auto-loaded from <span class="font-mono">@Lucas-Jin-Qh</span> GitHub</div>
+        <div class="text-sm text-gray-500 dark:text-gray-400">Auto-loaded from <span class="font-mono">@Lucas-Jin-Qh</span> GitHub</div>
       </div>
       <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6" x-ref="repoGrid">
         <div class="text-sm text-gray-500">Loading repositories...</div>
@@ -438,7 +477,7 @@
   </section>
 
   <!-- ================= CONTACT ================= -->
-  <section id="contact" class="border-t border-gray-200 dark:border-gray-800">
+  <section id="contact" class="border-t border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-900">
     <div class="max-w-6xl mx-auto px-4 py-16">
       <div class="text-center mb-12">
         <h2 class="text-3xl font-bold text-gray-900 dark:text-white mb-4">Contact & Collaboration</h2>
@@ -451,7 +490,7 @@
       <!-- Contact Information - Horizontal Layout -->
       <div class="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
         <!-- Direct Contact -->
-        <div class="bg-white dark:bg-gray-800 rounded-2xl p-8 border border-gray-200 dark:border-gray-700">
+        <div class="bg-white dark:bg-gray-800 rounded-2xl p-8 border border-gray-200 dark:border-gray-700 card-hover">
           <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-6">Direct Contact</h3>
           <div class="space-y-4">
             <div class="flex items-center gap-4">
@@ -485,7 +524,7 @@
         </div>
 
         <!-- Social Links -->
-        <div class="bg-white dark:bg-gray-800 rounded-2xl p-8 border border-gray-200 dark:border-gray-700">
+        <div class="bg-white dark:bg-gray-800 rounded-2xl p-8 border border-gray-200 dark:border-gray-700 card-hover">
           <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-6">Connect</h3>
           <div class="grid grid-cols-2 gap-4">
             <a :href="links.github" class="flex items-center gap-3 p-4 rounded-xl border border-gray-200 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors">
@@ -516,13 +555,13 @@
   </button>
 
   <!-- ================= FOOTER ================= -->
-  <footer class="bg-gray-900 dark:bg-black text-white">
+  <footer class="bg-gray-900 dark:bg-[#080808] text-white">
     <div class="max-w-7xl mx-auto px-4 py-12">
       <div class="grid md:grid-cols-3 gap-8">
         <!-- Brand -->
         <div>
           <h3 class="text-xl font-bold mb-4">Qihang(Lucas) Jin</h3>
-          <p class="text-gray-400 mb-4">
+          <p class="text-gray-400 dark:text-gray-500 mb-4">
             Graduate student in Computer Technology specializing in Vision-Language Models, AI applications, and model optimization.
           </p>
           <div class="flex items-center gap-4">
@@ -885,6 +924,38 @@
           // Setup image error handling
           this.setupImageErrorHandling();
 
+          // Scroll-driven section fade-in
+          const sectionObserver = new IntersectionObserver((entries) => {
+            entries.forEach(e => {
+              if (e.isIntersecting) {
+                e.target.classList.add('visible');
+                sectionObserver.unobserve(e.target);
+              }
+            });
+          }, { threshold: 0.05 });
+          document.querySelectorAll('section').forEach(s => sectionObserver.observe(s));
+
+          // Nav active section highlight
+          const navLinks = document.querySelectorAll('nav a');
+          const sectionIds = ['top', 'research', 'about', 'publications', 'projects', 'contact'];
+          const sectionObserver2 = new IntersectionObserver((entries) => {
+            entries.forEach(e => {
+              if (e.isIntersecting) {
+                const id = e.target.id;
+                navLinks.forEach(a => {
+                  a.classList.remove('text-sky-600', 'dark:text-sky-400');
+                  if (a.getAttribute('href') === '#' + id) {
+                    a.classList.add('text-sky-600', 'dark:text-sky-400');
+                  }
+                });
+              }
+            });
+          }, { threshold: 0.3 });
+          sectionIds.forEach(id => {
+            const el = document.getElementById(id);
+            if (el) sectionObserver2.observe(el);
+          });
+
           // theme
           this.darkMode = localStorage.getItem('theme') === 'dark' || window.matchMedia('(prefers-color-scheme: dark)').matches;
           document.documentElement.classList.toggle('dark', this.darkMode);
@@ -971,7 +1042,7 @@
             const venue = p.venue;
             const abstract = p.abstract || '';
             const card = document.createElement('div');
-            card.className = 'p-6 rounded-2xl border border-gray-200 dark:border-gray-800 hover:bg-gray-50/60 dark:hover:bg-gray-800/60 transition-all duration-200';
+            card.className = 'p-6 rounded-2xl border border-gray-200 dark:border-gray-700 hover:bg-gray-50/60 dark:hover:bg-gray-800/60 transition-all duration-200';
             const tags = (p.tags||[]).map(t=>`<span class=\"px-2 py-0.5 rounded-full bg-gray-100 dark:bg-gray-800 text-xs\">${t}</span>`).join(' ');
             const bib = this.showBibtex ? `<pre class=\"mt-4 p-3 bg-gray-100 dark:bg-gray-800 rounded-xl overflow-x-auto text-xs\">${p.bibtex||''}</pre>` : '';
             const abstractHtml = abstract ? `<div class=\"mt-3 text-sm text-gray-600 dark:text-gray-400 leading-relaxed\">${abstract}</div>` : '';
@@ -1052,7 +1123,7 @@
             pick.forEach(r=>{
               const card = document.createElement('a');
               card.href = r.html_url; card.target = '_blank';
-              card.className = 'p-5 rounded-2xl border border-gray-200 dark:border-gray-800 hover:bg-gray-50 dark:hover:bg-gray-800 block transition-all duration-200 group';
+              card.className = 'p-5 rounded-2xl border border-gray-200 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-800 block transition-all duration-200 group';
               const displayName = r.name.replace(/\.github\.io$/i, '');
               card.innerHTML = `
                 <div class=\"flex items-center justify-between\">
