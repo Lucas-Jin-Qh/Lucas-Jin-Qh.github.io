@@ -1,1 +1,4 @@
 *.tex
+# Anonymous review manuscripts (kept locally, excluded from public Pages deployment)
+/Calibrated Task-Routed LoRA Banks.pdf
+/2627_Towards_Reliable_VLM_Judg.pdf

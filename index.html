@@ -3,24 +3,24 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Qihang(Lucas) Jin (金启航) — Graduate Student | Vision-Language Models, AI Applications, Model Optimization</title>
-  <meta name="description" content="Qihang(Lucas) Jin (金启航) — Graduate student in Computer Technology at USTC focusing on Vision-Language Models, AI Applications, and efficient model optimization. Aspiring AI researcher with growing publication record." />
+  <title>Qihang (Lucas) Jin — M.Eng. Student at USTC | Neural–Behavior Modeling, Representation Geometry, Multimodal Systems</title>
+  <meta name="description" content="Qihang (Lucas) Jin. M.Eng. student at the University of Science and Technology of China; research assistant with the Liam Paninski Lab at Columbia University and the Lu Mi Lab at Tsinghua University / Qi Zhi Institute. Research on neural–behavior modeling, representation geometry, and reliable multimodal systems." />
   <meta name="keywords" content="Qihang(Lucas) Jin, 金启航, AI researcher, Vision-Language Models, AI applications, model optimization, USTC, machine learning, deep learning, computer vision, natural language processing" />
   <meta name="author" content="Qihang(Lucas) Jin" />
-  <meta name="theme-color" content="#0ea5e9" />
+  <meta name="theme-color" content="#1f2937" />
   
   <!-- Open Graph / Facebook -->
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://Lucas-Jin-Qh.github.io/" />
-  <meta property="og:title" content="Qihang(Lucas) Jin (金启航) — Graduate Student" />
-  <meta property="og:description" content="Graduate student in Computer Technology at USTC focusing on Vision-Language Models, AI applications, and model optimization. Aspiring AI researcher." />
+  <meta property="og:title" content="Qihang (Lucas) Jin — M.Eng. Student at USTC" />
+  <meta property="og:description" content="Research on neural–behavior modeling, representation geometry, and the reliability and adaptation of multimodal systems." />
   <meta property="og:image" content="https://Lucas-Jin-Qh.github.io/top.png" />
   
   <!-- Twitter -->
   <meta property="twitter:card" content="summary_large_image" />
   <meta property="twitter:url" content="https://Lucas-Jin-Qh.github.io/" />
-  <meta property="twitter:title" content="Qihang(Lucas) Jin (金启航) — Graduate Student" />
-  <meta property="twitter:description" content="Graduate student in Computer Technology at USTC focusing on Vision-Language Models, AI applications, and model optimization. Aspiring AI researcher." />
+  <meta property="twitter:title" content="Qihang (Lucas) Jin — M.Eng. Student at USTC" />
+  <meta property="twitter:description" content="Research on neural–behavior modeling, representation geometry, and the reliability and adaptation of multimodal systems." />
   <meta property="twitter:image" content="https://Lucas-Jin-Qh.github.io/top.png" />
   <meta name="twitter:creator" content="@Qh_Jin_Lucas" />
   <!-- Favicon -->
@@ -42,26 +42,134 @@
   <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
   <!-- Lucide Icons -->
   <script src="https://unpkg.com/lucide@latest"></script>
+
+  <!-- Brand/Social icon registry (Simple Icons paths, MIT) — lucide v1 doesn't ship github/linkedin/x -->
+  <script>
+    window.SOCIAL_ICON_PATHS = {
+      "github":   "M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12",
+      "linkedin": "M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z",
+      "x":        "M14.234 10.162 22.977 0h-2.072l-7.591 8.824L7.251 0H.258l9.168 13.343L.258 24H2.33l8.016-9.318L16.749 24h6.993zm-2.837 3.299-.929-1.329L3.076 1.56h3.182l5.965 8.532.929 1.329 7.754 11.09h-3.182z"
+    };
+    window.installSocialIcons = function() {
+      var nodes = document.querySelectorAll('i[data-lucide^="brand-"]');
+      nodes.forEach(function(el) {
+        var key = el.getAttribute('data-lucide').replace(/^brand-/, '');
+        var d = window.SOCIAL_ICON_PATHS[key];
+        if (!d) return;
+        var cls = (el.getAttribute('class') || '').trim();
+        var ns = "http://www.w3.org/2000/svg";
+        var svg = document.createElementNS(ns, 'svg');
+        svg.setAttribute('xmlns', ns);
+        svg.setAttribute('viewBox', '0 0 24 24');
+        svg.setAttribute('fill', 'currentColor');
+        svg.setAttribute('aria-hidden', 'true');
+        svg.setAttribute('focusable', 'false');
+        if (cls) svg.setAttribute('class', cls);
+        var path = document.createElementNS(ns, 'path');
+        path.setAttribute('d', d);
+        svg.appendChild(path);
+        el.parentNode.replaceChild(svg, el);
+      });
+    };
+    // Auto-process brand icons when DOM is ready (so lucide.createIcons won't see them)
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', window.installSocialIcons);
+    } else {
+      window.installSocialIcons();
+    }
+  </script>
   
   <style>
-    html, body {font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji";}
-    .prose a { text-decoration: underline; text-underline-offset: 3px; }
-    .glass { backdrop-filter: blur(8px); background: rgba(255,255,255,0.65);}
-    .dark .glass { background: rgba(17,24,39,0.5); }
-    /* Smooth loading animation */
+    :root {
+      --ink: #111827;
+      --ink-soft: #374151;
+      --ink-mute: #6b7280;
+      --rule: #e5e7eb;
+      --paper: #fafaf7;
+      --paper-pure: #ffffff;
+      --accent: #1f2937;
+      --maxw: 64rem;
+    }
+    html { font-size: 16.5px; }
+    html, body {
+      font-family: "Inter", "Charter", "Iowan Old Style", "Source Serif Pro", Georgia, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+      color: var(--ink);
+      background: var(--paper);
+      font-feature-settings: "kern" 1, "liga" 1;
+      -webkit-font-smoothing: antialiased;
+      line-height: 1.65;
+    }
+    .dark, .dark html, .dark body { color: #e5e7eb; background: #15181b; }
+    .dark { --ink: #e8eaed; --ink-soft: #b8bdc4; --ink-mute: #8a909a; --rule: #2a2f36; --paper: #15181b; --paper-pure: #1c2025; }
+
+    a { color: inherit; text-underline-offset: 3px; text-decoration-thickness: 1px; }
+
+    .container-narrow { max-width: var(--maxw); margin-left: auto; margin-right: auto; padding-left: 1.25rem; padding-right: 1.25rem; }
+
+    .section-rule { border-top: 1px solid var(--rule); }
+
+    .eyebrow {
+      font-size: 0.78rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--ink-mute);
+      font-weight: 600;
+    }
+
+    .heading-display {
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      line-height: 1.05;
+    }
+
+    .pub-item { border-top: 1px solid var(--rule); padding-top: 1.5rem; padding-bottom: 1.5rem; }
+    .pub-item:last-child { border-bottom: 1px solid var(--rule); }
+
+    .btn-quiet {
+      display: inline-flex; align-items: center; gap: 0.4rem;
+      padding: 0.4rem 0.85rem; border: 1px solid var(--rule); border-radius: 9999px;
+      font-size: 0.78rem; font-weight: 500; color: var(--ink-soft); background: transparent;
+      transition: background 0.15s ease, border-color 0.15s ease;
+    }
+    .btn-quiet:hover { background: var(--rule); }
+
+    .btn-solid {
+      display: inline-flex; align-items: center; gap: 0.4rem;
+      padding: 0.55rem 1.1rem; border: 1px solid var(--ink); border-radius: 9999px;
+      font-size: 0.85rem; font-weight: 600; color: var(--paper-pure); background: var(--ink);
+    }
+    .btn-solid:hover { opacity: 0.88; }
+
+    .nav-link { color: var(--ink-soft); font-size: 0.95rem; padding: 0.25rem 0; }
+
+    /* Profile links — icons + text, uniform size, single line */
+    .profile-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 1.08rem;
+      line-height: 1.2;
+      color: var(--ink);
+      text-decoration: underline;
+      text-decoration-thickness: 1px;
+      text-underline-offset: 4px;
+    }
+    .profile-link:hover { opacity: 0.75; }
+    .nav-link:hover, .nav-link.is-active { color: var(--ink); }
+    .dark .nav-link:hover, .dark .nav-link.is-active { color: #ffffff; }
+
+    /* Backdrop blur removed for paper feel */
+    .glass { background: var(--paper-pure); }
+    .dark .glass { background: rgba(21,24,27,0.92); }
+
     @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
     body { animation: fadeIn 0.3s ease-in; }
-    /* Image lazy loading optimization */
     img { content-visibility: auto; }
-    /* Card hover micro-lift */
-    .card-hover { transition: transform 0.2s ease, box-shadow 0.2s ease; }
-    .card-hover:hover { transform: translateY(-2px); box-shadow: 0 8px 30px rgba(0,0,0,0.08); }
-    .dark .card-hover:hover { box-shadow: 0 8px 30px rgba(0,0,0,0.4); }
-    /* Dark mode toast border */
-    .toast-notification { border: 1px solid rgba(255,255,255,0.1); }
-    /* Section scroll fade-in */
-    section { opacity: 0; transform: translateY(16px); transition: opacity 0.5s ease, transform 0.5s ease; }
+
+    section { opacity: 0; transform: translateY(12px); transition: opacity 0.5s ease, transform 0.5s ease; }
     section.visible { opacity: 1; transform: translateY(0); }
+
+    .toast-notification { border: 1px solid var(--rule); }
   </style>
   
   <!-- Sitemap -->
@@ -69,133 +177,84 @@
   <!-- Canonical URL -->
   <link rel="canonical" href="https://Lucas-Jin-Qh.github.io/" />
 </head>
-<body x-data="app()" x-init="init()" :class="darkMode ? 'dark' : ''" class="bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100">
+<body x-data="app()" x-init="init()" :class="darkMode ? 'dark' : ''" class="bg-[var(--paper)] text-[var(--ink)]">
   <!-- ================= NAVBAR ================= -->
-  <header class="sticky top-0 z-50 border-b border-gray-200/60 dark:border-gray-800/60 bg-white/80 dark:bg-gray-900/70 glass">
-    <div class="max-w-6xl mx-auto px-4">
+  <header class="sticky top-0 z-50 border-b border-gray-200/80 dark:border-gray-800/80 glass">
+    <div class="container-narrow">
       <div class="flex items-center justify-between h-16">
-        <a href="#top" class="font-extrabold tracking-tight text-xl">Qihang(Lucas) Jin<span class="text-sky-500">.</span></a>
-        <nav class="hidden md:flex items-center gap-6 text-sm">
-          <a href="#about" class="hover:text-sky-600 dark:hover:text-sky-400">About</a>
-          <a href="#research" class="hover:text-sky-600 dark:hover:text-sky-400">Research</a>
-          <a href="#publications" class="hover:text-sky-600 dark:hover:text-sky-400">Publications</a>
-          <a href="#projects" class="hover:text-sky-600 dark:hover:text-sky-400">Projects</a>
-          <a href="#contact" class="hover:text-sky-600 dark:hover:text-sky-400">Contact</a>
+        <a href="#top" class="font-bold tracking-tight text-base">Qihang (Lucas) Jin</a>
+        <nav class="hidden md:flex items-center gap-7">
+          <a href="#research" class="nav-link">Research</a>
+          <a href="#publications" class="nav-link">Publications</a>
+          <a href="#experience" class="nav-link">Experience</a>
+          <a href="#education" class="nav-link">Education</a>
+          <a href="#projects" class="nav-link">Projects</a>
+          <a href="#contact" class="nav-link">Contact</a>
         </nav>
         <div class="flex items-center gap-3">
-          <button @click="toggleDark()" class="p-2 rounded-xl border border-gray-200 dark:border-gray-800 hover:bg-gray-50 dark:hover:bg-gray-800" :aria-label="darkMode ? 'Switch to light' : 'Switch to dark'">
-            <i data-lucide="sun" x-show="darkMode" class="w-5 h-5"></i>
-            <i data-lucide="moon" x-show="!darkMode" class="w-5 h-5"></i>
+          <button @click="toggleDark()" class="p-2 rounded-full border border-gray-200 dark:border-gray-800 hover:bg-gray-100 dark:hover:bg-gray-800" :aria-label="darkMode ? 'Switch to light' : 'Switch to dark'">
+            <i data-lucide="sun" x-show="darkMode" class="w-4 h-4"></i>
+            <i data-lucide="moon" x-show="!darkMode" class="w-4 h-4"></i>
           </button>
-          <a href="#contact" class="hidden sm:inline-flex items-center gap-2 px-3 py-2 rounded-xl bg-sky-600 hover:bg-sky-700 text-white text-sm font-semibold">
-            <i data-lucide="send" class="w-4 h-4"></i>
-            <span>Collaborate</span>
+          <a href="./Qihang_Jin_Resume.pdf" download="Qihang_Jin_Resume.pdf" class="hidden sm:inline-flex btn-solid">
+            <span>CV</span>
           </a>
-          <button class="md:hidden p-2 rounded-xl border border-gray-200 dark:border-gray-800" @click="mobileOpen=!mobileOpen" aria-label="Open menu">
-            <i data-lucide="menu" class="w-5 h-5"></i>
+          <button class="md:hidden p-2 rounded-full border border-gray-200 dark:border-gray-800" @click="mobileOpen=!mobileOpen" aria-label="Open menu">
+            <i data-lucide="menu" class="w-4 h-4"></i>
           </button>
         </div>
       </div>
       <div x-show="mobileOpen" x-transition class="md:hidden pb-4">
         <nav class="flex flex-col gap-2 text-sm">
-          <a @click="mobileOpen=false" href="#about" class="py-2 hover:text-sky-600 dark:hover:text-sky-400">About</a>
-          <a @click="mobileOpen=false" href="#research" class="py-2 hover:text-sky-600 dark:hover:text-sky-400">Research</a>
-          <a @click="mobileOpen=false" href="#publications" class="py-2 hover:text-sky-600 dark:hover:text-sky-400">Publications</a>
-          <a @click="mobileOpen=false" href="#projects" class="py-2 hover:text-sky-600 dark:hover:text-sky-400">Projects</a>
-          <a @click="mobileOpen=false" href="#contact" class="py-2 hover:text-sky-600 dark:hover:text-sky-400">Contact</a>
+          <a @click="mobileOpen=false" href="#research" class="nav-link py-1">Research</a>
+          <a @click="mobileOpen=false" href="#publications" class="nav-link py-1">Publications</a>
+          <a @click="mobileOpen=false" href="#experience" class="nav-link py-1">Experience</a>
+          <a @click="mobileOpen=false" href="#education" class="nav-link py-1">Education</a>
+          <a @click="mobileOpen=false" href="#projects" class="nav-link py-1">Projects</a>
+          <a @click="mobileOpen=false" href="#contact" class="nav-link py-1">Contact</a>
         </nav>
       </div>
     </div>
   </header>
 
   <!-- ================= HERO ================= -->
-  <section id="top" class="relative overflow-hidden bg-gradient-to-br from-slate-50 via-blue-50/50 to-indigo-100 dark:from-slate-900 dark:via-blue-900/20 dark:to-slate-950">
-    <div class="max-w-7xl mx-auto px-4 py-20 md:py-28">
-      <div class="grid lg:grid-cols-2 gap-12 items-center">
-        <div class="space-y-6">
-            <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-blue-100 dark:bg-blue-900/30 text-blue-800 dark:text-blue-200 text-sm font-semibold">
-            <i data-lucide="brain" class="w-4 h-4"></i>
-            Graduate Researcher @ USTC &middot; RA @ Columbia &middot; Vision-Language Models
-          </div>
+  <section id="top" class="bg-[var(--paper)]">
+    <div class="container-narrow py-20 md:py-28">
+      <div class="grid lg:grid-cols-[1fr_auto] gap-12 items-start">
+        <div class="space-y-7">
+          <div class="eyebrow text-[0.92rem] tracking-[0.14em]" x-text="identity.subtitle || 'M.Eng. Student at USTC · Research Assistant with the Liam Paninski Lab and the Lu Mi Lab'">M.Eng. Student at USTC · Research Assistant with the Liam Paninski Lab and the Lu Mi Lab</div>
           <div>
-            <h1 class="text-5xl md:text-6xl font-bold leading-tight text-gray-900 dark:text-white">
-              Qihang(Lucas) Jin
-              <span class="block text-3xl md:text-4xl text-blue-600 dark:text-blue-400">金启航</span>
+            <h1 class="heading-display text-[2.5rem] md:text-[3.25rem]">
+              Qihang (Lucas) Jin
+              <span class="block text-[1.65rem] md:text-[2.1rem] font-medium text-[var(--ink-soft)] mt-2">金启航</span>
             </h1>
-            <p class="mt-4 text-xl text-gray-600 dark:text-gray-300 leading-relaxed">
-              Graduate student at USTC and Research Assistant at Columbia University (Liam Paninski Lab), focusing on <strong>Vision-Language Models</strong>,
-              <strong>AI applications</strong>, and <strong>efficient model optimization</strong>.
-            </p>
+            <p class="mt-5 text-[1.05rem] text-[var(--ink-soft)] leading-relaxed max-w-2xl" x-text="identity.affiliations || 'Columbia University · Tsinghua University / Qi Zhi Institute'">Columbia University · Tsinghua University / Qi Zhi Institute</p>
           </div>
-          
-          <!-- Academic Stats -->
-          <div class="grid grid-cols-3 gap-4 py-6 border-t border-b border-gray-200 dark:border-gray-700">
-            <div class="text-center">
-              <div class="text-2xl font-bold text-blue-600 dark:text-blue-400">4+</div>
-              <div class="text-sm text-gray-600 dark:text-gray-400">Publications</div>
-            </div>
-            <div class="text-center">
-              <div class="text-2xl font-bold text-blue-600 dark:text-blue-400">3</div>
-              <div class="text-sm text-gray-600 dark:text-gray-400">Research Areas</div>
-            </div>
-            <div class="text-center">
-              <div class="text-2xl font-bold text-blue-600 dark:text-blue-400">2027</div>
-              <div class="text-sm text-gray-600 dark:text-gray-400">PhD Target</div>
-            </div>
+          <p class="text-[1.125rem] text-[var(--ink-soft)] leading-relaxed max-w-2xl" x-text="identity.statement || 'Research on neural–behavior modeling, representation geometry, and the reliability and adaptation of multimodal systems. Applying to PhD programs starting Fall 2027.'">Research on neural–behavior modeling, representation geometry, and the reliability and adaptation of multimodal systems. Applying to PhD programs starting Fall 2027.</p>
+
+          <div class="flex flex-wrap gap-3 pt-2">
+            <a href="#publications" class="btn-solid">Publications</a>
+            <a href="#research" class="btn-quiet">Research</a>
+            <a class="btn-quiet" x-bind:href="'mailto:' + (email || 'qihangjin@mail.ustc.edu.cn')">Email</a>
           </div>
 
-          <div class="flex flex-wrap gap-3">
-            <a href="#publications" class="px-6 py-3 rounded-xl bg-blue-600 hover:bg-blue-700 text-white font-semibold transition-colors">
-              <i data-lucide="file-text" class="w-4 h-4 inline mr-2"></i>
-              View Publications
-            </a>
-            <a href="#research" class="px-6 py-3 rounded-xl border border-gray-300 dark:border-gray-600 hover:bg-gray-50 dark:hover:bg-gray-800 font-semibold transition-colors">
-              <i data-lucide="search" class="w-4 h-4 inline mr-2"></i>
-              Research Focus
-            </a>
-            <a href="#contact" class="px-6 py-3 rounded-xl border border-gray-300 dark:border-gray-600 hover:bg-gray-50 dark:hover:bg-gray-800 font-semibold transition-colors">
-              <i data-lucide="mail" class="w-4 h-4 inline mr-2"></i>
-              Collaborate
-            </a>
-          </div>
-
-          <!-- Social Links -->
-          <div class="flex items-center gap-4 text-gray-500">
-            <a :href="links.scholar" class="hover:text-blue-600 transition-colors" aria-label="Google Scholar">
-              <i data-lucide="graduation-cap" class="w-5 h-5"></i>
-            </a>
-            <a :href="links.linkedin" class="hover:text-blue-600 transition-colors" aria-label="LinkedIn">
-              <i data-lucide="linkedin" class="w-5 h-5"></i>
-            </a>
-            <a :href="links.github" class="hover:text-blue-600 transition-colors" aria-label="GitHub">
-              <i data-lucide="github" class="w-5 h-5"></i>
-            </a>
-            <a :href="links.twitter" class="hover:text-blue-600 transition-colors" aria-label="Twitter/X">
-              <i data-lucide="twitter" class="w-5 h-5"></i>
-            </a>
+          <div class="flex flex-wrap items-center gap-x-5 gap-y-2 pt-3 text-[1.05rem] leading-none">
+            <a :href="links.scholar"    class="profile-link whitespace-nowrap"><i data-lucide="graduation-cap" class="w-[1.05em] h-[1.05em]"></i><span>Google Scholar</span></a>
+            <a :href="links.github"     class="profile-link"><i data-lucide="brand-github" class="w-[1.05em] h-[1.05em]"></i><span>GitHub</span></a>
+            <a :href="links.linkedin"   class="profile-link"><i data-lucide="brand-linkedin" class="w-[1.05em] h-[1.05em]"></i><span>LinkedIn</span></a>
+            <a :href="links.twitter"    class="profile-link whitespace-nowrap"><i data-lucide="brand-x" class="w-[1.05em] h-[1.05em]"></i><span>Twitter / X</span></a>
           </div>
         </div>
-        
-        <div class="relative">
-          <div class="aspect-square rounded-3xl bg-gradient-to-tr from-blue-100 to-indigo-100 dark:from-blue-900/30 dark:to-indigo-900/20 p-3 shadow-2xl">
+
+        <div class="flex justify-center lg:justify-end">
+          <div class="w-44 h-44 md:w-56 md:h-56 rounded-full overflow-hidden ring-1 ring-[var(--rule)] bg-[var(--paper-pure)]">
             <img id="profile-image"
                  src="./top.png"
-                 alt="Qihang(Lucas) Jin (金启航) - AI Researcher"
+                 alt="Qihang (Lucas) Jin"
                  loading="lazy"
-                 width="500"
-                 height="500"
-                 class="w-full h-full object-cover rounded-2xl">
-          </div>
-          
-          <!-- Research Interests Badge -->
-          <div class="absolute -bottom-8 -right-8 bg-white/90 dark:bg-gray-900/90 backdrop-blur-sm border border-gray-200 dark:border-gray-800 rounded-2xl p-6 shadow-xl">
-            <div class="text-sm font-semibold text-gray-700 dark:text-gray-300 mb-3">Research Interests</div>
-            <div class="flex flex-wrap gap-2">
-              <span class="px-3 py-1 rounded-full bg-blue-100 dark:bg-blue-900/30 text-blue-800 dark:text-blue-200 text-xs font-medium">Vision-Language</span>
-              <span class="px-3 py-1 rounded-full bg-green-100 dark:bg-green-900/30 text-green-800 dark:text-green-200 text-xs font-medium">Model Optimization</span>
-              <span class="px-3 py-1 rounded-full bg-purple-100 dark:bg-purple-900/30 text-purple-800 dark:text-purple-200 text-xs font-medium">AI Applications</span>
-              <span class="px-3 py-1 rounded-full bg-orange-100 dark:bg-orange-900/30 text-orange-800 dark:text-orange-200 text-xs font-medium">Medical AI</span>
-            </div>
+                 width="224"
+                 height="224"
+                 class="w-full h-full object-cover">
           </div>
         </div>
       </div>
@@ -203,416 +262,186 @@
   </section>
 
   <!-- ================= RESEARCH FOCUS ================= -->
-  <section id="research" class="bg-gray-50 dark:bg-gray-900">
-    <div class="max-w-7xl mx-auto px-4 py-16">
-      <div class="text-center mb-12">
-        <h2 class="text-3xl font-bold text-gray-900 dark:text-white mb-4">Research Focus</h2>
-        <p class="text-lg text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
-          My research spans the intersection of computer vision, natural language processing, and AI applications,
-          with a focus on developing efficient and robust AI systems.
-        </p>
+  <section id="research" class="section-rule">
+    <div class="container-narrow py-16">
+      <div class="eyebrow mb-8">Research</div>
+
+      <div class="divide-y divide-[var(--rule)]">
+        <div class="grid md:grid-cols-[12rem_1fr] gap-4 md:gap-10 py-7">
+          <h3 class="text-[1.18rem] font-semibold leading-snug">NeuroAI &amp; Neural–Behavior Modeling</h3>
+          <div class="text-[1.05rem] text-[var(--ink-soft)] leading-relaxed">Multimodal representations connecting behavior, multi-view video, and neural population activity.</div>
+        </div>
+        <div class="grid md:grid-cols-[12rem_1fr] gap-4 md:gap-10 py-7">
+          <h3 class="text-[1.18rem] font-semibold leading-snug">Representation Geometry &amp; Spatial Coding</h3>
+          <div class="text-[1.05rem] text-[var(--ink-soft)] leading-relaxed">Auditing topology, geometry, decodability, and out-of-distribution usability in learned spatial representations.</div>
+        </div>
+        <div class="grid md:grid-cols-[12rem_1fr] gap-4 md:gap-10 py-7">
+          <h3 class="text-[1.18rem] font-semibold leading-snug">Reliable &amp; Adaptive Multimodal Systems</h3>
+          <div class="text-[1.05rem] text-[var(--ink-soft)] leading-relaxed">Diagnosing evaluation failures, routing bottlenecks, and continual-adaptation trade-offs in multimodal models.</div>
+        </div>
       </div>
-      
-      <div class="grid md:grid-cols-2 gap-8">
-        <!-- Vision-Language Models -->
-        <div class="bg-white dark:bg-gray-800 rounded-2xl p-8 shadow-lg border border-gray-200 dark:border-gray-700 card-hover">
-          <div class="flex items-center gap-4 mb-6">
-            <div class="w-12 h-12 bg-blue-100 dark:bg-blue-900/30 rounded-xl flex items-center justify-center">
-              <i data-lucide="eye" class="w-6 h-6 text-blue-600 dark:text-blue-400"></i>
-            </div>
-            <h3 class="text-xl font-bold text-gray-900 dark:text-white">Vision-Language Models</h3>
+    </div>
+  </section>
+
+  <!-- ================= EXPERIENCE ================= -->
+  <section id="experience" class="section-rule">
+    <div class="container-narrow py-16">
+      <div class="eyebrow mb-8">Research Experience</div>
+
+      <div class="divide-y divide-[var(--rule)]">
+        <!-- Columbia / Paninski Lab -->
+        <div class="py-7 grid md:grid-cols-[14rem_1fr] gap-4 md:gap-10">
+          <div class="text-[1rem] text-[var(--ink-mute)]">
+            Dec. 2025 – present
           </div>
-          <p class="text-gray-600 dark:text-gray-300 mb-4">
-            Developing and optimizing vision-language models for multimodal understanding,
-            exploring representation learning and fusion strategies for multimodal data,
-            focusing on efficient training strategies and robust performance across diverse domains.
-          </p>
-          <div class="flex flex-wrap gap-2">
-            <span class="px-3 py-1 bg-blue-100 dark:bg-blue-900/30 text-blue-800 dark:text-blue-200 rounded-full text-sm">CLIP</span>
-            <span class="px-3 py-1 bg-blue-100 dark:bg-blue-900/30 text-blue-800 dark:text-blue-200 rounded-full text-sm">Image Processing</span>
-            <span class="px-3 py-1 bg-blue-100 dark:bg-blue-900/30 text-blue-800 dark:text-blue-200 rounded-full text-sm">Model Mechanisms</span>
-            <span class="px-3 py-1 bg-blue-100 dark:bg-blue-900/30 text-blue-800 dark:text-blue-200 rounded-full text-sm">Multimodal</span>
-            <span class="px-3 py-1 bg-blue-100 dark:bg-blue-900/30 text-blue-800 dark:text-blue-200 rounded-full text-sm">Fusion</span>
-            <span class="px-3 py-1 bg-blue-100 dark:bg-blue-900/30 text-blue-800 dark:text-blue-200 rounded-full text-sm">Alignment</span>
-            <span class="px-3 py-1 bg-blue-100 dark:bg-blue-900/30 text-blue-800 dark:text-blue-200 rounded-full text-sm">Representation</span>
+          <div>
+            <div class="flex flex-wrap items-baseline gap-x-3">
+              <h3 class="text-[1.22rem] font-semibold">Columbia University — Liam Paninski Lab</h3>
+              <span class="text-[1rem] text-[var(--ink-mute)]">Research Assistant</span>
+            </div>
+            <ul class="mt-3 space-y-2 text-[1.05rem] text-[var(--ink-soft)] leading-relaxed list-disc list-outside pl-5 marker:text-[var(--ink-mute)]">
+              <li>SABLE: cross-view geometry initialization, keypoint-assisted camera calibration, and point-cloud visualization for 3D animal-behavior reconstruction, with controlled ablations over 28-keypoint versus paws-and-nose supervision on Cheese3D.</li>
+              <li>Longitudinal IBL neural-behavior analysis: initial quality control across 60 sessions and POSSM baseline reproduction.</li>
+            </ul>
           </div>
         </div>
 
-        <!-- Model Optimization -->
-        <div class="bg-white dark:bg-gray-800 rounded-2xl p-8 shadow-lg border border-gray-200 dark:border-gray-700 card-hover">
-          <div class="flex items-center gap-4 mb-6">
-            <div class="w-12 h-12 bg-green-100 dark:bg-green-900/30 rounded-xl flex items-center justify-center">
-              <i data-lucide="zap" class="w-6 h-6 text-green-600 dark:text-green-400"></i>
+        <!-- Tsinghua / Lu Mi Lab -->
+        <div class="py-7 grid md:grid-cols-[14rem_1fr] gap-4 md:gap-10">
+          <div class="text-[1rem] text-[var(--ink-mute)]">
+            Jun. 2026 – present
+          </div>
+          <div>
+            <div class="flex flex-wrap items-baseline gap-x-3">
+              <h3 class="text-[1.22rem] font-semibold">Tsinghua University / Qi Zhi Institute — Lu Mi Lab</h3>
+              <span class="text-[1rem] text-[var(--ink-mute)]">Research Assistant</span>
             </div>
-            <h3 class="text-xl font-bold text-gray-900 dark:text-white">Model Optimization</h3>
-          </div>
-          <p class="text-gray-600 dark:text-gray-300 mb-4">
-            Researching efficient fine-tuning methods, parameter-efficient techniques, 
-            and optimization strategies to reduce computational costs while maintaining model performance.
-          </p>
-          <div class="flex flex-wrap gap-2">
-            <span class="px-3 py-1 bg-green-100 dark:bg-green-900/30 text-green-800 dark:text-green-200 rounded-full text-sm">LoRA</span>
-            <span class="px-3 py-1 bg-green-100 dark:bg-green-900/30 text-green-800 dark:text-green-200 rounded-full text-sm">Adapters</span>
-            <span class="px-3 py-1 bg-green-100 dark:bg-green-900/30 text-green-800 dark:text-green-200 rounded-full text-sm">Efficient Training</span>
-          </div>
-        </div>
-
-        <!-- AI Applications -->
-        <div class="bg-white dark:bg-gray-800 rounded-2xl p-8 shadow-lg border border-gray-200 dark:border-gray-700 card-hover">
-          <div class="flex items-center gap-4 mb-6">
-            <div class="w-12 h-12 bg-purple-100 dark:bg-purple-900/30 rounded-xl flex items-center justify-center">
-              <i data-lucide="shield" class="w-6 h-6 text-purple-600 dark:text-purple-400"></i>
-            </div>
-            <h3 class="text-xl font-bold text-gray-900 dark:text-white">AI Applications</h3>
-          </div>
-          <p class="text-gray-600 dark:text-gray-300 mb-4">
-            Addressing critical challenges in AI deployment including safety, privacy protection,
-            bias mitigation, and responsible AI development across real-world applications.
-          </p>
-          <div class="flex flex-wrap gap-2">
-            <span class="px-3 py-1 bg-purple-100 dark:bg-purple-900/30 text-purple-800 dark:text-purple-200 rounded-full text-sm">AI Safety</span>
-            <span class="px-3 py-1 bg-purple-100 dark:bg-purple-900/30 text-purple-800 dark:text-purple-200 rounded-full text-sm">Privacy</span>
-            <span class="px-3 py-1 bg-purple-100 dark:bg-purple-900/30 text-purple-800 dark:text-purple-200 rounded-full text-sm">Bias</span>
-            <span class="px-3 py-1 bg-purple-100 dark:bg-purple-900/30 text-purple-800 dark:text-purple-200 rounded-full text-sm">Ethics</span>
-          </div>
-        </div>
-
-        <!-- Medical AI -->
-        <div class="bg-white dark:bg-gray-800 rounded-2xl p-8 shadow-lg border border-gray-200 dark:border-gray-700 card-hover">
-          <div class="flex items-center gap-4 mb-6">
-            <div class="w-12 h-12 bg-orange-100 dark:bg-orange-900/30 rounded-xl flex items-center justify-center">
-              <i data-lucide="heart" class="w-6 h-6 text-orange-600 dark:text-orange-400"></i>
-            </div>
-            <h3 class="text-xl font-bold text-gray-900 dark:text-white">Medical AI</h3>
-          </div>
-          <p class="text-gray-600 dark:text-gray-300 mb-4">
-            Bridging AI and healthcare through interdisciplinary approaches, integrating neuroscience,
-            computer vision, and clinical expertise for brain-computer interfaces, medical imaging,
-            and intelligent healthcare systems.
-          </p>
-          <div class="flex flex-wrap gap-2">
-            <span class="px-3 py-1 bg-orange-100 dark:bg-orange-900/30 text-orange-800 dark:text-orange-200 rounded-full text-sm">Neuroscience</span>
-            <span class="px-3 py-1 bg-orange-100 dark:bg-orange-900/30 text-orange-800 dark:text-orange-200 rounded-full text-sm">BCI</span>
-            <span class="px-3 py-1 bg-orange-100 dark:bg-orange-900/30 text-orange-800 dark:text-orange-200 rounded-full text-sm">Medical Imaging</span>
-            <span class="px-3 py-1 bg-orange-100 dark:bg-orange-900/30 text-orange-800 dark:text-orange-200 rounded-full text-sm">Clinical AI</span>
+            <ul class="mt-3 space-y-2 text-[1.05rem] text-[var(--ink-soft)] leading-relaxed list-disc list-outside pl-5 marker:text-[var(--ink-mute)]">
+              <li>Initiated <em>Cheap Certificates of Spatial Coding</em> and designed its controlled audit, metric suite, model sweep, and scientific framing.</li>
+            </ul>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ================= ABOUT ================= -->
-  <section id="about" class="border-t border-gray-200 dark:border-gray-800">
-    <div class="max-w-6xl mx-auto px-4 py-16">
-      <div class="grid lg:grid-cols-2 gap-12 items-center">
-        <div>
-          <h2 class="text-3xl font-bold text-gray-900 dark:text-white mb-6">About</h2>
-          <p class="text-lg text-gray-600 dark:text-gray-300 leading-relaxed mb-6">
-            I am a graduate student at USTC (Institute of Advanced Technology) and a Research Assistant
-            at Columbia University (Liam Paninski Lab). My research focuses on developing cutting-edge
-            AI systems that can understand and process multimodal information efficiently and responsibly.
-          </p>
-          <p class="text-gray-600 dark:text-gray-300 leading-relaxed mb-8">
-            Actively contributing to the field through publications and collaborations with leading researchers.
-            I am applying for PhD programs starting Fall 2027 and am open to research positions
-            (remote or on-site).
-          </p>
-          
-          <div class="flex flex-wrap gap-3 mb-6">
-            <a href="./Qihang_Jin_Resume.pdf" download="Qihang_Jin_Resume.pdf" class="px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white rounded-xl font-semibold transition-colors">
-              <i data-lucide="download" class="w-4 h-4 inline mr-2"></i>
-              Download CV
-            </a>
-            <a :href="links.scholar" class="px-6 py-3 border border-gray-300 dark:border-gray-600 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-xl font-semibold transition-colors">
-              <i data-lucide="graduation-cap" class="w-4 h-4 inline mr-2"></i>
-              Google Scholar
-            </a>
-          </div>
+  <!-- ================= EDUCATION ================= -->
+  <section id="education" class="section-rule">
+    <div class="container-narrow py-16">
+      <div class="eyebrow mb-8">Education</div>
 
-          <!-- Research Experience -->
-          <div class="bg-white dark:bg-gray-800 rounded-2xl p-6 border border-gray-200 dark:border-gray-700 mb-6 card-hover">
-            <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-4 flex items-center gap-2">
-              <i data-lucide="briefcase" class="w-5 h-5 text-sky-500"></i>
-              Research Experience
-            </h3>
-            <div class="space-y-4">
-              <!-- Columbia -->
-              <div class="flex items-start gap-3">
-                <div class="w-10 h-10 bg-purple-100 dark:bg-purple-900/30 rounded-lg flex items-center justify-center flex-shrink-0 mt-0.5">
-                  <i data-lucide="globe" class="w-5 h-5 text-purple-600 dark:text-purple-400"></i>
-                </div>
-                <div>
-                  <div class="font-medium text-gray-900 dark:text-white">Research Assistant</div>
-                  <div class="text-sm text-gray-600 dark:text-gray-300">Columbia University — <span class="text-gray-500 dark:text-gray-400">Liam Paninski Lab</span></div>
-                  <div class="text-xs text-gray-500 dark:text-gray-400">Neural Signal Analysis · IBL Data 3D Reconstruction</div>
-                </div>
-              </div>
-              <!-- USTC -->
-              <div class="flex items-start gap-3">
-                <div class="w-10 h-10 bg-blue-100 dark:bg-blue-900/30 rounded-lg flex items-center justify-center flex-shrink-0 mt-0.5">
-                  <i data-lucide="school" class="w-5 h-5 text-blue-600 dark:text-blue-400"></i>
-                </div>
-                <div>
-                  <div class="font-medium text-gray-900 dark:text-white">Graduate Researcher</div>
-                  <div class="text-sm text-gray-600 dark:text-gray-300">USTC — <span class="text-gray-500 dark:text-gray-400">Institute of Advanced Technology</span></div>
-                  <div class="text-xs text-gray-500 dark:text-gray-400">Vision-Language Models · AI Applications</div>
-                </div>
-              </div>
+      <div class="divide-y divide-[var(--rule)]" id="education-list">
+        <template x-for="(e, i) in education" :key="i">
+          <div class="py-7 grid md:grid-cols-[14rem_1fr] gap-4 md:gap-10">
+            <div class="text-[1rem] text-[var(--ink-mute)]" x-text="e.period"></div>
+            <div>
+              <div class="text-[1.22rem] font-semibold" x-text="e.school"></div>
+              <div class="text-[1.05rem] text-[var(--ink-soft)] mt-1" x-text="e.degree"></div>
+              <div class="text-[0.98rem] text-[var(--ink-mute)] mt-1" x-text="e.location"></div>
             </div>
           </div>
-        </div>
-        
-        <div class="space-y-6">
-          <!-- Collaboration Opportunities -->
-          <div class="bg-white dark:bg-gray-800 rounded-2xl p-6 border border-gray-200 dark:border-gray-700 card-hover">
-            <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-4">Collaboration Opportunities</h3>
-            <ul class="space-y-3 text-gray-600 dark:text-gray-300">
-              <li class="flex items-start gap-3">
-                <i data-lucide="check-circle" class="w-5 h-5 text-green-500 mt-0.5 flex-shrink-0"></i>
-                <span>VLM robustness evaluation and adversarial/diagnostic tools</span>
-              </li>
-              <li class="flex items-start gap-3">
-                <i data-lucide="check-circle" class="w-5 h-5 text-green-500 mt-0.5 flex-shrink-0"></i>
-                <span>Efficient fine-tuning and cross-domain transfer (medical/industrial)</span>
-              </li>
-              <li class="flex items-start gap-3">
-                <i data-lucide="check-circle" class="w-5 h-5 text-green-500 mt-0.5 flex-shrink-0"></i>
-                <span>Long document/multi-image multi-page scene understanding</span>
-              </li>
-            </ul>
-          </div>
-
-          <!-- Quick Links -->
-          <div class="bg-white dark:bg-gray-800 rounded-2xl p-6 border border-gray-200 dark:border-gray-700 card-hover">
-            <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-4">Quick Links</h3>
-            <div class="grid grid-cols-2 gap-3">
-              <a :href="links.github" class="flex items-center gap-2 text-gray-600 dark:text-gray-300 hover:text-blue-600 transition-colors">
-                <i data-lucide="github" class="w-4 h-4"></i>
-                <span>GitHub</span>
-              </a>
-              <a :href="links.linkedin" class="flex items-center gap-2 text-gray-600 dark:text-gray-300 hover:text-blue-600 transition-colors">
-                <i data-lucide="linkedin" class="w-4 h-4"></i>
-                <span>LinkedIn</span>
-              </a>
-              <a :href="links.scholar" class="flex items-center gap-2 text-gray-600 dark:text-gray-300 hover:text-blue-600 transition-colors">
-                <i data-lucide="graduation-cap" class="w-4 h-4"></i>
-                <span>Scholar</span>
-              </a>
-              <a :href="links.twitter" class="flex items-center gap-2 text-gray-600 dark:text-gray-300 hover:text-blue-600 transition-colors">
-                <i data-lucide="twitter" class="w-4 h-4"></i>
-                <span>Twitter</span>
-              </a>
-            </div>
-          </div>
-        </div>
+        </template>
       </div>
     </div>
   </section>
 
   <!-- ================= PUBLICATIONS ================= -->
-  <section id="publications" class="bg-gray-50 dark:bg-gray-900">
-    <div class="max-w-7xl mx-auto px-4 py-16">
-      <div class="text-center mb-12">
-        <h2 class="text-3xl font-bold text-gray-900 dark:text-white mb-4">Publications</h2>
-        <p class="text-lg text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
-          My research contributions span multiple areas of AI, with publications and ongoing work
-          in cutting-edge technologies, methodologies, and responsible AI development.
-        </p>
-      </div>
+  <section id="publications" class="section-rule">
+    <div class="container-narrow py-16">
+      <div class="eyebrow mb-8">Publications</div>
 
-      <!-- Publication Stats -->
-      <div class="grid grid-cols-4 gap-6 mb-12">
-        <div class="text-center p-6 bg-white dark:bg-gray-800 rounded-2xl border border-gray-200 dark:border-gray-700">
-          <div class="text-3xl font-bold text-blue-600 dark:text-blue-400">4+</div>
-          <div class="text-sm text-gray-600 dark:text-gray-400 mt-1">Publications</div>
-        </div>
-        <div class="text-center p-6 bg-white dark:bg-gray-800 rounded-2xl border border-gray-200 dark:border-gray-700">
-          <div class="text-3xl font-bold text-green-600 dark:text-green-400">3</div>
-          <div class="text-sm text-gray-600 dark:text-gray-400 mt-1">Research Areas</div>
-        </div>
-        <div class="text-center p-6 bg-white dark:bg-gray-800 rounded-2xl border border-gray-200 dark:border-gray-700">
-          <div class="text-3xl font-bold text-purple-600 dark:text-purple-400">1</div>
-          <div class="text-sm text-gray-600 dark:text-gray-400 mt-1">Under Review</div>
-        </div>
-        <div class="text-center p-6 bg-white dark:bg-gray-800 rounded-2xl border border-gray-200 dark:border-gray-700">
-          <div class="text-3xl font-bold text-orange-600 dark:text-orange-400">2026</div>
-          <div class="text-sm text-gray-600 dark:text-gray-400 mt-1">Latest Year</div>
-        </div>
-      </div>
-
-      <!-- Search and Filter Controls -->
-      <div class="flex flex-wrap items-center justify-between gap-4 mb-8">
+      <div class="flex flex-wrap items-center justify-between gap-4 mb-6">
         <div class="flex flex-wrap items-center gap-3">
           <div class="relative">
-            <i data-lucide="search" class="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-gray-400"></i>
-            <input x-model="pubQuery" @input="filterPubs()" type="search" placeholder="Search publications..." class="w-80 max-w-full pl-10 pr-4 py-2 text-sm rounded-xl border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-800 focus:ring-2 focus:ring-blue-500 focus:border-transparent" />
+            <i data-lucide="search" class="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-[var(--ink-mute)]"></i>
+            <input x-model="pubQuery" @input="filterPubs()" type="search" placeholder="Search publications..." class="w-72 max-w-full pl-9 pr-3 py-2 text-[0.98rem] rounded-full border border-[var(--rule)] bg-transparent focus:outline-none focus:border-[var(--ink)]" />
           </div>
-          <select x-model="pubYear" @change="filterPubs()" class="px-4 py-2 text-sm rounded-xl border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-800 focus:ring-2 focus:ring-blue-500 focus:border-transparent">
-            <option value="all">All Years</option>
+          <select x-model="pubYear" @change="filterPubs()" class="px-3 py-2 text-[0.98rem] rounded-full border border-[var(--rule)] bg-transparent focus:outline-none focus:border-[var(--ink)]">
+            <option value="all">All years</option>
             <template x-for="y in years" :key="y"><option :value="y" x-text="y"></option></template>
           </select>
         </div>
-        <button @click="toggleBibtex()" class="px-4 py-2 text-sm rounded-xl border border-gray-300 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors">
-          <i data-lucide="file-text" class="w-4 h-4 inline mr-2"></i>
-          Toggle BibTeX
-        </button>
+        <button @click="toggleBibtex()" class="btn-quiet" x-text="showBibtex ? 'Hide BibTeX' : 'Show BibTeX'">Show BibTeX</button>
       </div>
 
-      <!-- Publications List -->
-      <div class="space-y-6" x-ref="pubList"></div>
+      <div x-ref="pubList"></div>
+      <p class="mt-8 text-[0.98rem] text-[var(--ink-mute)]"><span class="font-mono">*</span> denotes equal contribution.</p>
     </div>
   </section>
 
   <!-- ================= PROJECTS ================= -->
-  <section id="projects" class="border-t border-gray-200 dark:border-gray-800">
-    <div class="max-w-7xl mx-auto px-4 py-16">
-      <div class="flex items-center justify-between mb-8">
-        <h2 class="text-3xl font-bold text-gray-900 dark:text-white">Projects</h2>
-        <div class="text-sm text-gray-500 dark:text-gray-400">Auto-loaded from <span class="font-mono">@Lucas-Jin-Qh</span> GitHub</div>
+  <section id="projects" class="section-rule">
+    <div class="container-narrow py-16">
+      <div class="flex items-baseline justify-between mb-8">
+        <div class="eyebrow">Projects</div>
+        <div class="text-[0.95rem] text-[var(--ink-mute)]">github.com/Lucas-Jin-Qh</div>
       </div>
-      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6" x-ref="repoGrid">
-        <div class="text-sm text-gray-500">Loading repositories...</div>
+      <div x-ref="repoGrid">
+        <div class="text-[1rem] text-[var(--ink-mute)]">Loading repositories…</div>
       </div>
     </div>
   </section>
 
   <!-- ================= CONTACT ================= -->
-  <section id="contact" class="border-t border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-900">
-    <div class="max-w-6xl mx-auto px-4 py-16">
-      <div class="text-center mb-12">
-        <h2 class="text-3xl font-bold text-gray-900 dark:text-white mb-4">Contact & Collaboration</h2>
-        <p class="text-lg text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
-          I'm always interested in discussing research opportunities, collaborations, and potential PhD positions. 
-          Feel free to reach out!
-        </p>
-      </div>
+  <section id="contact" class="section-rule">
+    <div class="container-narrow py-16">
+      <div class="eyebrow mb-8">Contact</div>
 
-      <!-- Contact Information - Horizontal Layout -->
-      <div class="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
-        <!-- Direct Contact -->
-        <div class="bg-white dark:bg-gray-800 rounded-2xl p-8 border border-gray-200 dark:border-gray-700 card-hover">
-          <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-6">Direct Contact</h3>
-          <div class="space-y-4">
-            <div class="flex items-center gap-4">
-              <div class="w-10 h-10 bg-blue-100 dark:bg-blue-900/30 rounded-xl flex items-center justify-center">
-                <i data-lucide="mail" class="w-5 h-5 text-blue-600 dark:text-blue-400"></i>
-              </div>
+      <div class="grid md:grid-cols-2 gap-12">
+        <div>
+          <div class="text-[0.98rem] text-[var(--ink-mute)] mb-2">Email</div>
+          <div class="flex flex-col gap-1.5 text-[1.08rem]">
+            <a x-show="!emails.length && email" :href="'mailto:' + email" class="font-medium underline decoration-1 underline-offset-4" x-text="email"></a>
+            <a x-show="!emails.length && !email" href="mailto:qihangjin@mail.ustc.edu.cn" class="font-medium underline decoration-1 underline-offset-4">qihangjin@mail.ustc.edu.cn</a>
+            <template x-for="em in emails" :key="em.address">
               <div>
-                <div class="font-medium text-gray-900 dark:text-white">Email</div>
-                <a :href="'mailto:' + (email || 'qihangjin@mail.ustc.edu.cn')" class="text-blue-600 hover:text-blue-700" x-text="email || 'qihangjin@mail.ustc.edu.cn'">qihangjin@mail.ustc.edu.cn</a>
+                <a :href="'mailto:' + em.address" class="font-medium underline decoration-1 underline-offset-4" x-text="em.address"></a>
+                <span class="text-[0.92rem] text-[var(--ink-mute)] ml-2" x-text="em.label"></span>
               </div>
-            </div>
-            <div class="flex items-center gap-4">
-              <div class="w-10 h-10 bg-green-100 dark:bg-green-900/30 rounded-xl flex items-center justify-center">
-                <i data-lucide="map-pin" class="w-5 h-5 text-green-600 dark:text-green-400"></i>
-              </div>
-              <div>
-                <div class="font-medium text-gray-900 dark:text-white">Location</div>
-                <div class="text-gray-600 dark:text-gray-300">Hefei, Anhui, China</div>
-              </div>
-            </div>
-            <div class="flex items-center gap-4">
-              <div class="w-10 h-10 bg-purple-100 dark:bg-purple-900/30 rounded-xl flex items-center justify-center">
-                <i data-lucide="building" class="w-5 h-5 text-purple-600 dark:text-purple-400"></i>
-              </div>
-              <div>
-                <div class="font-medium text-gray-900 dark:text-white">Institution</div>
-                <div class="text-gray-600 dark:text-gray-300">USTC · Institute of Advanced Technology</div>
-              </div>
-            </div>
+            </template>
+          </div>
+
+          <div class="text-[0.98rem] text-[var(--ink-mute)] mt-7 mb-1">Location</div>
+          <div class="text-[1.08rem]">Hefei, Anhui, China</div>
+
+          <div class="text-[0.98rem] text-[var(--ink-mute)] mt-7 mb-2">Affiliations</div>
+          <div class="text-[1.05rem] leading-relaxed">
+            University of Science and Technology of China<br>
+            Columbia University — Liam Paninski Lab<br>
+            Tsinghua University / Qi Zhi Institute — Lu Mi Lab
           </div>
         </div>
 
-        <!-- Social Links -->
-        <div class="bg-white dark:bg-gray-800 rounded-2xl p-8 border border-gray-200 dark:border-gray-700 card-hover">
-          <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-6">Connect</h3>
-          <div class="grid grid-cols-2 gap-4">
-            <a :href="links.github" class="flex items-center gap-3 p-4 rounded-xl border border-gray-200 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors">
-              <i data-lucide="github" class="w-5 h-5 text-gray-600 dark:text-gray-400"></i>
-              <span class="font-medium">GitHub</span>
-            </a>
-            <a :href="links.scholar" class="flex items-center gap-3 p-4 rounded-xl border border-gray-200 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors">
-              <i data-lucide="graduation-cap" class="w-5 h-5 text-gray-600 dark:text-gray-400"></i>
-              <span class="font-medium">Scholar</span>
-            </a>
-            <a :href="links.linkedin" class="flex items-center gap-3 p-4 rounded-xl border border-gray-200 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors">
-              <i data-lucide="linkedin" class="w-5 h-5 text-gray-600 dark:text-gray-400"></i>
-              <span class="font-medium">LinkedIn</span>
-            </a>
-            <a :href="links.twitter" class="flex items-center gap-3 p-4 rounded-xl border border-gray-200 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors">
-              <i data-lucide="twitter" class="w-5 h-5 text-gray-600 dark:text-gray-400"></i>
-              <span class="font-medium">Twitter</span>
-            </a>
+        <div>
+          <div class="text-[0.98rem] text-[var(--ink-mute)] mb-3">Profiles</div>
+          <div class="flex flex-nowrap items-center gap-x-5 gap-y-2 text-[1.08rem] leading-none">
+            <a :href="links.github"     class="profile-link"><i data-lucide="brand-github" class="w-[1.05em] h-[1.05em]"></i><span>GitHub</span></a>
+            <a :href="links.scholar"    class="profile-link whitespace-nowrap"><i data-lucide="graduation-cap" class="w-[1.05em] h-[1.05em]"></i><span>Google Scholar</span></a>
+            <a :href="links.linkedin"   class="profile-link"><i data-lucide="brand-linkedin" class="w-[1.05em] h-[1.05em]"></i><span>LinkedIn</span></a>
+            <a :href="links.twitter"    class="profile-link whitespace-nowrap"><i data-lucide="brand-x" class="w-[1.05em] h-[1.05em]"></i><span>Twitter / X</span></a>
           </div>
+
+          <div class="text-[0.98rem] text-[var(--ink-mute)] mt-7 mb-2">CV</div>
+          <a href="./Qihang_Jin_Resume.pdf" download="Qihang_Jin_Resume.pdf" class="btn-quiet">Download PDF</a>
         </div>
       </div>
     </div>
   </section>
 
   <!-- Back to Top Button -->
-  <button id="backToTop" class="fixed bottom-8 right-8 p-3 bg-blue-600 hover:bg-blue-700 text-white rounded-full shadow-lg opacity-0 transition-all duration-300 transform scale-95 z-40">
-    <i data-lucide="arrow-up" class="w-5 h-5"></i>
+  <button id="backToTop" class="fixed bottom-8 right-8 p-2.5 rounded-full border border-[var(--rule)] bg-[var(--paper-pure)] hover:opacity-80 opacity-0 transition-all duration-300 transform scale-95 z-40" aria-label="Back to top">
+    <i data-lucide="arrow-up" class="w-4 h-4"></i>
   </button>
 
   <!-- ================= FOOTER ================= -->
-  <footer class="bg-gray-900 dark:bg-[#080808] text-white">
-    <div class="max-w-7xl mx-auto px-4 py-12">
-      <div class="grid md:grid-cols-3 gap-8">
-        <!-- Brand -->
-        <div>
-          <h3 class="text-xl font-bold mb-4">Qihang(Lucas) Jin</h3>
-          <p class="text-gray-400 dark:text-gray-500 mb-4">
-            Graduate student in Computer Technology specializing in Vision-Language Models, AI applications, and model optimization.
-          </p>
-          <div class="flex items-center gap-4">
-            <a :href="links.github" class="text-gray-400 hover:text-white transition-colors">
-              <i data-lucide="github" class="w-5 h-5"></i>
-            </a>
-            <a :href="links.scholar" class="text-gray-400 hover:text-white transition-colors">
-              <i data-lucide="graduation-cap" class="w-5 h-5"></i>
-            </a>
-            <a :href="links.linkedin" class="text-gray-400 hover:text-white transition-colors">
-              <i data-lucide="linkedin" class="w-5 h-5"></i>
-            </a>
-            <a :href="links.twitter" class="text-gray-400 hover:text-white transition-colors">
-              <i data-lucide="twitter" class="w-5 h-5"></i>
-            </a>
-          </div>
-        </div>
-
-        <!-- Quick Links -->
-        <div>
-          <h3 class="text-lg font-semibold mb-4">Quick Links</h3>
-          <div class="space-y-2">
-            <a href="#research" class="block text-gray-400 hover:text-white transition-colors">Research Focus</a>
-            <a href="#publications" class="block text-gray-400 hover:text-white transition-colors">Publications</a>
-            <a href="#projects" class="block text-gray-400 hover:text-white transition-colors">Projects</a>
-            <a href="#contact" class="block text-gray-400 hover:text-white transition-colors">Contact</a>
-          </div>
-        </div>
-
-        <!-- Contact Info -->
-        <div>
-          <h3 class="text-lg font-semibold mb-4">Contact</h3>
-          <div class="space-y-2 text-gray-400">
-            <div class="flex items-center gap-2">
-              <i data-lucide="mail" class="w-4 h-4"></i>
-              <a :href="'mailto:' + (email || 'qihangjin@mail.ustc.edu.cn')" class="hover:text-white transition-colors" x-text="email || 'qihangjin@mail.ustc.edu.cn'">qihangjin@mail.ustc.edu.cn</a>
-            </div>
-            <div class="flex items-center gap-2">
-              <i data-lucide="map-pin" class="w-4 h-4"></i>
-              <span>Hefei, Anhui, China</span>
-            </div>
-            <div class="flex items-center gap-2">
-              <i data-lucide="building" class="w-4 h-4"></i>
-              <span>USTC · IAT</span>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
-        <p>© <span x-text="new Date().getFullYear()"></span> Qihang(Lucas) Jin. All rights reserved.</p>
+  <footer class="border-t border-[var(--rule)]">
+    <div class="container-narrow py-8 flex flex-wrap items-center justify-between gap-4 text-sm text-[var(--ink-mute)]">
+      <div>© <span x-text="new Date().getFullYear()"></span> Qihang (Lucas) Jin</div>
+      <div class="flex items-center gap-5">
+        <a :href="links.github">GitHub</a>
+        <a :href="links.scholar">Scholar</a>
+        <a :href="links.linkedin">LinkedIn</a>
+        <a :href="links.twitter">Twitter</a>
       </div>
     </div>
   </footer>
@@ -620,13 +449,35 @@
   <!-- ================= DATA (Inline fallback; can be overridden by /data/*.json) ================= -->
   <script id="site-data" type="application/json">
   {
-    "email": "qihangjin@mail.ustc.edu.cn",
+    "emails": [
+      { "address": "qihangjin@mail.ustc.edu.cn", "label": "USTC" },
+      { "address": "qihangjin1121@gmail.com",   "label": "Gmail" }
+    ],
     "links": {
       "github": "https://github.com/Lucas-Jin-Qh",
       "scholar": "https://scholar.google.com/citations?user=pSvQSKsAAAAJ&hl=en",
       "linkedin": "https://www.linkedin.com/in/qihang-jin-lucas1121",
       "twitter": "https://x.com/Qh_Jin_Lucas"
     },
+    "identity": {
+      "subtitle": "M.Eng. Student at USTC · Research Assistant with the Liam Paninski Lab and the Lu Mi Lab",
+      "affiliations": "Columbia University · Tsinghua University / Qi Zhi Institute",
+      "statement": "Research on neural\u2013behavior modeling, representation geometry, and the reliability and adaptation of multimodal systems. Applying to PhD programs starting Fall 2027."
+    },
+    "education": [
+      {
+        "degree": "M.Eng. in Electronic and Information Engineering",
+        "school": "University of Science and Technology of China",
+        "location": "Hefei, China",
+        "period": "Expected Jun. 2027"
+      },
+      {
+        "degree": "B.Eng. in Vehicle Engineering",
+        "school": "Chang'an University",
+        "location": "Xi'an, China",
+        "period": "Jul. 2022"
+      }
+    ],
     "publications": []
   }
   </script>
@@ -640,7 +491,10 @@
         mobileOpen: false,
         lang: 'en',
         email: "",
+        emails: [],
         links: {},
+        identity: { subtitle: "", affiliations: "", statement: "" },
+        education: [],
         pubQuery: "",
         pubYear: "all",
         years: [],
@@ -774,6 +628,7 @@
 
           document.body.appendChild(toast);
           window.lucide?.createIcons();
+          window.installSocialIcons?.();
 
           // Animate in
           setTimeout(() => {
@@ -913,7 +768,8 @@
           this.setupNetworkMonitoring();
 
           // icons
-          setTimeout(()=>{window.lucide?.createIcons();}, 0);
+          setTimeout(()=>{window.lucide?.createIcons();
+          window.installSocialIcons?.();}, 0);
 
           // Setup BibTeX copy functionality
           this.setupBibtexCopy();
@@ -937,7 +793,7 @@
 
           // Nav active section highlight
           const navLinks = document.querySelectorAll('nav a');
-          const sectionIds = ['top', 'research', 'about', 'publications', 'projects', 'contact'];
+          const sectionIds = ['top', 'research', 'experience', 'education', 'publications', 'projects', 'contact'];
           const sectionObserver2 = new IntersectionObserver((entries) => {
             entries.forEach(e => {
               if (e.isIntersecting) {
@@ -974,14 +830,19 @@
           }
 
           // 验证并设置数据
-          this.email = data.email || 'qihangjin@mail.ustc.edu.cn';
+          this.email = data.email || '';
+          this.emails = Array.isArray(data.emails) ? data.emails : (this.email ? [{ address: this.email, label: '' }] : []);
           this.links = Object.assign({}, dataInline.links, data.links || {});
+          this.identity = Object.assign({}, dataInline.identity || {}, data.identity || {});
+          this.education = (data.education && Array.isArray(data.education)) ? data.education : (dataInline.education || []);
 
           // Force Alpine.js to update the DOM
           this.$nextTick(() => {
             // Trigger reactivity update
             this.email = this.email;
             this.links = this.links;
+            this.identity = this.identity;
+            this.education = this.education;
           });
 
           // publications
@@ -1021,7 +882,8 @@
           localStorage.setItem('theme', this.darkMode?'dark':'light'); 
           // Force Alpine.js reactivity update
           this.$nextTick(() => {
-            window.lucide?.createIcons(); 
+            window.lucide?.createIcons();
+          window.installSocialIcons?.(); 
           });
         },
         toggleBibtex(){ this.showBibtex = !this.showBibtex; this.filterPubs(); },
@@ -1036,35 +898,46 @@
           this.renderPubs(filtered);
         },
         renderPubs(list){
-          const wrap = this.$refs.pubList; wrap.innerHTML='';
-          list.sort((a,b)=> (b.year-a.year) || a.title.localeCompare(b.title)).forEach(p=>{
-            const title = p.title;
-            const venue = p.venue;
-            const abstract = p.abstract || '';
-            const card = document.createElement('div');
-            card.className = 'p-6 rounded-2xl border border-gray-200 dark:border-gray-700 hover:bg-gray-50/60 dark:hover:bg-gray-800/60 transition-all duration-200';
-            const tags = (p.tags||[]).map(t=>`<span class=\"px-2 py-0.5 rounded-full bg-gray-100 dark:bg-gray-800 text-xs\">${t}</span>`).join(' ');
-            const bib = this.showBibtex ? `<pre class=\"mt-4 p-3 bg-gray-100 dark:bg-gray-800 rounded-xl overflow-x-auto text-xs\">${p.bibtex||''}</pre>` : '';
-            const abstractHtml = abstract ? `<div class=\"mt-3 text-sm text-gray-600 dark:text-gray-400 leading-relaxed\">${abstract}</div>` : '';
-            card.innerHTML = `
-              <div class=\"space-y-3\">
-                <div>
-                  <a href=\"${p.pdf||'#'}\" target=\"_blank\" class=\"text-lg font-bold text-sky-600 dark:text-sky-400 hover:text-sky-700 dark:hover:text-sky-300 underline decoration-2 underline-offset-2 transition-colors\">${title}</a>
-                  <div class=\"text-sm text-gray-600 dark:text-gray-300 mt-1\">${p.authors}</div>
-                  <div class=\"text-sm text-gray-500 dark:text-gray-400 mt-1\">${venue} · ${p.year}</div>
+          const wrap = this.$refs.pubList; if(!wrap) return; wrap.innerHTML='';
+          const groups = { selected: [], additional: [] };
+          list.forEach(p => { const t = (p.tier === 'selected') ? 'selected' : 'additional'; groups[t].push(p); });
+          const sortFn = (a,b) => (b.year - a.year) || (a.title||'').localeCompare(b.title||'');
+          groups.selected.sort(sortFn);
+          groups.additional.sort(sortFn);
+          const escapeAttr = (s) => String(s==null?'':s).replace(/&/g,'&amp;').replace(/"/g,'&quot;').replace(/</g,'&lt;');
+          const renderCard = (p) => {
+            const hasPdf = !!p.pdf;
+            const hasCode = !!p.code;
+            const tags = (p.tags||[]).map(t=>`<span class="text-[0.93rem] text-[var(--ink-mute)]">${escapeAttr(t)}</span>`).join('<span class="text-[var(--ink-mute)] mx-1">·</span>');
+            const bib = (this.showBibtex && p.bibtex) ? `<pre class="mt-4 p-3 bg-[var(--paper-pure)] border border-[var(--rule)] rounded-lg overflow-x-auto text-[0.93rem] whitespace-pre-wrap">${escapeAttr(p.bibtex)}</pre>` : '';
+            const abstractHtml = p.abstract ? `<p class="mt-3 text-[1.02rem] text-[var(--ink-mute)] leading-relaxed">${escapeAttr(p.abstract)}</p>` : '';
+            const titleHtml = hasPdf
+              ? `<a href="${escapeAttr(p.pdf)}" target="_blank" rel="noopener" class="text-[1.22rem] font-semibold underline decoration-1 underline-offset-4 hover:opacity-80">${escapeAttr(p.title)}</a>`
+              : `<span class="text-[1.22rem] font-semibold text-[var(--ink-soft)]">${escapeAttr(p.title)}<span class="ml-2 text-[0.92rem] font-normal italic text-[var(--ink-mute)]">(preprint unavailable)</span></span>`;
+            return `
+              <article class="pub-item">
+                <div class="space-y-2">
+                  ${titleHtml}
+                  <div class="text-[1.02rem] text-[var(--ink-soft)]">${escapeAttr(p.authors || '')}</div>
+                  <div class="text-[1rem] text-[var(--ink-mute)]">${escapeAttr(p.venue || '')}${p.year ? ' · ' + p.year : ''}</div>
+                  ${abstractHtml}
+                  ${tags ? `<div class="flex flex-wrap items-center pt-1">${tags}</div>` : ''}
+                  <div class="flex flex-wrap items-center gap-2 pt-3">
+                    ${hasPdf ? `<a href="${escapeAttr(p.pdf)}" target="_blank" rel="noopener" class="btn-quiet">Paper</a>` : ''}
+                    ${hasCode ? `<a href="${escapeAttr(p.code)}" target="_blank" rel="noopener" class="btn-quiet">Code</a>` : ''}
+                    ${p.bibtex ? `<button class="btn-quiet bibtex-copy-btn" data-bibtex="${escapeAttr(p.bibtex)}">BibTeX</button>` : ''}
+                  </div>
+                  ${bib}
                 </div>
-                ${abstractHtml}
-                <div class=\"flex flex-wrap items-center gap-2 pt-2 border-t border-gray-200 dark:border-gray-700\">
-                  ${tags}
-                  ${p.pdf ? `<a href=\"${p.pdf}\" target=\"_blank\" class=\"px-3 py-1.5 rounded-lg bg-sky-600 hover:bg-sky-700 text-white text-xs font-medium transition-colors\">📄 PDF</a>`:''}
-                  ${p.code ? `<a href=\"${p.code}\" target=\"_blank\" class=\"px-3 py-1.5 rounded-lg border border-gray-300 dark:border-gray-600 text-xs hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors\">💻 Code</a>`:''}
-                  <button class=\"px-3 py-1.5 rounded-lg border border-gray-300 dark:border-gray-600 text-xs hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors bibtex-copy-btn\" data-bibtex=\"${(p.bibtex||'').replace(/`/g,'\`').replace(/"/g,'&quot;')}\">📋 BibTeX</button>
-                </div>
-                ${bib}
-              </div>
-            `;
-            wrap.appendChild(card);
-          });
+              </article>`;
+          };
+          const section = (heading, items) => {
+            if (!items.length) return '';
+            return `<div class="mb-12"><div class="flex items-baseline gap-3 mb-3"><h3 class="eyebrow text-[0.85rem]">${heading}</h3><span class="text-[0.98rem] text-[var(--ink-mute)]">${items.length} ${items.length===1?'paper':'papers'}</span></div><div class="divide-y divide-[var(--rule)]">${items.map(renderCard).join('')}</div></div>`;
+          };
+          wrap.innerHTML = section('Selected', groups.selected) + section('Additional', groups.additional);
+          window.lucide?.createIcons();
+          window.installSocialIcons?.();
         },
         async loadRepos(){
           const grid = this.$refs.repoGrid;
@@ -1123,23 +996,20 @@
             pick.forEach(r=>{
               const card = document.createElement('a');
               card.href = r.html_url; card.target = '_blank';
-              card.className = 'p-5 rounded-2xl border border-gray-200 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-800 block transition-all duration-200 group';
+              card.className = 'block py-4 border-b border-[var(--rule)] hover:opacity-80';
               const displayName = r.name.replace(/\.github\.io$/i, '');
               card.innerHTML = `
                 <div class=\"flex items-center justify-between\">
-                  <div class=\"font-semibold group-hover:text-blue-600 transition-colors\">${displayName}</div>
-                  <div class=\"text-xs text-gray-500 flex items-center gap-1\">
+                  <div class="font-medium underline decoration-1 underline-offset-4 text-[1.05rem]">${displayName}</div>
+                  <div class="text-[0.92rem] text-[var(--ink-mute)] flex items-center gap-1 whitespace-nowrap">
                     <i data-lucide="star" class="w-3 h-3"></i>
                     ${r.stargazers_count}
                   </div>
                 </div>
-                <p class=\"mt-2 text-sm text-gray-600 dark:text-gray-300 line-clamp-3\">${r.description || 'No description available'}</p>
-                <div class=\"mt-3 flex items-center gap-3 text-xs text-gray-500\">
-                  <span class="flex items-center gap-1">
-                    <i data-lucide="calendar" class="w-3 h-3"></i>
-                    ${new Date(r.pushed_at).toISOString().slice(0,10)}
-                  </span>
-                  ${r.language?`<span class=\"px-2 py-0.5 rounded-full bg-gray-100 dark:bg-gray-800\">${r.language}</span>`:''}
+                <p class="mt-1 text-[1rem] text-[var(--ink-soft)] line-clamp-2">${r.description || 'No description available'}</p>
+                <div class="mt-2 flex items-center gap-3 text-[0.92rem] text-[var(--ink-mute)]">
+                  <span>${new Date(r.pushed_at).toISOString().slice(0,10)}</span>
+                  ${r.language?`<span>${r.language}</span>`:''}
                 </div>
               `;
               grid.appendChild(card);
@@ -1168,6 +1038,7 @@
             `;
           } finally {
             window.lucide?.createIcons();
+          window.installSocialIcons?.();
           }
         }
       }
@@ -1179,7 +1050,7 @@
   {
     "@context": "https://schema.org",
     "@type": "Person",
-    "name": "Qihang(Lucas) Jin",
+    "name": "Qihang (Lucas) Jin",
     "alternateName": "金启航",
     "url": "https://Lucas-Jin-Qh.github.io",
     "sameAs": [
@@ -1188,23 +1059,31 @@
       "https://www.linkedin.com/in/qihang-jin-lucas1121",
       "https://x.com/Qh_Jin_Lucas"
     ],
-    "jobTitle": "Graduate Student",
-    "affiliation": {
-      "@type": "Organization", 
-      "name": "University of Science and Technology of China",
-      "department": "Institute of Advanced Technology"
+    "jobTitle": "Graduate Researcher",
+    "affiliation": [
+      { "@type": "CollegeOrUniversity", "name": "University of Science and Technology of China" },
+      { "@type": "CollegeOrUniversity", "name": "Columbia University" },
+      { "@type": "CollegeOrUniversity", "name": "Tsinghua University" }
+    ],
+    "alumniOf": {
+      "@type": "CollegeOrUniversity",
+      "name": "Chang'an University"
     },
-    "alumniOf": "University of Science and Technology of China",
     "knowsAbout": [
-      "Vision-Language Models",
-      "AI Applications",
-      "Model Optimization",
-      "Machine Learning",
-      "Computer Vision",
-      "Natural Language Processing",
-      "Medical AI"
+      "NeuroAI",
+      "Computational Neuroscience",
+      "Neural-Behavior Modeling",
+      "Representation Geometry",
+      "Spatial Coding",
+      "Vision-Language Model Evaluation",
+      "Continual Learning",
+      "Parameter-Efficient Fine-Tuning"
     ],
     "email": "qihangjin@mail.ustc.edu.cn",
+    "emails": [
+      { "address": "qihangjin@mail.ustc.edu.cn", "label": "USTC" },
+      { "address": "qihangjin1121@gmail.com",   "label": "Gmail" }
+    ],
     "address": {
       "@type": "PostalAddress",
       "addressLocality": "Hefei",

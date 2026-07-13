@@ -1,9 +1,32 @@
 {
   "email": "qihangjin@mail.ustc.edu.cn",
+  "emails": [
+    { "address": "qihangjin@mail.ustc.edu.cn", "label": "USTC" },
+    { "address": "qihangjin1121@gmail.com",   "label": "Gmail" }
+  ],
   "links": {
     "github": "https://github.com/Lucas-Jin-Qh",
     "scholar": "https://scholar.google.com/citations?user=pSvQSKsAAAAJ&hl=en",
     "linkedin": "https://www.linkedin.com/in/qihang-jin-lucas1121",
     "twitter": "https://x.com/Qh_Jin_Lucas"
-  }
+  },
+  "identity": {
+    "subtitle": "M.Eng. Student at USTC · Research Assistant with the Liam Paninski Lab and the Lu Mi Lab",
+    "affiliations": "Columbia University · Tsinghua University / Qi Zhi Institute",
+    "statement": "Research on neural\u2013behavior modeling, representation geometry, and the reliability and adaptation of multimodal systems. Applying to PhD programs starting Fall 2027."
+  },
+  "education": [
+    {
+      "degree": "M.Eng. in Electronic and Information Engineering",
+      "school": "University of Science and Technology of China",
+      "location": "Hefei, China",
+      "period": "Expected Jun. 2027"
+    },
+    {
+      "degree": "B.Eng. in Vehicle Engineering",
+      "school": "Chang'an University",
+      "location": "Xi'an, China",
+      "period": "Jul. 2022"
+    }
+  ]
 }
